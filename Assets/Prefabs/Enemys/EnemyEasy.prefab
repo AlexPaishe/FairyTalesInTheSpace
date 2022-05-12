@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 2399495169345447180}
   - component: {fileID: 2399495169345447177}
   - component: {fileID: 2399495169345447178}
-  - component: {fileID: 2399495169345447179}
+  - component: {fileID: 6919592785714248084}
   m_Layer: 0
   m_Name: HalthBar
   m_TagString: Untagged
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2399495169345447179
+--- !u!114 &6919592785714248084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2399495169345447181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f21098bd80f94478d98f83e78b981c, type: 3}
+  m_Script: {fileID: 11500000, guid: 84dc7a354c226514088b007aac08a37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBarFilling: {fileID: 2399495169342899872}
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 40
-  _hPBar: {fileID: 2399495169345447179}
+  _hPBar: {fileID: 6919592785714248084}
 --- !u!1 &2399495169710556985
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,29 +6,23 @@ public class Enemy : MonoBehaviour, IHaveHealth
     [SerializeField] private HPBar _hPBar;
 
     private int _maxHealth;
-    private bool _isDead;
 
-    private void Start()
+    private void Awake()
     {
         _maxHealth = _health;
     }
 
     public void Impact(int damage)
     {
-        if (_isDead == false)
+        if (damage < _health)
         {
             _health -= damage;
-
-            _hPBar.TakeDamage((float)damage/_maxHealth);
-
-            if (_health <= 0)
-            {
-                Dead();
-            }
-            else
-            {
-                //включить анимацию получения урона
-            }
+            _hPBar.UpdateHPBar((float)_health / _maxHealth);
+            //включить анимацию получения урона
+        }
+        else
+        {
+            Dead();
         }
     }
 
@@ -36,7 +30,6 @@ public class Enemy : MonoBehaviour, IHaveHealth
     {
         //анимация смерти
 
-        _isDead = true;
         Destroy(gameObject);
     }
 }

@@ -1,22 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class HPBar : MonoBehaviour
+public class HPBarEnemy : HPBar
 {
-    [SerializeField] private Image _healthBarFilling;
-
     private Camera _camera;
 
     private void Awake()
     {
         _camera = Camera.main;
-    }
-
-    public void TakeDamage(float damagePercent)
-    {
-        _healthBarFilling.fillAmount -= damagePercent;
     }
 
     private void LateUpdate()
