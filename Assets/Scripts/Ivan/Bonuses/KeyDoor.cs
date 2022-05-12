@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
 {
-    [SerializeField] private KeyDoorType _key;
+    [SerializeField] private KeyDoorType _keyType;
+
+    public KeyDoorType KeyType => _keyType;
 
     private KeyStorage _keyStorage;
 
@@ -13,9 +15,9 @@ public class KeyDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.GetComponent<PlayerHealth>())
+        if (other.transform.GetComponent<Player>())
         {
-            _keyStorage.AddKey(_key);
+            _keyStorage.AddKey(_keyType);
             Destroy(gameObject);
         }
     }

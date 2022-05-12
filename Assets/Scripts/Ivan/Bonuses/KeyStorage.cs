@@ -3,49 +3,68 @@ using UnityEngine;
 
 public class KeyStorage : MonoBehaviour
 {
-    [SerializeField] GameObject[] _keysImage;
+    [SerializeField] GameObject[] _keyPrefabs;
 
-    private List<KeyDoorType> _keys;
+    public List<GameObject> Keys { get; private set; }
 
     private void Awake()
     {
-        _keys = new List<KeyDoorType>();
+        Keys = new List<GameObject>();
     }
 
-    public void AddKey(KeyDoorType key)
+    public void AddKey(KeyDoorType keyType)
     {
-        _keys.Add(key);
-
-        AddImageKey(key);
+        Keys.Add(Instantiate(_keyPrefabs[IndexPrefab(keyType)],transform));
     }
 
-    public void RemoveKey(KeyDoorType key)
+    public void RemoveKey(KeyDoorType keyType)
     {
-        if (_keys.Contains(key))
+        foreach (GameObject key in Keys)
         {
-            _keys.Remove(key);
+            if(key.TryGetComponent<KeyImage>(out KeyImage keyImage))
+            {
+                if (keyImage.KeyType == keyType)
+                {
+                    Keys.Remove(key);
+                    Destroy(key);
+                    return;
+                }
+            }
         }
-        // Удалить из панели
     }
 
-    private void AddImageKey(KeyDoorType colour)
+    public bool IsContainsKey(KeyDoorType keyType)
     {
-        switch (colour)
+        bool result = false;
+
+        foreach (GameObject key in Keys)
+        {
+            if (key.TryGetComponent<KeyImage>(out KeyImage keyImage))
+            {
+                if (keyImage.KeyType == keyType)
+                {
+                    result = true;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    private int IndexPrefab(KeyDoorType keyType)
+    {
+        switch (keyType)
         {
             case KeyDoorType.Red:
-                _keysImage[0].SetActive(true);
-                return;
+                return 0;
             case KeyDoorType.Blue:
-                _keysImage[1].SetActive(true);
-                return;
+                return 1;
             case KeyDoorType.Green:
-                _keysImage[2].SetActive(true);
-                return;
+                return 2;
             case KeyDoorType.Yellow:
-                _keysImage[3].SetActive(true);
-                return;
+                return 3;
                 default:
-                return;
+                return 0;
         }
     }
 }

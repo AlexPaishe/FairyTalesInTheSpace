@@ -1,16 +1,16 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerHealth))]
+[RequireComponent(typeof(Player))]
 public class DamageTimer : MonoBehaviour
 {
     [SerializeField] private float _delay;
 
-    private PlayerHealth _player;
+    private Player _player;
 
     void Awake()
     {
-        _player = GetComponent<PlayerHealth>();
+        _player = GetComponent<Player>();
     }
 
     private void Start()

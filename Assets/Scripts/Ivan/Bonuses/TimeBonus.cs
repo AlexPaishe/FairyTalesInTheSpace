@@ -6,7 +6,7 @@ public class TimeBonus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.TryGetComponent<PlayerHealth>(out PlayerHealth playerHealth))
+        if (other.transform.TryGetComponent<Player>(out Player playerHealth))
         {
             playerHealth.TakeDamage(-_addedLiveTime);
             Destroy(gameObject);

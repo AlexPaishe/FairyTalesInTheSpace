@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IHaveHealth
+public class Player : MonoBehaviour, IHaveHealth
 {
     [SerializeField] private int _health;
     [SerializeField] private HPBar _hPBar;
