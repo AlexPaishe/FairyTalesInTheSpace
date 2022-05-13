@@ -5,17 +5,17 @@ using UnityEngine.EventSystems;
 
 public class ShootJoystick : Joystick
 {
-    [SerializeField] private WeaponChange _weaponChange;
+    [SerializeField] private WeaponLoader _weaponChange;
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
-        _weaponChange.CurretWeapon.StartShoot();
+        _weaponChange.CurrentWeapon.StartShoot();
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         base.OnPointerUp(eventData);
-        _weaponChange.CurretWeapon.StopShoot();
+        _weaponChange.CurrentWeapon.StopShoot();
     }
 }

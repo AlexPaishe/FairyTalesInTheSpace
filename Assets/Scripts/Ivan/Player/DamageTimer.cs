@@ -26,4 +26,9 @@ public class DamageTimer : MonoBehaviour
             yield return new WaitForSeconds(_delay);
         }
     }
+
+    private void OnDisable()
+    {
+        StopCoroutine(DamagePerSecond());
+    }
 }
