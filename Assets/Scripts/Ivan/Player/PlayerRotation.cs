@@ -17,7 +17,7 @@ public class PlayerRotation : MonoBehaviour
     {
         Vector3 direction;
 
-        if (_shootJoystick.Horizontal!= 0 || _shootJoystick.Vertical != 0)
+        if ((_shootJoystick.Horizontal!= 0 || _shootJoystick.Vertical != 0) && _shootJoystick.IsStartedAction == true)
         {
             direction = new Vector3(_shootJoystick.Horizontal, 0, _shootJoystick.Vertical);
         }

@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7075876263131416904}
   - component: {fileID: 7931007121265218786}
   m_Layer: 0
-  m_Name: SubmachineGunBullet
+  m_Name: IzlarFirstBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,8 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dbd21df2c031e4a90920a5a5af9c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
-  _liveTime: 5
+  _edit: {fileID: 11400000, guid: c3ea9b1adcd0a214a873ab578c931e21, type: 2}
+  _speed: 40
+  _liveTime: 0.5
   _damage: 5
   _force: 1
 --- !u!54 &7931007121265218786

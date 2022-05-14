@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private BulletEdit _edit;
+
     [SerializeField] private float _speed;
     [SerializeField] private float _liveTime;
     [SerializeField] private int _damage;
@@ -10,22 +12,22 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, _liveTime);
+        Destroy(gameObject, _edit.liveTime);
     }
 
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * _edit.speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.TryGetComponent<IHaveHealth>(out IHaveHealth iHaveHeaith))
         {
-            iHaveHeaith.Impact(_damage);
+            iHaveHeaith.Impact(_edit.damage);
             if(collision.transform.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
             {
-                rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
+                rigidbody.AddForce(transform.forward * _edit.force, ForceMode.Impulse);
             }
         }
 

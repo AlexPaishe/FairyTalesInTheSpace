@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponLoader : MonoBehaviour
 {
-    [SerializeField] Transform _rightHand;
+    [SerializeField] Transform _rightHandPoint;
 
     public Weapon CurrentWeapon { get; private set; }
 
@@ -15,12 +15,12 @@ public class WeaponLoader : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(GlobalSystemVar.currentWeaponSave) == false)
         {
-            PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.sword);
+            PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.izlar);
         }
 
         string path = GlobalSystemVar.weaponPrefsabPath + PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
 
-        GameObject weaponGO = Instantiate(Resources.Load(path, typeof(GameObject)),_rightHand) as GameObject;
+        GameObject weaponGO = Instantiate(Resources.Load(path, typeof(GameObject)),_rightHandPoint) as GameObject;
 
         return weaponGO.GetComponent<Weapon>();
     }

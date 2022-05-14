@@ -13,8 +13,7 @@ public class GlobalSystemVar
     public const string weaponPrefsabPath = "Weapons/";//путь к папке с оружием
 
     public const string sword = "Sword";
-    public const string doubleGun = "DoubleGun";
+    public const string izlar = "Izlar";
 
     #endregion
-
 }

@@ -5,24 +5,30 @@ public class Player : MonoBehaviour, IHaveHealth
 {
     [SerializeField] private int _health;
     [SerializeField] private HPBar _hPBar;
-
+    [SerializeField] private Events _events;
+    
     private int _maxHealth;
+    private bool _isInvulnerability;
 
     private void Awake()
     {
+        _events.OnJerkEvent += OnInvulnerability;
         _maxHealth = _health;
     }
 
     public void Impact(int damage)
     {
-        if (damage < _health)
+        if (_isInvulnerability == false)
         {
-            TakeDamage(damage);
-            //анимация
-        }
-        else
-        {
-            Dead();
+            if (damage < _health)
+            {
+                TakeDamage(damage);
+                //анимация
+            }
+            else
+            {
+                Dead();
+            }
         }
     }
 
@@ -40,8 +46,18 @@ public class Player : MonoBehaviour, IHaveHealth
         _hPBar.UpdateHPBar((float)_health/_maxHealth);
     }
 
+    public void OnInvulnerability(bool value )
+    {
+        _isInvulnerability = value;
+    }
+    
     private void Dead()
     {
-        
+        //Анимация
+    }
+
+    private void OnDisable()
+    {
+        _events.OnJerkEvent -= OnInvulnerability;
     }
 }

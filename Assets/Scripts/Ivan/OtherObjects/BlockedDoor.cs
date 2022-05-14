@@ -25,7 +25,7 @@ public class BlockedDoor : MonoBehaviour
             {
                 if (_keyStorage.IsContainsKey(_keyType))
                 {
-                    //_keyStorage.RemoveKey(_keyType);
+                    //_keyStorage.RemoveKey(_keyType); //–азблокировать, если нужно, чтоб ключи уничтожались при открытии дверей
                     Open();
                 }
                 else
