@@ -5,18 +5,18 @@ using UnityEngine.UI;
 public class FillingReadiAttak : MonoBehaviour
 {
     [SerializeField] private WeaponLoader _weaponLoader;
-    [SerializeField] private Events _events;
 
     private Image _fillingImage;
     private float _timeReadyFastAttack;
     private float _timer = 0;
     private bool _isReady = true;
 
+    public bool IsReady => _isReady;
+
     private void Start()
     {
         _fillingImage = GetComponent<Image>();
         _timeReadyFastAttack = _weaponLoader.CurrentWeapon.TimeReadyFastAttack;
-        _events.OnJerkEvent += SetReady;
     }
 
     void Update()
@@ -28,24 +28,13 @@ public class FillingReadiAttak : MonoBehaviour
             if(_timer >= _timeReadyFastAttack)
             {
                 _isReady = true;
-            }
-        }
-    }
-
-    private void SetReady(bool isStartedAttak)
-    {
-        if(isStartedAttak == false)
-        {
-            if (_isReady == true)
-            {
                 _timer = 0;
-                _isReady = false;
             }
         }
     }
 
-    private void OnDisable()
+    public void StartReadiness()
     {
-        _events.OnJerkEvent -= SetReady;
+        _isReady = false;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
-    [SerializeField] private MoveJoystick _moveJoystick;
+    [SerializeField] private Joystick _moveJoystick;
     [SerializeField] private Events _events;
 
     private Rigidbody _rigidbody;

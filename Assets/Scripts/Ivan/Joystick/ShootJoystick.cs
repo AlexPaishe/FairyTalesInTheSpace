@@ -1,38 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(FillingReadiAttak))]
 public class ShootJoystick : Joystick
 {
-    [SerializeField] float _timeLimitQuikTap;
+    [SerializeField] private float _shootDelay;
     [SerializeField] private WeaponLoader _weaponLoader;
-    [SerializeField] private Events _events;
-     
-    public bool IsStartedAction {get; private set;}
 
-    bool _isFastAttak = false;
-    private bool _isPressed = false;
-    private float _timeTap = 0;
+    public bool IsRetention {get; private set;}
+
+    private FillingReadiAttak _fillingReady;
+    private bool _longAttakAllowed = true;
+    private bool _isSelected = false;
+    private float _timer = 0;
 
     protected override void Start()
     {
         base.Start();
-        _events.OnJerkEvent += EndFastAttak;
+        _fillingReady = GetComponent<FillingReadiAttak>();
     }
 
     private void Update()
     {
-        if (_isPressed == true)
+        if(_isSelected == true)
         {
-            _timeTap += Time.deltaTime;
+            _timer += Time.deltaTime;
 
-            if(_timeTap >= _timeLimitQuikTap)
+            if(_timer > _shootDelay)
             {
-                if(IsStartedAction == false)
+                if (_longAttakAllowed == true)
                 {
                     _weaponLoader.CurrentWeapon.StartShoot();
-                    IsStartedAction = true;
+                    IsRetention = true;
+                    _longAttakAllowed = false;
                 }
             }
         }
@@ -41,38 +42,29 @@ public class ShootJoystick : Joystick
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
-        _isPressed = true;
+        _isSelected = true;
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         base.OnPointerUp(eventData);
 
-        if(IsStartedAction == false && _isFastAttak == false)
+        if(IsRetention == true)
         {
-            _weaponLoader.CurrentWeapon.FastAttak();
-            _isFastAttak = true;
+            _weaponLoader.CurrentWeapon.StopShoot();
+            IsRetention = false;
         }
         else
         {
-            _weaponLoader.CurrentWeapon.StopShoot();
+            if (_fillingReady.IsReady == true)
+            {
+                _weaponLoader.CurrentWeapon.FastAttak();
+                _fillingReady.StartReadiness();
+            }
         }
 
-        IsStartedAction = false;
-        _timeTap = 0;
-        _isPressed = false;
-    }
-
-    private void EndFastAttak(bool isEnd)
-    {
-        if(isEnd == false)
-        {
-            _isFastAttak = false;
-        }
-    }
-
-    private void OnDisable()
-    {
-        _events.OnJerkEvent -= EndFastAttak;
+        _isSelected = false;
+        _longAttakAllowed = true;
+        _timer = 0;
     }
 }
