@@ -1,34 +1,40 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(Player))]
 public class DamageTimer : MonoBehaviour
 {
+    [SerializeField] private int _damage;
     [SerializeField] private float _delay;
+    [SerializeField] private Player _player;
+    [SerializeField] private TextMeshProUGUI _textMeshPro;
 
-    private Player _player;
-
-    void Awake()
-    {
-        _player = GetComponent<Player>();
-    }
+    private Coroutine _coroutine;
 
     private void Start()
     {
-        StartCoroutine(DamagePerSecond());
+        UpdateDisplay();
+        _coroutine = StartCoroutine(DamagePerSecond());
     }
 
     private IEnumerator DamagePerSecond()
     {
         while (true)
         {
-            _player.TakeDamage(1);
             yield return new WaitForSeconds(_delay);
+            _player.TakeDamage(_damage);
+            UpdateDisplay();
         }
+    }
+
+    public void UpdateDisplay()
+    {
+        _textMeshPro.text = _player.Health.ToString();
     }
 
     private void OnDisable()
     {
-        StopCoroutine(DamagePerSecond());
+        StopCoroutine(_coroutine);
     }
 }

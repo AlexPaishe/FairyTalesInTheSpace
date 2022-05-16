@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour, IHaveHealth
 {
-    [SerializeField] private int _health;
-    [SerializeField] private HPBar _hPBar;
     [SerializeField] private Events _events;
-    
+    [SerializeField] private DamageTimer _damageTimer;
+    [SerializeField] private int _health;
+
+    public int Health => _health;
+
     private int _maxHealth;
     private bool _isInvulnerability;
 
@@ -38,19 +40,18 @@ public class Player : MonoBehaviour, IHaveHealth
         {
             _health -= damage;
         }
-        if(_health > _maxHealth)                  // Условие сработает, если при получении бонуса времени HP стало больше максимального
+        if (_health > _maxHealth)                  // Условие сработает, если при получении бонуса времени HP стало больше максимального
         {
             _health = _maxHealth;
         }
-
-        _hPBar.UpdateHPBar((float)_health/_maxHealth);
+        _damageTimer.UpdateDisplay();
     }
 
-    public void OnInvulnerability(bool value )
+    public void OnInvulnerability(bool value)
     {
         _isInvulnerability = value;
     }
-    
+
     private void Dead()
     {
         //Анимация
