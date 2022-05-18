@@ -7,6 +7,7 @@ public class ChangeCanvas : MonoBehaviour
     [SerializeField] private GameObject[] _canvas;
     private int _nowCanvas = 0;
     private int _newWeaponInfo = 0;
+    private int _newLevelMap = 0;
 
     private void Awake()
     {
@@ -46,17 +47,7 @@ public class ChangeCanvas : MonoBehaviour
     /// </summary>
     public void SaveMenuLoad()
     {
-        for (int i = 0; i < _canvas.Length; i++)
-        {
-            if (i == _nowCanvas)
-            {
-                _canvas[i].SetActive(true);
-            }
-            else
-            {
-                _canvas[i].SetActive(false);
-            }
-        }
+        CanvasChange(0);
     }
 
     /// <summary>
@@ -64,17 +55,7 @@ public class ChangeCanvas : MonoBehaviour
     /// </summary>
     public void SaveWeaponInfoLoad()
     {
-        for (int i = 0; i < _canvas.Length; i++)
-        {
-            if (i == _newWeaponInfo)
-            {
-                _canvas[i].SetActive(true);
-            }
-            else
-            {
-                _canvas[i].SetActive(false);
-            }
-        }
+        CanvasChange(1);
     }
 
     /// <summary>
@@ -84,5 +65,44 @@ public class ChangeCanvas : MonoBehaviour
     public void SaveWeaponInfo(int newCanvas)
     {
         _newWeaponInfo = newCanvas;
+    }
+
+    /// <summary>
+    /// Сохранение последнего меню выбора оружия
+    /// </summary>
+    /// <param name="newCanvas"></param>
+    public void SaveLevelMap(int newCanvas)
+    {
+        _newLevelMap = newCanvas;
+    }
+
+    /// <summary>
+    /// Реализация Загрузки связки меню выбора уровня
+    /// </summary>
+    public void SaveLevelMapLoad()
+    {
+        CanvasChange(2);
+    }
+
+    /// <summary>
+    /// Реализация отдельных канвас систем
+    /// </summary>
+    /// <param name="var"></param>
+    private void CanvasChange(int var)
+    {
+        int newCanvas = 0;
+        switch(var)
+        {
+            case 0: newCanvas = _nowCanvas; break;
+            case 1: newCanvas = _newWeaponInfo; break;
+            case 2: newCanvas = _newLevelMap; break;
+        }
+
+        NewCanvas(newCanvas);
+    }
+
+    private void OnEnable()
+    {
+        NewCanvas(0);
     }
 }

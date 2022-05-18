@@ -1420,7 +1420,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 0.9989801}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3775,7 +3775,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1486986478}
+      - m_Target: {fileID: 1723652875}
         m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
         m_MethodName: NextWeapon
         m_Mode: 1
@@ -4511,14 +4511,13 @@ GameObject:
   - component: {fileID: 525971897}
   - component: {fileID: 525971896}
   - component: {fileID: 525971895}
-  - component: {fileID: 525971898}
   m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &525971894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4604,31 +4603,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &525971898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525971893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109d7c7dd7413ca4c8e137c1b933f3e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mixer:
-  - {fileID: 1285837547115294230, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
-  - {fileID: -3397117267645276961, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
-  - {fileID: 8161291933446657807, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
-  _sliders:
-  - {fileID: 956710293}
-  - {fileID: 1020474151}
-  - {fileID: 1445260343}
-  _nameSliders:
-  - MusicVol
-  - WeaponVol
-  - EnemyVol
-  _minValueVolume: -75
 --- !u!1 &530009324
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,7 +4849,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5392,7 +5366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f73bdc916df687c43b9f4cfbe251d263, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5918,7 +5892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00020525968}
+  m_AnchoredPosition: {x: 0, y: 0.00010086818}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &652195995
@@ -6037,7 +6011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f73bdc916df687c43b9f4cfbe251d263, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8435,7 +8409,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 500, y: 200}
-  m_SizeDelta: {x: 700, y: 50}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956710293
 MonoBehaviour:
@@ -8488,7 +8462,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SliderVariation
         m_Mode: 3
@@ -8500,7 +8474,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SlidersVolume
         m_Mode: 0
@@ -8786,10 +8760,10 @@ RectTransform:
   m_Father: {fileID: 1909897430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012925876
 MonoBehaviour:
@@ -8811,7 +8785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -714320061170637998, guid: 57b92ca7da6eabb41a444b84b62b9108, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8957,7 +8931,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 500, y: 0}
-  m_SizeDelta: {x: 700, y: 50}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020474151
 MonoBehaviour:
@@ -9010,7 +8984,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SliderVariation
         m_Mode: 3
@@ -9022,7 +8996,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SlidersVolume
         m_Mode: 0
@@ -10090,12 +10064,24 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 721958997}
         m_TargetAssemblyTypeName: ChangeCanvas, Assembly-CSharp
-        m_MethodName: SaveMenuLoad
-        m_Mode: 1
+        m_MethodName: NewCanvas
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 721958997}
+        m_TargetAssemblyTypeName: ChangeCanvas, Assembly-CSharp
+        m_MethodName: SaveMenu
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10618,6 +10604,18 @@ MonoBehaviour:
       - m_Target: {fileID: 721958997}
         m_TargetAssemblyTypeName: ChangeCanvas, Assembly-CSharp
         m_MethodName: NewCanvas
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 721958997}
+        m_TargetAssemblyTypeName: ChangeCanvas, Assembly-CSharp
+        m_MethodName: SaveMenu
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11166,10 +11164,10 @@ RectTransform:
   m_Father: {fileID: 280229907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262698108
 MonoBehaviour:
@@ -11191,7 +11189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -714320061170637998, guid: 57b92ca7da6eabb41a444b84b62b9108, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11415,7 +11413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f73bdc916df687c43b9f4cfbe251d263, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12088,7 +12086,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12495,7 +12493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8f2b90028525694a998521412ac82b0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13024,7 +13022,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 500, y: -200}
-  m_SizeDelta: {x: 700, y: 50}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445260343
 MonoBehaviour:
@@ -13077,7 +13075,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SliderVariation
         m_Mode: 3
@@ -13089,7 +13087,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 525971898}
+      - m_Target: {fileID: 1723652876}
         m_TargetAssemblyTypeName: SoundVolumeSystem, Assembly-CSharp
         m_MethodName: SlidersVolume
         m_Mode: 0
@@ -13334,7 +13332,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 194886065}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9989801
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14007,7 +14005,6 @@ GameObject:
   - component: {fileID: 1486986477}
   - component: {fileID: 1486986476}
   - component: {fileID: 1486986475}
-  - component: {fileID: 1486986478}
   m_Layer: 5
   m_Name: Weapon
   m_TagString: Untagged
@@ -14103,38 +14100,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1486986478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486986473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27faa6eb5f77ab641829d5972d0f5a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weaponIcon:
-  - {fileID: 2125145040}
-  - {fileID: 586483912}
-  - {fileID: 774941906}
-  - {fileID: 2114140416}
-  _weaponSpriteArmory:
-  - {fileID: 21300000, guid: 25607abae5648324193cd14d874380a5, type: 3}
-  - {fileID: 21300000, guid: 255377709b1850e44b674d1e03f09e78, type: 3}
-  _weaponSprite:
-  - {fileID: 5580721502893046084, guid: 40acbf9a7938e5e4b8e0558d7cdb6794, type: 3}
-  - {fileID: -7794366583406581743, guid: 40acbf9a7938e5e4b8e0558d7cdb6794, type: 3}
-  _weaponTitle:
-  - {fileID: 2034710259}
-  - {fileID: 1026238987}
-  - {fileID: 881788343}
-  - {fileID: 992913540}
-  _weaponText:
-  - "\u041C\u0435\u0447 \"\u041A\u043B\u0430\u0434\""
-  - "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442 \"\u0418\u0437\u043B\u0430\u0440\""
-  _weaponMaxVariation: 1
 --- !u!1 &1521173923
 GameObject:
   m_ObjectHideFlags: 0
@@ -14875,7 +14840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8f2b90028525694a998521412ac82b0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15577,6 +15542,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1723652874}
+  - component: {fileID: 1723652875}
+  - component: {fileID: 1723652876}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -15609,6 +15576,63 @@ Transform:
   m_Father: {fileID: 622082820}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723652875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723652873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27faa6eb5f77ab641829d5972d0f5a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponIcon:
+  - {fileID: 2125145040}
+  - {fileID: 586483912}
+  - {fileID: 774941906}
+  - {fileID: 2114140416}
+  _weaponSpriteArmory:
+  - {fileID: 21300000, guid: 25607abae5648324193cd14d874380a5, type: 3}
+  - {fileID: 21300000, guid: 255377709b1850e44b674d1e03f09e78, type: 3}
+  _weaponSprite:
+  - {fileID: 5580721502893046084, guid: 40acbf9a7938e5e4b8e0558d7cdb6794, type: 3}
+  - {fileID: -7794366583406581743, guid: 40acbf9a7938e5e4b8e0558d7cdb6794, type: 3}
+  _weaponTitle:
+  - {fileID: 992913540}
+  - {fileID: 2034710259}
+  - {fileID: 1026238987}
+  - {fileID: 881788343}
+  _weaponText:
+  - "\u041C\u0435\u0447 \"\u041A\u043B\u0430\u0434\""
+  - "\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442 \"\u0418\u0437\u043B\u0430\u0440\""
+  _weaponMaxVariation: 1
+--- !u!114 &1723652876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723652873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109d7c7dd7413ca4c8e137c1b933f3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mixer:
+  - {fileID: 1285837547115294230, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
+  - {fileID: -3397117267645276961, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
+  - {fileID: 8161291933446657807, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
+  _sliders:
+  - {fileID: 956710293}
+  - {fileID: 1020474151}
+  - {fileID: 1445260343}
+  _nameSliders:
+  - MusicVol
+  - WeaponVol
+  - EnemyVol
+  _minValueVolume: -75
 --- !u!1 &1740975443
 GameObject:
   m_ObjectHideFlags: 0
@@ -16245,7 +16269,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1486986478}
+      - m_Target: {fileID: 1723652875}
         m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
         m_MethodName: ChangeWepon
         m_Mode: 1
@@ -16901,7 +16925,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16975,10 +16999,10 @@ RectTransform:
   m_Father: {fileID: 1050347363}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 0}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814142677
 MonoBehaviour:
@@ -17000,7 +17024,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -714320061170637998, guid: 57b92ca7da6eabb41a444b84b62b9108, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17101,7 +17125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1486986478}
+      - m_Target: {fileID: 1723652875}
         m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
         m_MethodName: PastWeapon
         m_Mode: 1
@@ -17728,7 +17752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25cb96fc64445b443bcc2209f24bb594, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8f2b90028525694a998521412ac82b0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

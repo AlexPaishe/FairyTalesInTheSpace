@@ -22,7 +22,7 @@ public class ChangeWeaponMenu : MonoBehaviour
         set
         {
             _currentWeapon = value;
-            NewWeapon();
+            ChangePicture();
         }
     }
 
@@ -34,6 +34,8 @@ public class ChangeWeaponMenu : MonoBehaviour
             case GlobalSystemVar.sword: CurrentWeapon = 0; break;
             case GlobalSystemVar.izlar: CurrentWeapon = 1; break;
         }
+
+        ChangeWepon();
     }
 
     /// <summary>
@@ -57,16 +59,7 @@ public class ChangeWeaponMenu : MonoBehaviour
     /// </summary>
     private void NewWeapon()
     {
-        if (_currentWeapon > _weaponMaxVariation)
-        {
-            _currentWeapon = 0;
-        }
-        else if (_currentWeapon < 0)
-        {
-            _currentWeapon = _weaponMaxVariation;
-        }
-
-        for (int i = 0; i < _weaponIcon.Length; i++)
+        for (int i = 1; i < _weaponIcon.Length; i++)
         {
             if(i == 0)
             {
@@ -89,10 +82,29 @@ public class ChangeWeaponMenu : MonoBehaviour
     /// </summary>
     public void ChangeWepon()
     {
+        NewWeapon();
         switch(CurrentWeapon)
         {
             case 0: PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.sword); break;
             case 1: PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.izlar); break;
         }
+    }
+
+    /// <summary>
+    /// Реализация изменеия картинки при выборе оружия
+    /// </summary>
+    private void ChangePicture()
+    {
+        if (_currentWeapon > _weaponMaxVariation)
+        {
+            _currentWeapon = 0;
+        }
+        else if (_currentWeapon < 0)
+        {
+            _currentWeapon = _weaponMaxVariation;
+        }
+
+        _weaponIcon[0].sprite = _weaponSpriteArmory[_currentWeapon];
+        _weaponTitle[0].text = _weaponText[_currentWeapon];
     }
 }
