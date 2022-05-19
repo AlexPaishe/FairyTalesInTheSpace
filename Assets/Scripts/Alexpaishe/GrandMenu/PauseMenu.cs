@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private void Start()
     {
         _pauseIcon = _pauseButton.GetComponent<Image>();
         Pause = false;
@@ -39,13 +39,13 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 1;
             _pauseIcon.sprite = _pauseSprite[0];
-            _canvasSystem.enabled = false;
+            _canvasSystem.NewCanvas(12);
         }
         else
         {
             Time.timeScale = 0;
             _pauseIcon.sprite = _pauseSprite[1];
-            _canvasSystem.enabled = true;
+            _canvasSystem.NewCanvas(0);
         }
     }
 
