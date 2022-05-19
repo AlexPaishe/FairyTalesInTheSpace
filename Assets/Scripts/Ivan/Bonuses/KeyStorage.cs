@@ -3,32 +3,20 @@ using UnityEngine;
 
 public class KeyStorage : MonoBehaviour
 {
-    [SerializeField] GameObject[] _keyPrefabs;
-
-    public List<GameObject> Keys { get; private set; }
+    [SerializeField] KeyImage[] _keysImage;
 
     private void Awake()
     {
-        Keys = new List<GameObject>();
+        HideAllKeys();
     }
 
     public void AddKey(KeyDoorType keyType)
     {
-        Keys.Add(Instantiate(_keyPrefabs[IndexPrefab(keyType)],transform));
-    }
-
-    public void RemoveKey(KeyDoorType keyType)
-    {
-        foreach (GameObject key in Keys)
+        foreach (var key in _keysImage)
         {
-            if(key.TryGetComponent<KeyImage>(out KeyImage keyImage))
+            if (key.KeyType == keyType)
             {
-                if (keyImage.KeyType == keyType)
-                {
-                    Keys.Remove(key);
-                    Destroy(key);
-                    return;
-                }
+                key.gameObject.SetActive(true);
             }
         }
     }
@@ -37,34 +25,22 @@ public class KeyStorage : MonoBehaviour
     {
         bool result = false;
 
-        foreach (GameObject key in Keys)
+        foreach (var key in _keysImage)
         {
-            if (key.TryGetComponent<KeyImage>(out KeyImage keyImage))
+            if (key.KeyType == keyType && key.gameObject.activeSelf == true)
             {
-                if (keyImage.KeyType == keyType)
-                {
-                    result = true;
-                }
+                result = true;
             }
         }
 
         return result;
     }
 
-    private int IndexPrefab(KeyDoorType keyType)
+    private void HideAllKeys()
     {
-        switch (keyType)
+        for (int i = 0; i < _keysImage.Length; i++)
         {
-            case KeyDoorType.Red:
-                return 0;
-            case KeyDoorType.Blue:
-                return 1;
-            case KeyDoorType.Green:
-                return 2;
-            case KeyDoorType.Yellow:
-                return 3;
-                default:
-                return 0;
+            _keysImage[i].gameObject.SetActive(false);
         }
     }
 }
