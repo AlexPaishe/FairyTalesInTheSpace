@@ -15,15 +15,19 @@ public class Izlar : Weapon
     public override float ForceFastAttack => _edit.jerkForce;
 
     private Events _events;
-    private Player _player;
+    private Transform _legs;
     private Rigidbody _playerRB;
     private Coroutine _shoot;
+
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
         _events = FindObjectOfType<Events>();
-        _player = FindObjectOfType<Player>();
-        _playerRB = _player.GetComponent<Rigidbody>();
+        _playerRB = FindObjectOfType<Player>().GetComponent<Rigidbody>();
 
         Transform leftHandPoint = FindObjectOfType<LeftHandPoint>().GetComponent<Transform>();
         _secondIzlar.transform.parent = leftHandPoint;

@@ -1,14 +1,13 @@
-using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageTimer : MonoBehaviour
 {
     [SerializeField] private int _damage;
     [SerializeField] private float _delay;
     [SerializeField] private Player _player;
-    [SerializeField] private TextMeshProUGUI _textMeshPro;
+    [SerializeField] private Text _timerText;
 
     private Coroutine _coroutine;
 
@@ -30,7 +29,7 @@ public class DamageTimer : MonoBehaviour
 
     public void UpdateDisplay()
     {
-        _textMeshPro.text = _player.Health.ToString();
+        _timerText.text = _player.Health.ToString();
     }
 
     private void OnDisable()
