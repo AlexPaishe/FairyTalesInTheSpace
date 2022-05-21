@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7725446020040829834}
   - component: {fileID: 7725446020040829828}
-  - component: {fileID: 5841864101664193169}
   - component: {fileID: 7725446020040829825}
   - component: {fileID: 7725446020040829829}
   - component: {fileID: 7725446020040829831}
@@ -86,25 +85,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!95 &5841864101664193169
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7725446020040829835}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
-  m_Controller: {fileID: 9100000, guid: a4b09b0798151264fbaa482e2915571e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7725446020040829825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +115,7 @@ MonoBehaviour:
   _moveSpeed: 8
   _moveJoystick: {fileID: 0}
   _events: {fileID: 0}
+  _playerAnimation: {fileID: 0}
 --- !u!114 &7725446020040829831
 MonoBehaviour:
   m_ObjectHideFlags: 0

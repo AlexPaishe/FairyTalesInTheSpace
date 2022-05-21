@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class WeaponLoader : MonoBehaviour
 {
-    [SerializeField] Transform _rightHandPoint;
+    [SerializeField] PlayerParts _playerParts;
+    [SerializeField] Events _events;
 
     public Weapon CurrentWeapon { get; private set; }
 
     private void Awake()
     {
         CurrentWeapon = LoadWeapon();
+        CurrentWeapon.Construct(_events, _playerParts);
     }
 
     private Weapon LoadWeapon()
@@ -20,7 +22,7 @@ public class WeaponLoader : MonoBehaviour
 
         string path = GlobalSystemVar.weaponPrefsabPath + PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
 
-        GameObject weaponGO = Instantiate(Resources.Load(path, typeof(GameObject)),_rightHandPoint) as GameObject;
+        GameObject weaponGO = Instantiate(Resources.Load(path, typeof(GameObject)), _playerParts.RightHandPoint) as GameObject;
 
         return weaponGO.GetComponent<Weapon>();
     }

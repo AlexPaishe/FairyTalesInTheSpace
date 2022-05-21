@@ -14,39 +14,39 @@ public class Izlar : Weapon
     public override int DamageFastAttack => _edit.jerkDamage;
     public override float ForceFastAttack => _edit.jerkForce;
 
+    private PlayerAnimation _animation;
     private Events _events;
-    private Transform _legs;
     private Rigidbody _playerRB;
     private Coroutine _shoot;
-
-    private void Awake()
-    {
-        
-    }
+    private Transform _legs;
 
     private void Start()
     {
-        _events = FindObjectOfType<Events>();
-        _playerRB = FindObjectOfType<Player>().GetComponent<Rigidbody>();
-
-        Transform leftHandPoint = FindObjectOfType<LeftHandPoint>().GetComponent<Transform>();
-        _secondIzlar.transform.parent = leftHandPoint;
+        _animation = base.PlayerParts.Father.GetComponent<PlayerAnimation>();
+        _events = base.Events;
+        _playerRB = base.PlayerParts.Rigidbody;
+        _secondIzlar.transform.parent = base.PlayerParts.LeftHandPoint;
         _secondIzlar.transform.localPosition = Vector3.zero;
+        _secondIzlar.transform.localRotation = Quaternion.identity;
+        _legs = base.PlayerParts.Legs;
     }
 
     public override void StartShoot()
     {
+        _animation.StartShoot(true);
         _shoot = StartCoroutine(Shoot());
     }
 
     public override void StopShoot()
     {
+        _animation.StartShoot(false);
         StopCoroutine(_shoot);
     }
 
     public override void FastAttak()
     {
-        _playerRB.AddForce(_playerRB.transform.forward * _edit.jerkForce, ForceMode.Impulse);
+        _animation.Jerk();
+        _playerRB.AddForce(_legs.transform.forward * _edit.jerkForce, ForceMode.Impulse);
         _events.Jerk(true);
 
         StartCoroutine(WaitJerkReady());
@@ -62,9 +62,11 @@ public class Izlar : Weapon
     {
         while (true)
         {
+            _animation.Shoot(true);
             Instantiate(_firstBullet, _leftShootPoint.position, _leftShootPoint.rotation);
             yield return new WaitForSeconds(_edit.shootFrequency);
 
+            _animation.Shoot(false);
             Instantiate(_secondBullet, _rightShootPoint.position, _rightShootPoint.rotation);
             yield return new WaitForSeconds(_edit.changeGunsFrequency);
         }

@@ -4,8 +4,10 @@ using UnityEngine;
 public class Player : MonoBehaviour, IHaveHealth
 {
     [SerializeField] private Events _events;
+    [SerializeField] private PlayerAnimation _animation;
     [SerializeField] private DamageTimer _damageTimer;
     [SerializeField] private int _health;
+    [SerializeField] private PlayerParts _playerParts;
 
     public int Health => _health;
 
@@ -54,7 +56,13 @@ public class Player : MonoBehaviour, IHaveHealth
 
     private void Dead()
     {
-        //Анимация
+        _animation.Dead();
+    }
+
+    public void TestDead()   //Метод для тестовой кнопки
+    {
+        _playerParts.Torso.rotation = _playerParts.Legs.rotation;
+        _animation.Dead();
     }
 
     private void OnDisable()

@@ -22,6 +22,11 @@ public class PlayerRotation : MonoBehaviour
             Vector3 direction = new Vector3(_shootJoystick.Horizontal, 0, _shootJoystick.Vertical);
             _playerTorso.rotation = Quaternion.LookRotation(direction);
         }
+        else
+        {
+            Vector3 direction = new Vector3(_moveJoystick.Horizontal, 0, _moveJoystick.Vertical);
+            _playerTorso.rotation = _playerLegs.rotation;
+        }
 
         if (_moveJoystick.Horizontal != 0 || _moveJoystick.Vertical != 0)
         {

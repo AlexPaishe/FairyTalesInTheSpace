@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
             );
 
         _playerAnimation.SetMoveSpeed(moveAmount);
-        //_animator.SetFloat("vertical", moveAmount, 0.15f, Time.deltaTime);
     }
 
     public void SetPermissionStatus(bool isJerk)
