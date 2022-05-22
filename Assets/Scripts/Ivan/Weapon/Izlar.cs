@@ -20,6 +20,7 @@ public class Izlar : Weapon
     private Rigidbody _playerRB;
     private Coroutine _shoot;
     private Transform _legs;
+    private Transform _torso;
     private WaitForSeconds _shootFrequency;
     private WaitForSeconds _changeGunsFrequency;
     private Queue<GameObject> _bulletsPool;
@@ -33,6 +34,7 @@ public class Izlar : Weapon
         _secondIzlar.transform.localPosition = Vector3.zero;
         _secondIzlar.transform.localRotation = Quaternion.identity;
         _legs = base.PlayerParts.Legs;
+        _torso = base.PlayerParts.Torso;
         _shootFrequency = new WaitForSeconds(_edit.shootFrequency);
         _changeGunsFrequency = new WaitForSeconds(_edit.changeGunsFrequency);
 
@@ -102,7 +104,7 @@ public class Izlar : Weapon
     {
         GameObject bullet = _bulletsPool.Dequeue();
         bullet.transform.position = point.position;
-        bullet.transform.rotation = point.rotation;
+        bullet.transform.rotation = _torso.rotation;
         bullet.SetActive(true);
         _bulletsPool.Enqueue(bullet);
     }

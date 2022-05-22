@@ -23,12 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
 
-        float moveAmount = Mathf.Clamp01(
-            Mathf.Abs(_moveJoystick.Horizontal)
-            + Mathf.Abs(_moveJoystick.Vertical)
-            );
-
-        _playerAnimation.SetMoveSpeed(moveAmount);
+        float moveSpeed = _rigidbody.velocity.normalized.magnitude;
+        _playerAnimation.SetMoveSpeed(moveSpeed);
     }
 
     public void SetPermissionStatus(bool isJerk)
@@ -45,10 +41,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_moveJoystick != null && _moveAllowed == true)
         {
-            _rigidbody.velocity = new Vector3(
-                _moveJoystick.Horizontal * _moveSpeed,
+            Vector3 direction = new Vector3(
+                _moveJoystick.Direction.x,
                 _rigidbody.velocity.y,
-                _moveJoystick.Vertical * _moveSpeed);
+                _moveJoystick.Direction.y);
+
+            _rigidbody.velocity = direction.normalized * _moveSpeed;
         }
     }
 }

@@ -7,29 +7,36 @@ public class Bullet : MonoBehaviour
     [SerializeField] private BulletEdit _edit;
 
     private WaitForSeconds _liveTime;
+    private Vector3 _lastPos;
 
     private void Awake()
     {
         _liveTime = new WaitForSeconds(_edit.liveTime);
+        _lastPos = transform.position;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         transform.Translate(Vector3.forward * _edit.speed * Time.deltaTime);
-    }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.TryGetComponent<IHaveHealth>(out IHaveHealth iHaveHeaith))
+        RaycastHit hit;
+
+        if (Physics.Linecast(_lastPos, transform.position, out hit))
         {
-            iHaveHeaith.Impact(_edit.damage);
-            if(collision.transform.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            if(hit.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
             {
-                rigidbody.AddForce(transform.forward * _edit.force, ForceMode.Impulse);
+                bulletReaction.Reaction(hit.point);
+
+                if (hit.transform.TryGetComponent<IHaveHealth>(out IHaveHealth haveHealth))
+                {
+                    haveHealth.Impact(_edit.damage);
+                }
             }
+            
+            gameObject.SetActive(false);
         }
 
-        gameObject.SetActive(false);
+        _lastPos = transform.position;
     }
 
     private void OnEnable()

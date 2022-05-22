@@ -17,7 +17,7 @@ public class PlayerRotation : MonoBehaviour
 
     void Update()
     {
-        if (_shootJoystick.Horizontal != 0 || _shootJoystick.Vertical != 0)
+        if (_shootJoystick.Direction != Vector2.zero)
         {
             Vector3 direction = new Vector3(_shootJoystick.Horizontal, 0, _shootJoystick.Vertical);
             _playerTorso.rotation = Quaternion.LookRotation(direction);
@@ -28,7 +28,7 @@ public class PlayerRotation : MonoBehaviour
             _playerTorso.rotation = _playerLegs.rotation;
         }
 
-        if (_moveJoystick.Horizontal != 0 || _moveJoystick.Vertical != 0)
+        if (_moveJoystick.Direction != Vector2.zero)
         {
             Vector3 direction = new Vector3(_moveJoystick.Horizontal, 0, _moveJoystick.Vertical);
             _playerLegs.rotation = Quaternion.LookRotation(direction);
