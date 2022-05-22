@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Izlar : Weapon
@@ -7,8 +9,7 @@ public class Izlar : Weapon
     [SerializeField] private Transform _rightShootPoint;
     [SerializeField] private Transform _leftShootPoint;
     [SerializeField] private IzlarEdit _edit;
-    [SerializeField] private GameObject _firstBullet;
-    [SerializeField] private GameObject _secondBullet;
+    [SerializeField] private GameObject _bullet;
 
     public override float TimeReadyFastAttack => _edit.waitJerkTime;
     public override int DamageFastAttack => _edit.jerkDamage;
@@ -19,6 +20,9 @@ public class Izlar : Weapon
     private Rigidbody _playerRB;
     private Coroutine _shoot;
     private Transform _legs;
+    private WaitForSeconds _shootFrequency;
+    private WaitForSeconds _changeGunsFrequency;
+    private Queue<GameObject> _bulletsPool;
 
     private void Start()
     {
@@ -29,6 +33,10 @@ public class Izlar : Weapon
         _secondIzlar.transform.localPosition = Vector3.zero;
         _secondIzlar.transform.localRotation = Quaternion.identity;
         _legs = base.PlayerParts.Legs;
+        _shootFrequency = new WaitForSeconds(_edit.shootFrequency);
+        _changeGunsFrequency = new WaitForSeconds(_edit.changeGunsFrequency);
+
+        _bulletsPool = FillBulletsPull(_edit.bulletReservCount);
     }
 
     public override void StartShoot()
@@ -63,12 +71,39 @@ public class Izlar : Weapon
         while (true)
         {
             _animation.Shoot(true);
-            Instantiate(_firstBullet, _leftShootPoint.position, _leftShootPoint.rotation);
-            yield return new WaitForSeconds(_edit.shootFrequency);
+
+            BulletInstance(_leftShootPoint);
+
+            yield return _shootFrequency;
 
             _animation.Shoot(false);
-            Instantiate(_secondBullet, _rightShootPoint.position, _rightShootPoint.rotation);
-            yield return new WaitForSeconds(_edit.changeGunsFrequency);
+
+            BulletInstance(_rightShootPoint);
+
+            yield return _changeGunsFrequency;
         }
+    }
+
+    private Queue<GameObject> FillBulletsPull(int bulletReservCount)
+    {
+        Queue<GameObject> queue = new Queue<GameObject>();
+
+        GameObject Pool = new GameObject("BulletsPool");
+
+        for (int i = 0; i < bulletReservCount; i++)
+        {
+            queue.Enqueue(Instantiate(_bullet, Pool.transform));
+        }
+
+        return queue;
+    }
+
+    private void BulletInstance(Transform point)
+    {
+        GameObject bullet = _bulletsPool.Dequeue();
+        bullet.transform.position = point.position;
+        bullet.transform.rotation = point.rotation;
+        bullet.SetActive(true);
+        _bulletsPool.Enqueue(bullet);
     }
 }
