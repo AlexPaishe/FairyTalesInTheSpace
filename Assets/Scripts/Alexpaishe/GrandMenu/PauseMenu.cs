@@ -40,12 +40,14 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1;
             _pauseIcon.sprite = _pauseSprite[0];
             _canvasSystem.NewCanvas(12);
+            AudioListener.pause = false;
         }
         else
         {
             Time.timeScale = 0;
             _pauseIcon.sprite = _pauseSprite[1];
             _canvasSystem.NewCanvas(0);
+            AudioListener.pause = true;
         }
     }
 

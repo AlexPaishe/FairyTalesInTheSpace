@@ -7,6 +7,7 @@ public class BlockedDoor : MonoBehaviour
     private Animator _animator;
     private KeyStorage _keyStorage;
     private PopupMessage _message;
+    private DoorSound _sound;
     private bool _isOpen;
 
     private void Start()
@@ -15,6 +16,7 @@ public class BlockedDoor : MonoBehaviour
         _keyStorage = FindObjectOfType<KeyStorage>();
         _message = FindObjectOfType<PopupMessage>();
         _animator = GetComponent<Animator>();
+        _sound = GetComponent<DoorSound>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,6 +41,7 @@ public class BlockedDoor : MonoBehaviour
     private void Open()
     {
         _animator.Play("Open");
+        _sound.Open();
         _isOpen = true;
     }
 
