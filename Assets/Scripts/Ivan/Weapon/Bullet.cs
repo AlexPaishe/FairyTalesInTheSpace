@@ -1,18 +1,16 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private BulletEdit _edit;
 
-    [SerializeField] private float _speed;
-    [SerializeField] private float _liveTime;
-    [SerializeField] private int _damage;
-    [SerializeField] private float _force;
+    private WaitForSeconds _liveTime;
 
-    private void Start()
+    private void Awake()
     {
-        Destroy(gameObject, _edit.liveTime);
+        _liveTime = new WaitForSeconds(_edit.liveTime);
     }
 
     private void FixedUpdate()
@@ -31,7 +29,18 @@ public class Bullet : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(LiveCounter());
+    }
+
+    private IEnumerator LiveCounter()
+    {
+        yield return _liveTime;
+        gameObject.SetActive(false);
     }
 }
 
