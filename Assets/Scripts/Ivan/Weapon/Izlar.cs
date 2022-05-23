@@ -43,7 +43,6 @@ public class Izlar : Weapon
 
     public override void StartShoot()
     {
-        _animation.StartShoot(true);
         _shoot = StartCoroutine(Shoot());
     }
 
@@ -70,6 +69,9 @@ public class Izlar : Weapon
 
     private IEnumerator Shoot()
     {
+        _animation.StartShoot(true);
+        yield return _changeGunsFrequency;
+
         while (true)
         {
             _animation.Shoot(true);
