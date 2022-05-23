@@ -8,6 +8,7 @@ public class Desolve : MonoBehaviour
     [SerializeField] private float _speedDesolve;
     private float _fade = 1.5f;
     private bool _desolve;
+    private Win _win;
 
     public float Fade
     {
@@ -21,6 +22,11 @@ public class Desolve : MonoBehaviour
             _fade = value;
             FadeEnemy();
         }
+    }
+
+    private void Awake()
+    {
+        _win = FindObjectOfType<Win>();
     }
 
     void Update()
@@ -42,6 +48,7 @@ public class Desolve : MonoBehaviour
         }
         if(_fade < 0)
         {
+            _win.EnemyLenght--;
             Destroy(transform.parent.gameObject);
         }
     }
