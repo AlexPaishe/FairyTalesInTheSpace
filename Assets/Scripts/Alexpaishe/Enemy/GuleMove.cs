@@ -5,10 +5,11 @@ using UnityEngine;
 public class GuleMove : Enemy, ITriggerMove
 {
     [SerializeField] private float _speed;
-    //[SerializeField] private Transform _point;
+    [SerializeField] private Transform _point;
     [SerializeField] private Transform _pointRot;
     [SerializeField] private LayerMask _layer;
-    [SerializeField] private float _distance;
+    [SerializeField] private float _maxDistance;
+    [SerializeField] private float _minDistance;
     private Transform _player;
     private Vector3 _target;
     private bool _isIddle = true;
@@ -16,7 +17,7 @@ public class GuleMove : Enemy, ITriggerMove
     {
         Agent.speed = _speed;
         Agent.destination = transform.position;
-        //_point.transform.parent = transform.parent;
+        _point.transform.parent = transform.parent;
         NewTarget();
     }
 
@@ -33,49 +34,42 @@ public class GuleMove : Enemy, ITriggerMove
     private IEnumerator Move()
     {
         yield return new WaitForSeconds(0.1f);
-        if (Death == false && transform.position != _target)
+        if (Death == false && Vector3.Distance(transform.position, _target) > _minDistance)
         {
             Agent.destination = _target;
             StartCoroutine(Move());
         }
-        else if (Death == false && transform.position == _target)
+        else if (Death == false && Vector3.Distance(transform.position, _target) <= _minDistance)
         {
-            Debug.Log("y");
             NewTarget();
             Agent.destination = _target;
             StartCoroutine(Move());
         }
     }
 
+    /// <summary>
+    /// Реализация выбора нового таргета
+    /// </summary>
     private void NewTarget()
     {
         int rand = Random.Range(0, 360);
         _pointRot.Rotate(0, rand, 0);
+        Vector3 pose = _pointRot.position + (_pointRot.forward * _maxDistance);
         Ray ray = new Ray(_pointRot.position, Vector3.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, _distance, _layer))
+        if(Physics.Linecast(_pointRot.position, pose, out hit, _layer))
         {
             Vector3 pos = hit.point;
             pos.y = transform.position.y;
             _target = pos;
-            //_point.position = _target;
-            Debug.Log(hit.point);
-            Debug.Log(_target);
+            _point.position = _target;
         }
         else
         {
-            Vector3 pos = _pointRot.position + (_pointRot.forward * _distance);
+            Vector3 pos = _pointRot.position + (_pointRot.forward * _maxDistance);
             pos.y = transform.position.y;
             _target = pos;
-            //_point.position = _target;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.TryGetComponent<BulletReaction>(out BulletReaction point))
-        {
-            NewTarget();
+            _point.position = _target;
         }
     }
 }
