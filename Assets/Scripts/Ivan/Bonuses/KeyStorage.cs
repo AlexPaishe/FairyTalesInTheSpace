@@ -4,6 +4,7 @@ using UnityEngine;
 public class KeyStorage : MonoBehaviour
 {
     [SerializeField] KeyImage[] _keysImage;
+    [SerializeField] private Sound _sound;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class KeyStorage : MonoBehaviour
             if (key.KeyType == keyType)
             {
                 key.gameObject.SetActive(true);
+                _sound.SoundPlay(0);
             }
         }
     }

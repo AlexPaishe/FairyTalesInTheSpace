@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7398741505719600413}
   - component: {fileID: 3065388144310171886}
   - component: {fileID: 907934450}
-  - component: {fileID: 907934449}
+  - component: {fileID: 1284348483724904863}
   m_Layer: 0
   m_Name: BlockedDoor
   m_TagString: Untagged
@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _keyType: 0
+  _sound: {fileID: 1284348483724904863}
 --- !u!82 &907934450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -178,7 +179,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &907934449
+--- !u!114 &1284348483724904863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,10 +188,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3586650790035280925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e2af6da208358b40bc5f09cfef5cc5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 13ea91a939bbaad4fb6f43d0083e5279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 907934450}
+  _clips:
+  - {fileID: 8300000, guid: 268f3d272804cb742a84a3a5ce2ec61c, type: 3}
+  - {fileID: 8300000, guid: 2a2d03eaffd4ecc4b93f8466c4a7a6e5, type: 3}
 --- !u!1 &3586650790475298000
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3586650791217205812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 2, z: 0}
+  m_LocalPosition: {x: -1, y: 2, z: -0.04}
   m_LocalScale: {x: 2, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 3586650790035280927}

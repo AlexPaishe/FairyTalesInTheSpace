@@ -3,11 +3,11 @@ using UnityEngine;
 public class BlockedDoor : MonoBehaviour
 {
     [SerializeField] private KeyDoorType _keyType;
+    [SerializeField] private Sound _sound;
 
     private Animator _animator;
     private KeyStorage _keyStorage;
     private PopupMessage _message;
-    private DoorSound _sound;
     private bool _isOpen;
 
     private void Start()
@@ -16,7 +16,6 @@ public class BlockedDoor : MonoBehaviour
         _keyStorage = FindObjectOfType<KeyStorage>();
         _message = FindObjectOfType<PopupMessage>();
         _animator = GetComponent<Animator>();
-        _sound = GetComponent<DoorSound>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +32,7 @@ public class BlockedDoor : MonoBehaviour
                 else
                 {
                     _message.DisplayMessage($"У Вас нет {ColourKey(_keyType)} ключа");
+                    _sound.SoundPlay(1);
                 }
             }
         }
@@ -41,7 +41,7 @@ public class BlockedDoor : MonoBehaviour
     private void Open()
     {
         _animator.Play("Open");
-        _sound.Open();
+        _sound.SoundPlay(0);
         _isOpen = true;
     }
 

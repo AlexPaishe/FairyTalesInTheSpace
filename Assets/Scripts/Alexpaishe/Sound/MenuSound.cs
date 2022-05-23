@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MenuSound : MonoBehaviour
 {
-    private SoundSystem _sound;
+    [SerializeField] private AudioSource _music;
+    [SerializeField] private AudioSource _soundClick;
 
     private void Awake()
     {
-        _sound = FindObjectOfType<SoundSystem>();
+        _music.ignoreListenerPause = true;
+        _soundClick.ignoreListenerPause = true;
     }
 
     /// <summary>
@@ -16,6 +18,6 @@ public class MenuSound : MonoBehaviour
     /// </summary>
     public void Click()
     {
-        _sound.Click();
+        _soundClick.Play();
     }
 }

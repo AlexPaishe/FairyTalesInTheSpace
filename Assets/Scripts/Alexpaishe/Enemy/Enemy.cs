@@ -1,35 +1,51 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IHaveHealth
 {
-    [SerializeField] private int _health;
-    [SerializeField] private HPBar _hPBar;
+    public int Health;
 
-    private int _maxHealth;
+    public int Damage;
 
-    private void Awake()
-    {
-        _maxHealth = _health;
-    }
+    public bool Death = false;
 
+    public Desolve Desolver;
+
+    public CapsuleCollider Collider;
+
+    public Rigidbody Rb;
+
+    public NavMeshAgent Agent;
+
+
+    /// <summary>
+    /// Реализация получения урона
+    /// </summary>
+    /// <param name="damage"></param>
     public void Impact(int damage)
     {
-        if (damage < _health)
+        if (damage < Health)
         {
-            _health -= damage;
-            _hPBar.UpdateHPBar((float)_health / _maxHealth);
+            Health -= damage;
             //включить анимацию получения урона
         }
-        else
+        else if (Death == false && damage >= Health)
         {
             Dead();
         }
     }
 
+    /// <summary>
+    /// Реализация смерти и исчезновения
+    /// </summary>
     private void Dead()
     {
         //анимация смерти
 
-        Destroy(gameObject);
+        Death = true;
+        Desolver.DesolveEnemy();
+        Collider.isTrigger = true;
+        Rb.isKinematic = true;
+        Agent.destination = transform.position;
     }
 }

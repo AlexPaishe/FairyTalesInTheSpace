@@ -8,12 +8,9 @@ public class KeyDoor : MonoBehaviour
 
     private KeyStorage _keyStorage;
 
-    private KeySound _keySound;
-
     private void Start()
     {
         _keyStorage = FindObjectOfType<KeyStorage>();
-        _keySound = FindObjectOfType<KeySound>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,7 +18,6 @@ public class KeyDoor : MonoBehaviour
         if (other.transform.GetComponent<Player>())
         {
             _keyStorage.AddKey(_keyType);
-            _keySound.SoundKey();
             Destroy(gameObject);
         }
     }
