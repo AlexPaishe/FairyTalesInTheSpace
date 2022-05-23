@@ -17,7 +17,6 @@ public class Enemy : MonoBehaviour, IHaveHealth
 
     public NavMeshAgent Agent;
 
-
     /// <summary>
     /// Реализация получения урона
     /// </summary>

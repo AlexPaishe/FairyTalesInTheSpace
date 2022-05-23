@@ -8718,7 +8718,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d9a2c830c061e6e409d2ee605c2b4dc3, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -9783,7 +9783,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d9a2c830c061e6e409d2ee605c2b4dc3, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -12095,6 +12095,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1723652878}
+        m_TargetAssemblyTypeName: InfoSearch, Assembly-CSharp
+        m_MethodName: LevelSearchInfo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16213,6 +16225,7 @@ GameObject:
   - component: {fileID: 1723652875}
   - component: {fileID: 1723652876}
   - component: {fileID: 1723652877}
+  - component: {fileID: 1723652878}
   m_Layer: 0
   m_Name: CanvasMenu
   m_TagString: Untagged
@@ -16319,6 +16332,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _music: {fileID: 612285974}
   _soundClick: {fileID: 488652027}
+--- !u!114 &1723652878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723652873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a29d48cf9838f4480007a4d2c7ec27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recordText:
+  - {fileID: 951255704}
+  - {fileID: 1058498093}
+  _rangImage:
+  - {fileID: 925446986}
+  - {fileID: 2075444755}
+  _rangSprite:
+  - {fileID: 21300000, guid: e475c3779f0c2ff43bc983a8cde74be1, type: 3}
+  - {fileID: 21300000, guid: e475c3779f0c2ff43bc983a8cde74be1, type: 3}
+  - {fileID: 21300000, guid: e475c3779f0c2ff43bc983a8cde74be1, type: 3}
+  - {fileID: 21300000, guid: e475c3779f0c2ff43bc983a8cde74be1, type: 3}
+  - {fileID: 21300000, guid: e475c3779f0c2ff43bc983a8cde74be1, type: 3}
+  _maxLevel: 1
 --- !u!1 &1740975443
 GameObject:
   m_ObjectHideFlags: 0
