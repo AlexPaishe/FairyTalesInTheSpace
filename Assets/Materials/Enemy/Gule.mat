@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 62333996e721b6f479bb6b01c3382075, type: 3}
+        m_Texture: {fileID: 2800000, guid: 18dffb54100305a419f56522749c91cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -97,7 +97,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Edge: 0.1
+    - Edge: 0.2
     - Noise: 10
     - _AOStrenght: 1
     - _AlphaClip: 0
@@ -110,6 +110,8 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Electric: 0
+    - _ElectricNoise: 15
     - _EnvironmentReflections: 1
     - _Fade: 1.5
     - _GlossMapScale: 1
@@ -135,8 +137,11 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DesolveColor: {r: 0, g: 8, b: 2.029726, a: 0}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DesolveColor: {r: 0, g: 349982.56, b: 0, a: 1}
+    - _ElectricColor: {r: 0, g: 307838.16, b: 1399930.2, a: 0}
+    - _ElectricSpeed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _EmissionColor: {r: 24543.875, g: 0, b: 21973.836, a: 1}
+    - _NoiseSpeed: {r: 0.1, g: -0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &425173428914351272

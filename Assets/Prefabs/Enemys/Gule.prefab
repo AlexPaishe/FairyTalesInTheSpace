@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2950027948596689904}
   - component: {fileID: 2950027948596689911}
   - component: {fileID: 2950027948596689898}
+  - component: {fileID: 3484889}
   m_Layer: 4
   m_Name: Gule
   m_TagString: Untagged
@@ -133,6 +134,21 @@ MonoBehaviour:
     m_Bits: 1
   _maxDistance: 10
   _minDistance: 1
+--- !u!114 &3484889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950027948596689909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842e1fce4b60d4e41a2cc2d7996909e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mesh:
+  - {fileID: 5878911608204252968}
+  _speed: 1.2
 --- !u!1 &7347212354409931552
 GameObject:
   m_ObjectHideFlags: 0
