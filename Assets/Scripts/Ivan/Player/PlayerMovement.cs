@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        _events.OnJerkEvent += SetPermissionStatus;
+        _events.OnJerkEvent += BanMovement;
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -27,14 +27,19 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimation.SetMoveSpeed(moveSpeed);
     }
 
-    public void SetPermissionStatus(bool isJerk)
+    public void BanMovement(bool isBun)
     {
-        _moveAllowed = !isJerk;
+        _moveAllowed = !isBun;
+    }
+
+    public void RestMovement()
+    {
+        _rigidbody.velocity = Vector3.zero;
     }
 
     private void OnDisable()
     {
-        _events.OnJerkEvent -= SetPermissionStatus;
+        _events.OnJerkEvent -= BanMovement;
     }
 
     private void Movement()
