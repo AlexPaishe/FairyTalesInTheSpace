@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -291,6 +291,11 @@ Transform:
   m_Father: {fileID: 838287994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &326814799 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 294454185, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+  m_PrefabInstance: {fileID: 49795046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &339778719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1488,7 @@ Transform:
   - {fileID: 6693001237743609031}
   - {fileID: 7625264059699422479}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &1188807026
 LightingSettings:
@@ -1880,7 +1885,7 @@ Transform:
   - {fileID: 1805342035}
   - {fileID: 1326099099}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1447273769
 PrefabInstance:
@@ -2251,7 +2256,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3776
+  m_Name: pb_Mesh-2582362
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2765,6 +2770,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 339778720}
     m_Modifications:
     - target: {fileID: 1015240183413425397, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: _dash
+      value: 
+      objectReference: {fileID: 326814799}
+    - target: {fileID: 1015240183413425397, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
       propertyPath: _weaponLoader
       value: 
       objectReference: {fileID: 1943600551}
@@ -2962,7 +2971,7 @@ PrefabInstance:
     - target: {fileID: 2173501451236854957, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
       propertyPath: _effect
       value: 
-      objectReference: {fileID: 5394705801391734627, guid: 7471a0d4444dba048811939864daa26b, type: 3}
+      objectReference: {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
     - target: {fileID: 7542036525867963216, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3051,7 +3060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5759511286423493512, guid: e528ca07d1e82a240863a0429816fb59, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5759511286423493512, guid: e528ca07d1e82a240863a0429816fb59, type: 3}
       propertyPath: m_LocalPosition.x

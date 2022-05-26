@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IHaveHealth
     [SerializeField] private DamageTimer _damageTimer;
     [SerializeField] private int _health;
     [SerializeField] private PlayerParts _playerParts;
+    [SerializeField] private Material _kosMat;
 
     public int Health => _health;
 
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour, IHaveHealth
     {
         _events.OnJerkEvent += OnInvulnerability;
         _maxHealth = _health;
+        _kosMat.SetFloat("_EmissionStrenght", 30);
     }
 
     public void Impact(int damage)
@@ -45,6 +47,14 @@ public class Player : MonoBehaviour, IHaveHealth
         if (_health > _maxHealth)                  // Условие сработает, если при получении бонуса времени HP стало больше максимального
         {
             _health = _maxHealth;
+        }
+        if(_health > 0)
+        {
+            _kosMat.SetFloat("_EmissionStrenght", 30);
+        }
+        else
+        {
+            _kosMat.SetFloat("_EmissionStrenght", 0);
         }
         _damageTimer.UpdateDisplay();
     }

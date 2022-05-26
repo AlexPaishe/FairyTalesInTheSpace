@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class FillingReadiAttak : MonoBehaviour
 {
     [SerializeField] private WeaponLoader _weaponLoader;
+    [SerializeField] private Material _kosMat;
 
     private Image _fillingImage;
     private float _timeReadyFastAttack;
@@ -17,6 +18,7 @@ public class FillingReadiAttak : MonoBehaviour
     {
         _fillingImage = GetComponent<Image>();
         _timeReadyFastAttack = _weaponLoader.CurrentWeapon.TimeReadyFastAttack;
+        _kosMat.SetFloat("_Edge", 0);
     }
 
     void Update()
@@ -24,11 +26,14 @@ public class FillingReadiAttak : MonoBehaviour
         if(_isReady == false)
         {
             _timer += Time.deltaTime;
+
             _fillingImage.fillAmount = _timer / _timeReadyFastAttack;
+            _kosMat.SetFloat("_Edge", _timer / _timeReadyFastAttack);
             if(_timer >= _timeReadyFastAttack)
             {
                 _isReady = true;
                 _timer = 0;
+                _kosMat.SetFloat("_Edge", _timer);
             }
         }
     }
