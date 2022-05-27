@@ -11,9 +11,24 @@ public class PlayerAnimation : MonoBehaviour
         _torsoAnim.SetFloat("MoveSpeed", _speed);
     }
 
+    public void WeaponChange(int number)
+    {
+        _torsoAnim.SetInteger("WeaponNumber", number);
+    }
+
     public void StartShoot(bool isShoot)
     {
         _torsoAnim.SetBool("IsShooting", isShoot);
+    }
+
+    public void SwordCircleAttack()
+    {
+        _torsoAnim.SetTrigger("SwordCircleAttack");
+    }
+
+    public void SwordChargeJerk()
+    {
+        _torsoAnim.SetTrigger("SwordChargJerk");
     }
 
     public void Shoot (bool isLeftShoot)

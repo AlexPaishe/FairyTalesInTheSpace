@@ -39,6 +39,7 @@ public class Izlar : Weapon
         _changeGunsFrequency = new WaitForSeconds(_edit.changeGunsFrequency);
 
         _bulletsPool = FillBulletsPull(_edit.bulletReservCount);
+        _animation.WeaponChange(0);
     }
 
     public override void StartShoot()
