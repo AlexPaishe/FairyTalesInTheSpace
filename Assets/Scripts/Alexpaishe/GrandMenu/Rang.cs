@@ -49,6 +49,7 @@ public class Rang : MonoBehaviour
                     PlayerPrefs.SetInt($"Record{SceneManager.GetActiveScene().buildIndex}", _timer);
                     PlayerPrefs.SetInt($"Rang{SceneManager.GetActiveScene().buildIndex}", i);
                 }
+                break;
             }
         }
         _info.Init();

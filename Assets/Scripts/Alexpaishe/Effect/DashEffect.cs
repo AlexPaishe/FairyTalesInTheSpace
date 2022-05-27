@@ -19,7 +19,6 @@ public class DashEffect : MonoBehaviour
         float x = Mathf.Abs(_rb.velocity.x);
         float z = Mathf.Abs(_rb.velocity.z);
         float xz = x + z;
-        Debug.Log(xz);
         if (xz < 10)
         {
             var emission = _dash.emission;
