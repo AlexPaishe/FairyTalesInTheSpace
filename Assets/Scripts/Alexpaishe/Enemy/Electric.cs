@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Electric : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer[] _mesh;
+    //[SerializeField] private MeshRenderer[] _mesh;
+    [SerializeField] private SkinnedMeshRenderer[] _mesh;
     [SerializeField] private float _speed;
     private float _electricEffect;
     public float ElectricEffect

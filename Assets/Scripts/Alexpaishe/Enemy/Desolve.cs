@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Desolve : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer[] _mesh;
+    //[SerializeField] private MeshRenderer[] _mesh;
+    [SerializeField] private SkinnedMeshRenderer[] _mesh;
     [SerializeField] private float _speedDesolve;
     private float _fade = 1.5f;
     private bool _desolve;
@@ -27,6 +28,7 @@ public class Desolve : MonoBehaviour
     private void Awake()
     {
         _win = FindObjectOfType<Win>();
+
     }
 
     void Update()
