@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Desolve : MonoBehaviour
 {
-    //[SerializeField] private MeshRenderer[] _mesh;
     [SerializeField] private Renderer[] _mesh;
     [SerializeField] private float _speedDesolve;
     private float _fade = 1.5f;

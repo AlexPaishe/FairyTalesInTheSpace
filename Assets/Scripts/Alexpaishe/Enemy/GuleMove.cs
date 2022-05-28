@@ -10,6 +10,7 @@ public class GuleMove : Enemy, ITriggerMove
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _maxDistance;
     [SerializeField] private float _minDistance;
+    [SerializeField] private Animator _anima;
     private Transform _player;
     private Vector3 _target;
     private bool _isIddle = true;
@@ -27,6 +28,7 @@ public class GuleMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
+            _anima.SetFloat("Speed", 1);
             StartCoroutine(Move());
         }
     }

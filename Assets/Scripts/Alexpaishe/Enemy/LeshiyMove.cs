@@ -6,8 +6,12 @@ using UnityEngine.AI;
 public class LeshiyMove : Enemy, ITriggerMove
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _attackDistance;
+    [SerializeField] private LeshiyAttack _leshiy;
     private Transform _player;
     private bool _isIddle = true;
+    public bool IsAttack { get; set; }
+
     void Start()
     {
         Agent.speed = _speed;
@@ -20,16 +24,22 @@ public class LeshiyMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
+            Anima.SetFloat("Speed", 1);
             StartCoroutine(Move());
         }
     }
 
     private IEnumerator Move()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.03f);
         if(Death == false)
         {
             Agent.destination = _player.position;
+            if(Vector3.Distance(_player.position, transform.position) < _attackDistance && IsAttack == false)
+            {
+                IsAttack = true;
+                _leshiy.Attack();
+            }
             StartCoroutine(Move());
         }
     }

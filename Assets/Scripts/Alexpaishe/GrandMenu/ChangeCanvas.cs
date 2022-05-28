@@ -101,6 +101,11 @@ public class ChangeCanvas : MonoBehaviour
         NewCanvas(newCanvas);
     }
 
+    public void Lose()
+    {
+        _canvas[12].SetActive(false);
+    }
+
     private void OnEnable()
     {
         NewCanvas(0);

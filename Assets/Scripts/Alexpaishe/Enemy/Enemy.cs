@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour, IHaveHealth
 
     public NavMeshAgent Agent;
 
+    public Animator Anima;
+
     /// <summary>
     /// Реализация получения урона
     /// </summary>
@@ -46,5 +48,6 @@ public class Enemy : MonoBehaviour, IHaveHealth
         Collider.isTrigger = true;
         Rb.isKinematic = true;
         Agent.destination = transform.position;
+        Anima.SetTrigger("Dead");
     }
 }

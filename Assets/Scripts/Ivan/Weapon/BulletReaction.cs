@@ -16,6 +16,7 @@ public class BulletReaction : MonoBehaviour
 
     public void Reaction(Vector3 point)
     {
+        _audioSource.Stop();
         _audioSource.Play();
         EffectPlay(point);
     }

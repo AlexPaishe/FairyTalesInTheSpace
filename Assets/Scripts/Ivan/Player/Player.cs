@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IHaveHealth
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour, IHaveHealth
     {
         if (_isInvulnerability == false)
         {
+            StartCoroutine(Damage());
             if (damage < _health)
             {
                 TakeDamage(damage);
@@ -78,5 +81,12 @@ public class Player : MonoBehaviour, IHaveHealth
     private void OnDisable()
     {
         _events.OnJerkEvent -= OnInvulnerability;
+    }
+
+    private IEnumerator Damage()
+    {
+        _kosMat.SetFloat("_Electric", 1);
+        yield return new WaitForSeconds(0.5f);
+        _kosMat.SetFloat("_Electric", 0);
     }
 }
