@@ -8,6 +8,7 @@ public class Win : MonoBehaviour
     [SerializeField] private Rang _rang;
     private Player _player;
     private float _enemyLenght;
+    private bool _lose = false;
     public float EnemyLenght
     {
         get
@@ -20,9 +21,12 @@ public class Win : MonoBehaviour
             _enemyLenght = value;
             if(_enemyLenght == 0)
             {
-                _changeCanvas.NewCanvas(11);
-                _rang.Timer = _player.Health;
-                Time.timeScale = 0;
+                if (_lose == false)
+                {
+                    _changeCanvas.NewCanvas(11);
+                    _rang.Timer = _player.Health;
+                    Time.timeScale = 0;
+                }
             }
         }
     }
@@ -32,5 +36,10 @@ public class Win : MonoBehaviour
         Enemy[] enemies = FindObjectsOfType<Enemy>();
         EnemyLenght = enemies.Length;
         _player = FindObjectOfType<Player>();
+    }
+
+    public void Lose()
+    {
+        _lose = true;
     }
 }

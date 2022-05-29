@@ -8,12 +8,14 @@ public class DeadPlayer : MonoBehaviour
     [SerializeField] private CapsuleCollider _col;
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private PauseMenu _pause;
+    [SerializeField] private Win _win;
 
     public void DeadBegin()
     {
         _canvas.Lose();
         _rb.isKinematic = true;
         _col.enabled = false;
+        _win.Lose();
     }
 
     public void DeadEnd()

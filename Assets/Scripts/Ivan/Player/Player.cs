@@ -22,6 +22,7 @@ public class Player : MonoBehaviour, IHaveHealth
         _events.OnJerkEvent += OnInvulnerability;
         _maxHealth = _health;
         _kosMat.SetFloat("_EmissionStrenght", 30);
+        _kosMat.SetFloat("_Electric", 0);
     }
 
     public void Impact(int damage)
