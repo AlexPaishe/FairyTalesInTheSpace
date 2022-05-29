@@ -18,8 +18,13 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         _rigidbody.velocity = Vector3.zero;
-        _rigidbody.AddForce(transform.forward * _edit.speed, ForceMode.Impulse);
+        //_rigidbody.AddForce(transform.forward * _edit.speed, ForceMode.Impulse);
         StartCoroutine(LiveCounter());
+    }
+
+    private void FixedUpdate()
+    {
+        _rigidbody.AddForce(transform.forward * _edit.speed, ForceMode.Force);
     }
 
     private void OnCollisionEnter(Collision collision)

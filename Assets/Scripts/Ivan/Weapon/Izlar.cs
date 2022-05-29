@@ -24,6 +24,10 @@ public class Izlar : Weapon
     private WaitForSeconds _shootFrequency;
     private WaitForSeconds _changeGunsFrequency;
     private Queue<GameObject> _bulletsPool;
+    private GameObject[] _playerGO;
+    private Collider[] _playerColliders;
+    private int _layerJerkValue;
+    private int _layerDefaultValue;
 
     private void Start()
     {
@@ -37,6 +41,10 @@ public class Izlar : Weapon
         _torso = base.PlayerParts.Torso;
         _shootFrequency = new WaitForSeconds(_edit.shootFrequency);
         _changeGunsFrequency = new WaitForSeconds(_edit.changeGunsFrequency);
+        _playerColliders = base.PlayerParts.Father.transform.GetComponentsInChildren<Collider>();
+        _playerGO = FillGO(_playerColliders);
+        _layerJerkValue = LayerMask.NameToLayer("BulletEnemy");
+        _layerDefaultValue = LayerMask.NameToLayer("Player");
 
         _bulletsPool = FillBulletsPull(_edit.bulletReservCount);
         _animation.WeaponChange(0);
@@ -55,6 +63,7 @@ public class Izlar : Weapon
 
     public override void FastAttak()
     {
+        ChangeLayer(_playerGO, _layerJerkValue);
         _animation.Jerk();
         _playerRB.AddForce(_legs.transform.forward * _edit.jerkForce, ForceMode.Impulse);
         _events.Jerk(true);
@@ -66,6 +75,7 @@ public class Izlar : Weapon
     {
         yield return new WaitForSeconds(0.1f);
         _events.Jerk(false);                                //Перенести вызов метода в конец анимации рывка
+        ChangeLayer(_playerGO, _layerDefaultValue);
     }
 
     private IEnumerator Shoot()
@@ -110,5 +120,23 @@ public class Izlar : Weapon
         bullet.transform.rotation = _torso.rotation;
         bullet.SetActive(true);
         _bulletsPool.Enqueue(bullet);
+    }
+
+    private GameObject[] FillGO(Collider[] colliders)
+    {
+        GameObject[] gameObjects = new GameObject[colliders.Length];
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            gameObjects[i] = colliders[i].gameObject;
+        }
+        return gameObjects;
+    }
+
+    private void ChangeLayer(GameObject[] gameObjects, int layer)
+    {
+        foreach (GameObject gameObject in gameObjects)
+        {
+            gameObject.layer = layer;
+        }
     }
 }
