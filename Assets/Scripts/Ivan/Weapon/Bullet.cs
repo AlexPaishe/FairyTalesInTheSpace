@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         _rigidbody.velocity = Vector3.zero;
-        //_rigidbody.AddForce(transform.forward * _edit.speed, ForceMode.Impulse);
         StartCoroutine(LiveCounter());
     }
 
@@ -31,7 +30,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
         {
-            bulletReaction.Reaction(collision.contacts[0].point);
+            bulletReaction.Reaction(_edit.bulletType, collision.contacts[0].point);
 
             if (collision.transform.TryGetComponent<IHaveHealth>(out IHaveHealth haveHealth))
             {
