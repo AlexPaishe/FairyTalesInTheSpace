@@ -60,4 +60,16 @@ public class BlockedDoor : MonoBehaviour
                 default: return "";
         }
     }
+
+    public int ColorDoor()
+    {
+        int door = 0;
+        switch(_keyType)
+        {
+            case KeyDoorType.Red: door = 0;break;
+            case KeyDoorType.Blue: door = 1; break;
+            case KeyDoorType.Yellow: door = 2; break;
+        }
+        return door;
+    }
 }
