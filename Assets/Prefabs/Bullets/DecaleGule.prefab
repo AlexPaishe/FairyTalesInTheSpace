@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7275574335330908048}
   - component: {fileID: 7275574335330908049}
   - component: {fileID: 4469972495836822410}
-  m_Layer: 0
-  m_Name: DecaleIzlarBullet 1
+  m_Layer: 8
+  m_Name: DecaleGule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7275574335330908050}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1

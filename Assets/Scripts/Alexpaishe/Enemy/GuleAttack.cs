@@ -25,7 +25,9 @@ public class GuleAttack : MonoBehaviour
 
     public void Attack()
     {
-        GameObject bullet = Instantiate(_bullet, _point.position, Quaternion.identity);
-        //bullet.transform.rotation = transform.rotation;
+        Vector3 pos = _player.position;
+        pos.y = _point.position.y;
+        _point.LookAt(pos);
+        GameObject bullet = Instantiate(_bullet, _point.position, _point.rotation);
     }
 }
