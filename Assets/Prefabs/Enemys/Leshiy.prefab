@@ -1682,7 +1682,7 @@ NavMeshAgent:
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 2000
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1703,7 +1703,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1704958758997075831}
-  _effect: {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+  _audioClips: []
+  _effectsPlayerBullet: []
+  _effectsGuleBullet: []
   _effectReservcount: 5
 --- !u!114 &6534488360203157411
 MonoBehaviour:
@@ -1727,6 +1729,7 @@ MonoBehaviour:
   Anima: {fileID: 5099112016974902192}
   _speed: 8
   _attackDistance: 2.5
+  _stopDistance: 2.3
   _leshiy: {fileID: 1974919854552740725}
 --- !u!114 &4441050558078550611
 MonoBehaviour:

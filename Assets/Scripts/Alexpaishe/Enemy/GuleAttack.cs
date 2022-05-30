@@ -20,7 +20,9 @@ public class GuleAttack : MonoBehaviour
     public void BeginAttack()
     {
         _player = _gule.PlayerAttack();
-        _guleAttack.LookAt(_player);
+        Vector3 pos = _player.position;
+        pos.y = _guleAttack.position.y;
+        _guleAttack.LookAt(pos);
     }
 
     public void Attack()
@@ -28,6 +30,6 @@ public class GuleAttack : MonoBehaviour
         Vector3 pos = _player.position;
         pos.y = _point.position.y;
         _point.LookAt(pos);
-        GameObject bullet = Instantiate(_bullet, _point.position, _point.rotation);
+        Instantiate(_bullet, _point.position, _point.rotation);
     }
 }

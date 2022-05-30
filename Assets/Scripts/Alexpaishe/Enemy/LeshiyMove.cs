@@ -7,6 +7,7 @@ public class LeshiyMove : Enemy, ITriggerMove
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _attackDistance;
+    [SerializeField] private float _stopDistance;
     [SerializeField] private LeshiyAttack _leshiy;
     private Transform _player;
     private bool _isIddle = true;
@@ -39,6 +40,14 @@ public class LeshiyMove : Enemy, ITriggerMove
             {
                 IsAttack = true;
                 _leshiy.Attack();
+            }
+            if(Vector3.Distance(_player.position, transform.position) < _stopDistance)
+            {
+                Anima.SetFloat("Speed", 0);
+            }
+            else
+            {
+                Anima.SetFloat("Speed", 1);
             }
             StartCoroutine(Move());
         }
