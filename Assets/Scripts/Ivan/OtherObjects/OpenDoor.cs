@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
+    [SerializeField] private AudioSource _source;
+
     private Animator _animator;
+    private bool _isOpen;
 
     private void Start()
     {
@@ -11,14 +14,19 @@ public class OpenDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.GetComponent<Player>())
+        if(_isOpen == false)
         {
-            Open();
+            if (other.transform.GetComponent<Player>())
+            {
+                Open();
+            }
         }
     }
 
     private void Open()
     {
         _animator.Play("Open");
+        _source.Play();
+        _isOpen = true;
     }
 }

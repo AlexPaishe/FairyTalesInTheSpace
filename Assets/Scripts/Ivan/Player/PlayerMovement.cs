@@ -21,7 +21,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
+        Vector3 direction;
+
+        if(_moveJoystick.Direction != Vector2.zero)
+        {
+            direction = DirectionMoveJoystick();
+        }
+        else
+        {
+            direction = DirectionWASD();
+        }
+
+        _rigidbody.velocity = direction.normalized * _moveSpeed;
 
         float moveSpeed = _rigidbody.velocity.normalized.magnitude;
         _playerAnimation.SetMoveSpeed(moveSpeed);
@@ -42,16 +53,28 @@ public class PlayerMovement : MonoBehaviour
         _events.OnJerkEvent -= BanMovement;
     }
 
-    private void Movement()
+    private Vector3 DirectionMoveJoystick()
     {
+        Vector3 direction;
         if (_moveJoystick != null && _moveAllowed == true)
         {
-            Vector3 direction = new Vector3(
+            direction = new Vector3(
                 _moveJoystick.Direction.x,
                 _rigidbody.velocity.y,
                 _moveJoystick.Direction.y);
-
-            _rigidbody.velocity = direction.normalized * _moveSpeed;
         }
+        else
+        {
+            direction = Vector3.zero;
+        }
+        return direction;
+    }
+
+    private Vector3 DirectionWASD()
+    {
+        return new Vector3(
+            Input.GetAxis("Horizontal"),
+            _rigidbody.velocity.y,
+            Input.GetAxis("Vertical"));
     }
 }

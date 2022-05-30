@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &6755890650690849798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350440905101644567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68234, y: 3.1225452, z: 0.82673097}
+  m_Center: {x: -0.0144390315, y: 1.5233233, z: 0.00000011920929}
 --- !u!1 &414840266395600282
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +23,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5728426657606787715}
   - component: {fileID: 7297923305555517090}
-  m_Layer: 0
+  - component: {fileID: 7959046402732190920}
+  m_Layer: 11
   m_Name: DoorsParts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,8 +61,24 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42243695, y: 2.9637156, z: 7.2810016}
-  m_Center: {x: 0.00000011920929, y: 0.04331714, z: -1.4078109}
+  m_Size: {x: 0.42243695, y: 2.6218762, z: 7.2810016}
+  m_Center: {x: 0.00000011920929, y: -0.12760252, z: -1.4078109}
+--- !u!208 &7959046402732190920
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414840266395600282}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.2112185, y: 1.310938, z: 3.640501}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.0000001192093, y: -0.1276025, z: -1.407811}
+  m_TimeToStationary: 0.5
 --- !u!1 &6045960724871588112
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,19 +312,6 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7357916914345010952}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.68234, y: 3.1225452, z: 0.82673097}
-  m_Center: {x: -0.0144390315, y: 1.5233233, z: 0.00000011920929}
---- !u!65 &6755890650690849798
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350440905101644567}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
