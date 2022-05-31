@@ -10,6 +10,7 @@ public class InfoSearch : MonoBehaviour
     [SerializeField] private Image[] _rangImage;
     [SerializeField] private Sprite[] _rangSprite;
     [SerializeField] private int _maxLevel;
+    [SerializeField] private SoundVolumeSystem _sound;
     private int[] _rang;
     private int[] _record;
     private void Awake()
@@ -26,6 +27,7 @@ public class InfoSearch : MonoBehaviour
                 _rang[i] = PlayerPrefs.GetInt($"Rang{i + 1}");
                 PlayerPrefs.SetInt($"Record{i + 1}", -1);
                 _record[i] = PlayerPrefs.GetInt($"Record{i + 1}");
+                _sound.FirstSound();
             }
         }
         else
@@ -45,12 +47,13 @@ public class InfoSearch : MonoBehaviour
             if(_record[var] > -1)
             {
                 _recordText[i].text = _record[var].ToString();
+                _rangImage[i].sprite = _rangSprite[_rang[var]];
             }
             else
             {
                 _recordText[i].text = "00:00";
+                _rangImage[i].sprite = _rangSprite[0];
             }
-            _rangImage[i].sprite = _rangSprite[_rang[var]];
         }
     }
 

@@ -6,7 +6,6 @@ public class DashEffect : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _dash;
     [SerializeField] private float _maxRateDistance;
-    [SerializeField] private Rigidbody _rb;
 
     public void DashOn()
     {
@@ -14,15 +13,9 @@ public class DashEffect : MonoBehaviour
         emission.rateOverDistance = _maxRateDistance;
     }
 
-    private void Update()
+    public void DashOff()
     {
-        float x = Mathf.Abs(_rb.velocity.x);
-        float z = Mathf.Abs(_rb.velocity.z);
-        float xz = x + z;
-        if (xz < 10)
-        {
-            var emission = _dash.emission;
-            emission.rateOverDistance = 0;
-        }
+        var emission = _dash.emission;
+        emission.rateOverDistance = 0;
     }
 }

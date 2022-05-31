@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f97ba079d1869646a11a38dbeefcf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 3
   Damage: 0
   Death: 0
   Desolver: {fileID: 6487982298442526851}
@@ -541,7 +541,8 @@ MonoBehaviour:
     m_Bits: 2049
   _maxDistance: 10
   _minDistance: 1
-  _timeAttack: 4
+  _minTimeAttack: 1
+  _maxTimeAttack: 3
 --- !u!114 &4611540003016731886
 MonoBehaviour:
   m_ObjectHideFlags: 0

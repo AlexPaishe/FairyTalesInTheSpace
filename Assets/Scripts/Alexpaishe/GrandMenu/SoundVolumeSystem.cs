@@ -10,23 +10,21 @@ public class SoundVolumeSystem : MonoBehaviour
     [SerializeField] private Slider[] _sliders;
     [SerializeField] private string[] _nameSliders;
     [SerializeField] private int _minValueVolume;
+    [SerializeField] private AudioSource _music;
     private int _sliderVariation;
-
-    private void Awake()
-    {
-        for (int i = 0; i < _sliders.Length; i++)
-        {
-            _sliders[i].minValue = _minValueVolume;
-            _sliders[i].value = PlayerPrefs.GetFloat(_nameSliders[i]);      
-        }
-    }
 
     void Start()
     {
         for (int i = 0; i < _sliders.Length; i++)
         {
+            _sliders[i].minValue = _minValueVolume;
+            _sliders[i].value = PlayerPrefs.GetFloat(_nameSliders[i]);
+        }
+        for (int i = 0; i < _sliders.Length; i++)
+        {
             _mixer[i].audioMixer.SetFloat(_nameSliders[i], PlayerPrefs.GetFloat(_nameSliders[i]));
         }
+        _music.Play();
     }
 
     /// <summary>
@@ -46,5 +44,16 @@ public class SoundVolumeSystem : MonoBehaviour
     public void SliderVariation(int var)
     {
         _sliderVariation = var;
+    }
+
+    /// <summary>
+    /// Реализация записи первого звука
+    /// </summary>
+    public void FirstSound()
+    {
+        for(int i = 0; i < _nameSliders.Length; i++)
+        {
+            PlayerPrefs.SetFloat(_nameSliders[i], _minValueVolume/2);
+        }
     }
 }

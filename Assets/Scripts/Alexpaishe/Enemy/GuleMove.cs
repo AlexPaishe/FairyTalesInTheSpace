@@ -10,7 +10,8 @@ public class GuleMove : Enemy, ITriggerMove
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _maxDistance;
     [SerializeField] private float _minDistance;
-    [SerializeField] private float _timeAttack;
+    [SerializeField] private float _minTimeAttack;
+    [SerializeField] private float _maxTimeAttack;
     private Transform _player;
     private Vector3 _target;
     private bool _isIddle = true;
@@ -78,7 +79,8 @@ public class GuleMove : Enemy, ITriggerMove
 
     public IEnumerator StartAttack()
     {
-        yield return new WaitForSeconds(_timeAttack);
+        float rand = Random.Range(_minTimeAttack, _maxTimeAttack);
+        yield return new WaitForSeconds(rand);
         if (Death == false)
         {
             Agent.speed = 0;

@@ -8,6 +8,7 @@ public class ChangeCanvas : MonoBehaviour
     private int _nowCanvas = 0;
     private int _newWeaponInfo = 0;
     private int _newLevelMap = 0;
+    private int _yesMenu = 0;
 
     private void Awake()
     {
@@ -96,6 +97,7 @@ public class ChangeCanvas : MonoBehaviour
             case 0: newCanvas = _nowCanvas; break;
             case 1: newCanvas = _newWeaponInfo; break;
             case 2: newCanvas = _newLevelMap; break;
+            case 3: newCanvas = _yesMenu; break;
         }
 
         NewCanvas(newCanvas);
@@ -104,6 +106,16 @@ public class ChangeCanvas : MonoBehaviour
     public void Lose()
     {
         _canvas[12].SetActive(false);
+    }
+
+    public void YesLoad()
+    {
+        CanvasChange(3);
+    }
+
+    public void SaveYesLoad(int newcanvas)
+    {
+        _yesMenu = newcanvas;
     }
 
     private void OnEnable()

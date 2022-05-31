@@ -6,6 +6,7 @@ public class FillingReadiAttak : MonoBehaviour
 {
     [SerializeField] private WeaponLoader _weaponLoader;
     [SerializeField] private Material _kosMat;
+    [SerializeField] private DashEffect _dash;
 
     private Image _fillingImage;
     private float _timeReadyFastAttack;
@@ -35,11 +36,16 @@ public class FillingReadiAttak : MonoBehaviour
                 _timer = 0;
                 _kosMat.SetFloat("_Edge", _timer);
             }
+            else if(_timer > _timeReadyFastAttack / 3f)
+            {
+                _dash.DashOff();
+            }
         }
     }
 
     public void StartReadiness()
     {
         _isReady = false;
+        _dash.DashOn();
     }
 }

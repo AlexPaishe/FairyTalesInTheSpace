@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IHaveHealth
     [SerializeField] private int _health;
     [SerializeField] private PlayerParts _playerParts;
     [SerializeField] private Material _kosMat;
+    [SerializeField] private DamageText _damageText;
 
     public int Health => _health;
 
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour, IHaveHealth
     {
         if (_isInvulnerability == false)
         {
+            _damageText.DamageAnima(damage);
             StartCoroutine(Damage());
             if (damage < _health)
             {

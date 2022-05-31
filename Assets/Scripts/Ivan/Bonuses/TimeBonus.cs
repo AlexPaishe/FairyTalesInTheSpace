@@ -8,7 +8,7 @@ public class TimeBonus : MonoBehaviour
     {
         if (other.transform.TryGetComponent<Player>(out Player playerHealth))
         {
-            playerHealth.TakeDamage(-_addedLiveTime);
+            playerHealth.Impact(-_addedLiveTime);
             Destroy(gameObject);
         }
     }

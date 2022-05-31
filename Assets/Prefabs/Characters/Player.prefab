@@ -438,6 +438,7 @@ MonoBehaviour:
   _health: 100
   _playerParts: {fileID: 2071019823}
   _kosMat: {fileID: 2100000, guid: 48dae7529819ec64f877797898182d19, type: 2}
+  _damageText: {fileID: 0}
 --- !u!114 &7725446020040829829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +546,8 @@ MonoBehaviour:
   _audioSource: {fileID: 617797518}
   _audioClips: []
   _effectsPlayerBullet: []
-  _effectsGuleBullet: []
+  _effectsGuleBullet:
+  - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
   _effectReservcount: 50
 --- !u!1 &7725446020202061590
 GameObject:
