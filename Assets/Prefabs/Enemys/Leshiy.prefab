@@ -1703,9 +1703,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1704958758997075831}
-  _audioClips: []
-  _effectsPlayerBullet: []
-  _effectsGuleBullet: []
+  _audioClips:
+  - {fileID: 8300000, guid: e5d39b697c1aa5348800586146678b1f, type: 3}
+  - {fileID: 8300000, guid: 8ba2ff471936c9a4a915fc61640b0b53, type: 3}
+  _effectsPlayerBullet:
+  - {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+  _effectsGuleBullet:
+  - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
   _effectReservcount: 5
 --- !u!114 &6534488360203157411
 MonoBehaviour:

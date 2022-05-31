@@ -505,7 +505,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 6487982298893574933}
-  _effect: {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+  _audioClips:
+  - {fileID: 8300000, guid: e5d39b697c1aa5348800586146678b1f, type: 3}
+  - {fileID: 8300000, guid: 8ba2ff471936c9a4a915fc61640b0b53, type: 3}
+  _effectsPlayerBullet:
+  - {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+  _effectsGuleBullet:
+  - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
   _effectReservcount: 5
 --- !u!114 &1661795247940811741
 MonoBehaviour:
@@ -532,7 +538,7 @@ MonoBehaviour:
   _pointRot: {fileID: 6487982298442526876}
   _layer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2049
   _maxDistance: 10
   _minDistance: 1
   _timeAttack: 4

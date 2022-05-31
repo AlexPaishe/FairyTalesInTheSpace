@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -918,9 +918,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 292840049}
-  _audioClips: []
-  _effectsPlayerBullet: []
-  _effectsGuleBullet: []
+  _audioClips:
+  - {fileID: 8300000, guid: e5d39b697c1aa5348800586146678b1f, type: 3}
+  - {fileID: 8300000, guid: 8ba2ff471936c9a4a915fc61640b0b53, type: 3}
+  _effectsPlayerBullet:
+  - {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+  _effectsGuleBullet:
+  - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
   _effectReservcount: 100
 --- !u!82 &292840049
 AudioSource:
@@ -3151,6 +3155,22 @@ PrefabInstance:
       propertyPath: _effect
       value: 
       objectReference: {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
+    - target: {fileID: 2173501451236854957, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
+      propertyPath: _effectsGuleBullet.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173501451236854957, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
+      propertyPath: _effectsPlayerBullet.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2173501451236854957, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
+      propertyPath: _effectsGuleBullet.Array.data[0]
+      value: 
+      objectReference: {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
+    - target: {fileID: 2173501451236854957, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
+      propertyPath: _effectsPlayerBullet.Array.data[0]
+      value: 
+      objectReference: {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
     - target: {fileID: 7542036525867963216, guid: dd535cfe40a04b144b6c9670f1252484, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4341,10 +4361,6 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2036807175443177848, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_RootOrder
@@ -5613,7 +5629,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24864
+  m_Name: pb_Mesh25088
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5940,7 +5956,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3942
+  m_Name: pb_Mesh-4156
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7470,10 +7486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2036807175443177848, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -8020,10 +8032,6 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
