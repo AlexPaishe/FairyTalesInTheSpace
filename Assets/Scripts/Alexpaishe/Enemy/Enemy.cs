@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour, IHaveHealth
 
     public Animator Anima;
 
+    public Sound Sounds;
+
     /// <summary>
     /// Реализация получения урона
     /// </summary>

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 657426988427023622}
   - component: {fileID: 6289108460875483945}
   m_Layer: 7
-  m_Name: BulletCule
+  m_Name: BulletGuleEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.5
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

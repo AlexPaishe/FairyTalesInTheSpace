@@ -1886,6 +1886,8 @@ MonoBehaviour:
   _sound: {fileID: 2092368240}
   _clips:
   - {fileID: 8300000, guid: fb525b5e8e213974b9fae1994ef3e13f, type: 3}
+  _min: 
+  _max: 
 --- !u!1 &1562784729521288099
 GameObject:
   m_ObjectHideFlags: 0
@@ -13208,7 +13210,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2848588725075973970}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.22499998
+  m_Size: 0.225
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

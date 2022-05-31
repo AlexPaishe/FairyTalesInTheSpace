@@ -228,6 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sound: {fileID: 919132149232981800}
   _clips: []
+  _min: 
+  _max: 
 --- !u!114 &1620149213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,8 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 6487982298893574933}
   _audioClips:
-  - {fileID: 8300000, guid: e5d39b697c1aa5348800586146678b1f, type: 3}
-  - {fileID: 8300000, guid: 8ba2ff471936c9a4a915fc61640b0b53, type: 3}
+  - {fileID: 8300000, guid: ee53fa4f02252604591515cdb83ce161, type: 3}
+  - {fileID: 8300000, guid: a05ea1bd26c855444aecdcb10fb9b8f3, type: 3}
   _effectsPlayerBullet:
   - {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
   _effectsGuleBullet:
@@ -533,6 +535,7 @@ MonoBehaviour:
   Rb: {fileID: 1661795247940811718}
   Agent: {fileID: 1661795247940811719}
   Anima: {fileID: 5866666021835888614}
+  Sounds: {fileID: 0}
   _speed: 4
   _point: {fileID: 5069455450455161262}
   _pointRot: {fileID: 6487982298442526876}

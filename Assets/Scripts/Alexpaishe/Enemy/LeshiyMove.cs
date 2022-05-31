@@ -26,6 +26,7 @@ public class LeshiyMove : Enemy, ITriggerMove
             _player = trans;
             _isIddle = false;
             Anima.SetFloat("Speed", 1);
+            Sounds.SoundVaroation(1);
             StartCoroutine(Move());
         }
     }
