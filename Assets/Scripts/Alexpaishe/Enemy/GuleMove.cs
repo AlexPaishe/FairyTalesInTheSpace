@@ -15,6 +15,7 @@ public class GuleMove : Enemy, ITriggerMove
     private Transform _player;
     private Vector3 _target;
     private bool _isIddle = true;
+    private GameObject _trigger;
     void Start()
     {
         Agent.speed = _speed;
@@ -54,12 +55,20 @@ public class GuleMove : Enemy, ITriggerMove
                 Anima.SetFloat("Speed", 1);
                 StartCoroutine(Move());
             }
+            if(Base.Death == true)
+            {
+                Anima.SetFloat("Speed", 0);
+                Agent.speed = 0;
+            }
         }
         else
         {
             StartCoroutine(Move());
             Anima.SetFloat("Speed", 0);
-            DoorOpen = true;
+            if(_trigger.activeSelf == false)
+            {
+                DoorOpen = true;
+            }
         }
     }
 
@@ -124,11 +133,12 @@ public class GuleMove : Enemy, ITriggerMove
         return _player;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<DoorOpenTrigger>(out DoorOpenTrigger door))
         {
             DoorOpen = false;
+            _trigger = door.gameObject;
         }
     }
 }

@@ -24,6 +24,7 @@ public class Player : MonoBehaviour, IHaveHealth
         _maxHealth = _health;
         _kosMat.SetFloat("_EmissionStrenght", 30);
         _kosMat.SetFloat("_Electric", 0);
+        Base.Death = false;
     }
 
     public void Impact(int damage)
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour, IHaveHealth
         {
             _damageText.DamageAnima(damage);
             StartCoroutine(Damage());
+            TypeDamage(damage);
             if (damage < _health)
             {
                 TakeDamage(damage);
@@ -92,5 +94,17 @@ public class Player : MonoBehaviour, IHaveHealth
         _kosMat.SetFloat("_Electric", 1);
         yield return new WaitForSeconds(0.5f);
         _kosMat.SetFloat("_Electric", 0);
+    }
+
+    private void TypeDamage(int damage)
+    {
+        if(damage > 0)
+        {
+            _kosMat.SetFloat("_ElectricColor", 0);
+        }
+        else
+        {
+            _kosMat.SetFloat("_ElectricColor", 1);
+        }
     }
 }

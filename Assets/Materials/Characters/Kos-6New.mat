@@ -24,7 +24,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 6b2dbf411e3f1e0419676b75b36a3282, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -142,7 +142,8 @@ Material:
     - _Edge: 0
     - _EdgeSize: 0.02
     - _Electric: 0
-    - _EmissionStrenght: 0
+    - _ElectricColor: 0
+    - _EmissionStrenght: 30
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -171,6 +172,8 @@ Material:
     - _EdgeColor: {r: 0, g: 1328.4281, b: 1272.7871, a: 1}
     - _EdgePosition: {r: 0, g: 2.15, b: 0, a: 0}
     - _ElectricColor: {r: 785404, g: 0, b: 0, a: 0}
+    - _ElectricColorFirst: {r: 1048575.25, g: 0, b: 0, a: 0}
+    - _ElectricColorSecond: {r: 0, g: 1048576, b: 0, a: 0}
     - _ElectricSpeed: {r: 0, g: 0.5, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 8.031373, b: 766.9961, a: 1}
     - _NoiseSpeed: {r: 0.1, g: -0.5, b: 0, a: 0}

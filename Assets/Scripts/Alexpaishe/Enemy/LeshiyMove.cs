@@ -11,6 +11,8 @@ public class LeshiyMove : Enemy, ITriggerMove
     [SerializeField] private LeshiyAttack _leshiy;
     private Transform _player;
     private bool _isIddle = true;
+    private bool _isAlart = false;
+    private GameObject _trigger;
     public bool IsAttack { get; set; }
 
     void Start()
@@ -26,7 +28,6 @@ public class LeshiyMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
-            Sounds.SoundVaroation(1);
             StartCoroutine(Move());
         }
     }
@@ -38,6 +39,11 @@ public class LeshiyMove : Enemy, ITriggerMove
         {
             if (Base.Death == false && DoorOpen == true)
             {
+                if (_isAlart == false)
+                {
+                    _isAlart = true;
+                    Sounds.SoundVaroation(1);
+                }
                 Agent.destination = _player.position;
                 if (Vector3.Distance(_player.position, transform.position) < _attackDistance && IsAttack == false)
                 {
@@ -61,17 +67,21 @@ public class LeshiyMove : Enemy, ITriggerMove
             }
             else if(DoorOpen == false)
             {
-                DoorOpen = true;
+                if(_trigger.activeSelf == false)
+                {
+                    DoorOpen = true;
+                }
                 StartCoroutine(Move());
             }
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<DoorOpenTrigger>(out DoorOpenTrigger door))
+        if(other.TryGetComponent<DoorOpenTrigger>(out DoorOpenTrigger door))
         {
             DoorOpen = false;
+            _trigger = door.gameObject;
         }
     }
 }

@@ -4,7 +4,7 @@ public class BlockedDoor : MonoBehaviour
 {
     [SerializeField] private KeyDoorType _keyType;
     [SerializeField] private Sound _sound;
-    [SerializeField] private Transform _triggerDoor;
+    [SerializeField] private GameObject _triggerDoor;
 
     private Animator _animator;
     private KeyStorage _keyStorage;
@@ -43,7 +43,7 @@ public class BlockedDoor : MonoBehaviour
     {
         _animator.Play("Open");
         _sound.SoundPlay(0);
-        _triggerDoor.localScale = Vector3.zero;
+        _triggerDoor.SetActive(false);
         _isOpen = true;
     }
 

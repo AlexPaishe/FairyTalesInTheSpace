@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d619df5df5e1270488bc486077fa36bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pushForce: 1
   _weaponLoader: {fileID: 0}
   _events: {fileID: 0}
 --- !u!114 &2071019822
@@ -840,7 +841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1018183814812198537, guid: d2b36da0c430c8c43a5376c301157a82, type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1018183814812198538, guid: d2b36da0c430c8c43a5376c301157a82, type: 3}
       propertyPath: m_Name
