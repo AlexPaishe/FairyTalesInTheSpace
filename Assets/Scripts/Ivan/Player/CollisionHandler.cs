@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collision))]
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] private float _pushForce;
     [SerializeField] private WeaponLoader _weaponLoader;
     [SerializeField] private Events _events;
 

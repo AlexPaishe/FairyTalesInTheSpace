@@ -3,18 +3,20 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] private Portal _secondPortal;
-    [SerializeField] private Transform _movePosition;
     [SerializeField] private float _timeCharging;
+    [SerializeField] private float _timeWaitingMovement;
+    [SerializeField] private Portal _secondPortal;
+    [SerializeField] private Sound _sound;
 
     private bool _movementAllowed;
     private WaitForSeconds _waitingCharging;
     private WaitForSeconds _waitingMovement;
+    private Coroutine _delayedMove;
 
     private void Start()
     {
         _waitingCharging = new WaitForSeconds(_timeCharging);
-        _waitingMovement = new WaitForSeconds(1);
+        _waitingMovement = new WaitForSeconds(_timeWaitingMovement);
         _movementAllowed = true;
     }
 
@@ -22,10 +24,23 @@ public class Portal : MonoBehaviour
     {
         if (_movementAllowed == true)
         {
-            if (other.transform.TryGetComponent<PlayerParts>(out PlayerParts player))
+            if (other.transform.GetComponent<Player>())
             {
-                StartCoroutine(DelayedMove(player));
+                _delayedMove = StartCoroutine(DelayedMove(other.transform));
+                _sound.SoundPlay(2);
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.GetComponent<Player>())
+        {
+            if(_delayedMove != null)
+            {
+                StopCoroutine(_delayedMove);
+            }
+            _sound.SoundStop();
         }
     }
 
@@ -34,21 +49,15 @@ public class Portal : MonoBehaviour
         StartCoroutine(Charging());
     }
 
-    private IEnumerator DelayedMove(PlayerParts player)
+    private IEnumerator DelayedMove(Transform player)
     {
-        PlayerMovement  playerMovement = player.Father.GetComponent<PlayerMovement>();
-
-        playerMovement.BanMovement(true);
-        playerMovement.RestMovement();
-
         yield return _waitingMovement;
+
+        player.position = _secondPortal.transform.position;
+        _sound.SoundPlay(0);
 
         _secondPortal.StartCharging();
         StartCharging();
-
-        player.transform.position = _movePosition.position;
-        player.Legs.rotation = _movePosition.rotation;
-        playerMovement.BanMovement(false);
     }
 
     private IEnumerator Charging()
@@ -56,5 +65,6 @@ public class Portal : MonoBehaviour
         _movementAllowed = false;
         yield return _waitingCharging;
         _movementAllowed = true;
+        _sound.SoundPlay(1);
     }
 }

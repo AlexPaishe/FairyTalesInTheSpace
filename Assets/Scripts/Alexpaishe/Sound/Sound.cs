@@ -19,6 +19,11 @@ public class Sound : MonoBehaviour
         _sound.Play();
     }
 
+    public void SoundStop()
+    {
+        _sound.Stop();
+    }
+
     public void SoundVaroation(int var)
     {
         int rand = Random.Range(_min[var], _max[var]);
