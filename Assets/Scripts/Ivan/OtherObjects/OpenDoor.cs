@@ -3,6 +3,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     [SerializeField] private AudioSource _source;
+    [SerializeField] private GameObject _triggerDoor;
 
     private Animator _animator;
     private bool _isOpen;
@@ -26,6 +27,7 @@ public class OpenDoor : MonoBehaviour
     private void Open()
     {
         _animator.Play("Open");
+        _triggerDoor.SetActive(false);
         _source.Play();
         _isOpen = true;
     }
