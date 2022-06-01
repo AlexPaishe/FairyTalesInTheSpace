@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour, IHaveHealth
 
     public Sound Sounds;
 
+    public bool DoorOpen;
+
     /// <summary>
     /// Реализация получения урона
     /// </summary>

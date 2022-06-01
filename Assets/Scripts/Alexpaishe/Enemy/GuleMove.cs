@@ -21,6 +21,7 @@ public class GuleMove : Enemy, ITriggerMove
         Agent.destination = transform.position;
         _point.transform.parent = transform.parent;
         NewTarget();
+        DoorOpen = true;
     }
 
     public void StartMove(Transform trans)
@@ -38,16 +39,27 @@ public class GuleMove : Enemy, ITriggerMove
     private IEnumerator Move()
     {
         yield return new WaitForSeconds(0.1f);
-        if (Death == false && Vector3.Distance(transform.position, _target) > _minDistance)
+        if (DoorOpen == true)
         {
-            Agent.destination = _target;
-            StartCoroutine(Move());
+            if (Death == false && Vector3.Distance(transform.position, _target) > _minDistance)
+            {
+                Agent.destination = _target;
+                Anima.SetFloat("Speed", 1);
+                StartCoroutine(Move());
+            }
+            else if (Death == false && Vector3.Distance(transform.position, _target) <= _minDistance)
+            {
+                NewTarget();
+                Agent.destination = _target;
+                Anima.SetFloat("Speed", 1);
+                StartCoroutine(Move());
+            }
         }
-        else if (Death == false && Vector3.Distance(transform.position, _target) <= _minDistance)
+        else
         {
-            NewTarget();
-            Agent.destination = _target;
             StartCoroutine(Move());
+            Anima.SetFloat("Speed", 0);
+            DoorOpen = true;
         }
     }
 
@@ -84,7 +96,18 @@ public class GuleMove : Enemy, ITriggerMove
         if (Death == false)
         {
             Agent.speed = 0;
-            Anima.SetTrigger("Attack");
+            if (Base.Death == false && DoorOpen == true)
+            {
+                Anima.SetTrigger("Attack");
+            }
+            else if(Base.Death == true)
+            {
+                Anima.SetFloat("Speed", 0);
+            }
+            else if(DoorOpen == false)
+            {
+                StartCoroutine(StartAttack());
+            }
         }
     }
 
@@ -99,5 +122,13 @@ public class GuleMove : Enemy, ITriggerMove
     public Transform PlayerAttack()
     {
         return _player;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent<DoorOpenTrigger>(out DoorOpenTrigger door))
+        {
+            DoorOpen = false;
+        }
     }
 }

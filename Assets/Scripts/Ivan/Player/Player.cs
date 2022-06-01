@@ -73,6 +73,7 @@ public class Player : MonoBehaviour, IHaveHealth
     private void Dead()
     {
         _animation.Dead();
+        Base.Death = true;
     }
 
     public void TestDead()   //Метод для тестовой кнопки

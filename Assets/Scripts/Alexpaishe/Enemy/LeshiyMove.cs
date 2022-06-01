@@ -17,6 +17,7 @@ public class LeshiyMove : Enemy, ITriggerMove
     {
         Agent.speed = _speed;
         Agent.destination = transform.position;
+        DoorOpen = true;
     }
 
     public void StartMove(Transform trans)
@@ -25,7 +26,6 @@ public class LeshiyMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
-            Anima.SetFloat("Speed", 1);
             Sounds.SoundVaroation(1);
             StartCoroutine(Move());
         }
@@ -36,21 +36,42 @@ public class LeshiyMove : Enemy, ITriggerMove
         yield return new WaitForSeconds(0.03f);
         if(Death == false)
         {
-            Agent.destination = _player.position;
-            if(Vector3.Distance(_player.position, transform.position) < _attackDistance && IsAttack == false)
+            if (Base.Death == false && DoorOpen == true)
             {
-                IsAttack = true;
-                _leshiy.Attack();
+                Agent.destination = _player.position;
+                if (Vector3.Distance(_player.position, transform.position) < _attackDistance && IsAttack == false)
+                {
+                    IsAttack = true;
+                    _leshiy.Attack();
+                }
+                if (Vector3.Distance(_player.position, transform.position) < _stopDistance)
+                {
+                    Anima.SetFloat("Speed", 0);
+                }
+                else
+                {
+                    Anima.SetFloat("Speed", 1);
+                }
+                StartCoroutine(Move());
             }
-            if(Vector3.Distance(_player.position, transform.position) < _stopDistance)
+            else if(Base.Death == true)
             {
                 Anima.SetFloat("Speed", 0);
+                Agent.speed = 0;
             }
-            else
+            else if(DoorOpen == false)
             {
-                Anima.SetFloat("Speed", 1);
+                DoorOpen = true;
+                StartCoroutine(Move());
             }
-            StartCoroutine(Move());
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent<DoorOpenTrigger>(out DoorOpenTrigger door))
+        {
+            DoorOpen = false;
         }
     }
 }
