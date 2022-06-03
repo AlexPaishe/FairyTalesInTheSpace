@@ -15,7 +15,8 @@ MonoBehaviour:
   chargJerkTime: 3
   jerkMaxDistance: 8
   jerkSpeed: 200000
-  jerkDamage: 10
+  jerkMinDamage: 2
+  jerkMaxDamage: 8
   circleAttackDamage: 2
   circleAttackForce: 5
   waitCircleAttackTime: 1

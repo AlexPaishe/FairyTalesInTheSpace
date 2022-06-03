@@ -80,7 +80,7 @@ public class Sword : Weapon
         _jerkCurrentDirection = _torso.forward * _edit.jerkSpeed;
         _isJerk = true;
 
-        int damage = (int)((float)_edit.jerkDamage * _jerkDistance / _edit.jerkMaxDistance); 
+        int damage = (int)((float)_edit.jerkMaxDamage - _edit.jerkMinDamage * _jerkDistance / _edit.jerkMaxDistance)+_edit.jerkMinDamage; 
         Ray ray = new Ray(_torso.position, _jerkCurrentDirection);
         RaycastHit[] hits;
         hits = Physics.SphereCastAll(ray, 1, _jerkDistance);
