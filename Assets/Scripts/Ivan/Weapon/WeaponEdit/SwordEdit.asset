@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SwordEdit
   m_EditorClassIdentifier: 
   chargJerkTime: 3
-  jerkDistance: 5
-  jerkForce: 5
+  jerkMaxDistance: 10
+  jerkSpeed: 200000
   jerkDamage: 2
   circleAttackDamage: 2
   circleAttackForce: 5
+  waitCircleAttackTime: 1

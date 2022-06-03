@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 7725446020040829829}
   - component: {fileID: 7725446020040829831}
   - component: {fileID: 7725446020040829827}
-  - component: {fileID: 7725446020040829830}
+  - component: {fileID: 412023910740128227}
   - component: {fileID: 2071019822}
   - component: {fileID: 2071019823}
   - component: {fileID: 1068769316}
@@ -572,7 +572,7 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.91641533, z: 0.02}
---- !u!114 &7725446020040829830
+--- !u!114 &412023910740128227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -581,12 +581,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7725446020040829835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d619df5df5e1270488bc486077fa36bb, type: 3}
+  m_Script: {fileID: 11500000, guid: a524ed1a768317a4caec53158faa0b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pushForce: 1
-  _weaponLoader: {fileID: 0}
-  _events: {fileID: 0}
 --- !u!114 &2071019822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +616,7 @@ MonoBehaviour:
   _leftHandPoint: {fileID: 7725446020202061585}
   _rightHandPoint: {fileID: 7725446019274970178}
   _rigidbody: {fileID: 7725446020040829828}
+  _jerkDirection: {fileID: 0}
 --- !u!114 &1068769316
 MonoBehaviour:
   m_ObjectHideFlags: 0
