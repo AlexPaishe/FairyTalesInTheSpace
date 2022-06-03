@@ -20,6 +20,10 @@ public class SwordCollisionHandler : MonoBehaviour
             if(collision.transform.TryGetComponent<IHaveHealth>(out IHaveHealth health))
             {
                 health.Impact(_damage);
+                if(collision.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
+                {
+                    bulletReaction.Reaction(BulletType.PlayerBullet, collision.contacts[0].point);
+                }
             }
         }
     }

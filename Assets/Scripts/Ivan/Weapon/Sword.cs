@@ -83,12 +83,16 @@ public class Sword : Weapon
         int damage = (int)((float)_edit.jerkDamage * _jerkDistance / _edit.jerkMaxDistance); 
         Ray ray = new Ray(_torso.position, _jerkCurrentDirection);
         RaycastHit[] hits;
-        hits = Physics.SphereCastAll(ray, 0.5f, _jerkDistance);
+        hits = Physics.SphereCastAll(ray, 1, _jerkDistance);
         foreach (RaycastHit hit in hits)
         {
             if(hit.transform.TryGetComponent<Enemy>(out Enemy enemy))
             {
                 enemy.Impact(damage);
+                if(hit.transform.TryGetComponent<BulletReaction>(out BulletReaction reaction))
+                {
+                    reaction.Reaction(BulletType.PlayerBullet, hit.point);
+                }
             }
         }
         StartCoroutine(StopJerkToTime());

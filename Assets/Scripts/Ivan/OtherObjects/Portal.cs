@@ -3,20 +3,15 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] private float _timeCharging;
-    [SerializeField] private float _timeWaitingMovement;
     [SerializeField] private Portal _secondPortal;
-    [SerializeField] private Sound _sound;
+    [SerializeField] private AudioClip[] _clips;
+    [SerializeField] private AudioSource _audioSource;
 
     private bool _movementAllowed;
-    private WaitForSeconds _waitingCharging;
-    private WaitForSeconds _waitingMovement;
     private Coroutine _delayedMove;
 
     private void Start()
     {
-        _waitingCharging = new WaitForSeconds(_timeCharging);
-        _waitingMovement = new WaitForSeconds(_timeWaitingMovement);
         _movementAllowed = true;
     }
 
@@ -27,7 +22,6 @@ public class Portal : MonoBehaviour
             if (other.transform.GetComponent<Player>())
             {
                 _delayedMove = StartCoroutine(DelayedMove(other.transform));
-                _sound.SoundPlay(2);
             }
         }
     }
@@ -40,31 +34,32 @@ public class Portal : MonoBehaviour
             {
                 StopCoroutine(_delayedMove);
             }
-            _sound.SoundStop();
         }
     }
 
     public void StartCharging()
     {
+        _audioSource.clip = _clips[1];
+        _audioSource.Play();
         StartCoroutine(Charging());
     }
 
     private IEnumerator DelayedMove(Transform player)
     {
-        yield return _waitingMovement;
-
-        player.position = _secondPortal.transform.position;
-        _sound.SoundPlay(0);
-
+        yield return new WaitForSeconds(0.5f);
+        _audioSource.clip = _clips[0];
+        _audioSource.Play();
+        yield return new WaitForSeconds(0.5f);
         _secondPortal.StartCharging();
-        StartCharging();
+        player.position = _secondPortal.transform.position;
     }
 
     private IEnumerator Charging()
     {
         _movementAllowed = false;
-        yield return _waitingCharging;
+        yield return new WaitForSeconds(5);
         _movementAllowed = true;
-        _sound.SoundPlay(1);
+        _audioSource.clip = _clips[2];
+        _audioSource.Play();
     }
 }
