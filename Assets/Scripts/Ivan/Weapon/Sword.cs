@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class Sword : Weapon
 {
     [SerializeField] private SwordEdit _edit;
     [SerializeField] private SwordCollisionHandler _swordCollisionHandler;
-    [SerializeField] private SwordCollisionHandler _playerCollisionHandler;
 
     public override float TimeReadyFastAttack => _edit.waitCircleAttackTime;
 
@@ -22,6 +22,9 @@ public class Sword : Weapon
     private WaitForSeconds _chargTick;
     private Vector3 _jerkStartPos;
     private Vector3 _jerkCurrentDirection;
+    private Collider[] _playerColliders;
+    private int _layerJerkValue;
+    private int _layerDefaultValue;
 
     private void Start()
     {
@@ -32,7 +35,11 @@ public class Sword : Weapon
         _jerkDirection = base.PlayerParts.JerkDirection;
         _chargTick = new WaitForSeconds(0.05f);
         _distanceOneTick = _edit.chargJerkTime / _edit.jerkMaxDistance;
-        _playerCollisionHandler = base.PlayerParts.Father.GetComponent<SwordCollisionHandler>();
+        _layerJerkValue = LayerMask.NameToLayer("BulletEnemy");
+        _layerDefaultValue = LayerMask.NameToLayer("Player");
+        _playerColliders = new Collider[2];
+        _playerColliders[0] = base.PlayerParts.Father.GetComponent<Collider>();
+        _playerColliders[1] = _swordCollisionHandler.transform.GetComponent<Collider>();
 
         _animation.WeaponChange(1);
     }
@@ -68,10 +75,29 @@ public class Sword : Weapon
     private void StartJerk()
     {
         _jerkDirection.FillDirection(0);
-        _playerCollisionHandler.OnDamage(true, (int)((float)_edit.jerkDamage * _jerkDistance / _edit.jerkMaxDistance));
+        ChangeLayer(_playerColliders, _layerJerkValue);
         _jerkStartPos = _torso.position;
         _jerkCurrentDirection = _torso.forward * _edit.jerkSpeed;
         _isJerk = true;
+
+        int damage = (int)((float)_edit.jerkDamage * _jerkDistance / _edit.jerkMaxDistance); 
+        Ray ray = new Ray(_torso.position, _jerkCurrentDirection);
+        RaycastHit[] hits;
+        hits = Physics.SphereCastAll(ray, 0.5f, _jerkDistance);
+        foreach (RaycastHit hit in hits)
+        {
+            if(hit.transform.TryGetComponent<Enemy>(out Enemy enemy))
+            {
+                enemy.Impact(damage);
+            }
+        }
+        StartCoroutine(StopJerkToTime());
+    }
+
+    private IEnumerator StopJerkToTime()
+    {
+        yield return new WaitForSeconds(0.2f);
+        StopJerk();
     }
 
     private void FixedUpdate()
@@ -89,11 +115,11 @@ public class Sword : Weapon
         }   
     }
 
-    public void StopJerk()
+    private void StopJerk()
     {
         _jerkDistance = 0;
         _isJerk = false;
-        _playerCollisionHandler.OnDamage(false, 0);
+        ChangeLayer(_playerColliders, _layerDefaultValue);
     }
 
     public override void FastAttak()
@@ -109,5 +135,13 @@ public class Sword : Weapon
         yield return new WaitForSeconds(0.5f);
 
         _swordCollisionHandler.OnDamage(false, 0);
+    }
+
+    private void ChangeLayer(Collider[] colliders, int layer)
+    {
+        foreach (Collider collider in colliders)
+        {
+            collider.gameObject.layer = layer;
+        }
     }
 }
