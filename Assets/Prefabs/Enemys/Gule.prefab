@@ -227,9 +227,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 919132149232981800}
-  _clips: []
-  _min: 
-  _max: 
+  _clips:
+  - {fileID: 8300000, guid: 2ab130ef734600940a4941678b2201f5, type: 3}
+  - {fileID: 8300000, guid: 2b2a0e96cc18f214cbdde09ee5e63d16, type: 3}
+  - {fileID: 8300000, guid: 7690f90dcf990d3499355bfdd74122d3, type: 3}
+  - {fileID: 8300000, guid: b07fd651a24f8ae44912f096daed44ec, type: 3}
+  - {fileID: 8300000, guid: ba8eba487b77a46419c356ab8eec0617, type: 3}
+  - {fileID: 8300000, guid: ba7778318b66fd943ad60edf8d1948ee, type: 3}
+  - {fileID: 8300000, guid: a90c1a444306bca4ca35f58dd805f1e7, type: 3}
+  - {fileID: 8300000, guid: 01ccb3d6f018c5646ab28ae8234422e6, type: 3}
+  - {fileID: 8300000, guid: 2af25e9bc5ebba449881a5433d8f72b7, type: 3}
+  _min: 0000000006000000
+  _max: 0600000009000000
 --- !u!114 &1620149213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,12 +517,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 6487982298893574933}
   _audioClips:
-  - {fileID: 8300000, guid: ee53fa4f02252604591515cdb83ce161, type: 3}
-  - {fileID: 8300000, guid: a05ea1bd26c855444aecdcb10fb9b8f3, type: 3}
+  - {fileID: 8300000, guid: bca160a82450cd742979819bb2932bb9, type: 3}
+  - {fileID: 8300000, guid: 1d370c41d818028479d0bed9b4e74ff4, type: 3}
+  - {fileID: 8300000, guid: 2605c0a3a070a5d4f864bbd2c8a3d52d, type: 3}
   _effectsPlayerBullet:
   - {fileID: 657426988427023622, guid: a16b10bc7fe5b31488783b9cc29aa717, type: 3}
-  _effectsGuleBullet:
-  - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
+  _effectsGuleBullet: []
   _effectReservcount: 5
 --- !u!114 &1661795247940811741
 MonoBehaviour:

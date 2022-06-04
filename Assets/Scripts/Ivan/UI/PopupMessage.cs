@@ -14,9 +14,10 @@ public class PopupMessage : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void DisplayMessage(string text)
+    public void DisplayMessage(string text, Color color)
     {
         _text.text = text;
+        _text.color = color;
         _animator.SetTrigger("SendMessage");
     }
 }

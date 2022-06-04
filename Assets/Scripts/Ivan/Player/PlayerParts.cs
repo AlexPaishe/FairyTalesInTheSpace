@@ -8,6 +8,7 @@ public class PlayerParts : MonoBehaviour
     [SerializeField] private Transform _leftHandPoint;
     [SerializeField] private Transform _rightHandPoint;
     [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private JerkDirection _jerkDirection; 
 
     public Transform Father => _father;
     public Transform Legs => _legs;
@@ -15,4 +16,5 @@ public class PlayerParts : MonoBehaviour
     public Transform LeftHandPoint => _leftHandPoint;
     public Transform RightHandPoint => _rightHandPoint;
     public Rigidbody Rigidbody => _rigidbody;
+    public JerkDirection JerkDirection => _jerkDirection;
 }

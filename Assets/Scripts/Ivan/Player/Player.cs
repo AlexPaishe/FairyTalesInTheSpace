@@ -52,10 +52,6 @@ public class Player : MonoBehaviour, IHaveHealth
         {
             _health -= damage;
         }
-        if (_health > _maxHealth)                  // Условие сработает, если при получении бонуса времени HP стало больше максимального
-        {
-            _health = _maxHealth;
-        }
         if(_health > 0)
         {
             _kosMat.SetFloat("_EmissionStrenght", 30);

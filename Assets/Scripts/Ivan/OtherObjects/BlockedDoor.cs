@@ -32,7 +32,7 @@ public class BlockedDoor : MonoBehaviour
                 }
                 else
                 {
-                    _message.DisplayMessage($"У Вас нет {ColourKey(_keyType)} ключа");
+                    _message.DisplayMessage($"Нужен {TextColorKey(_keyType)} ключ", ColorKey(_keyType));
                     _sound.SoundPlay(1);
                 }
             }
@@ -47,19 +47,35 @@ public class BlockedDoor : MonoBehaviour
         _isOpen = true;
     }
 
-    private string ColourKey (KeyDoorType key)
+    private string TextColorKey (KeyDoorType key)
     {
         switch (key)
         {
             case KeyDoorType.Red:
-                return "красного";
+                return "красный";
             case KeyDoorType.Green:
-                return "зеленого";
+                return "зеленый";
             case KeyDoorType.Blue:
-                return "синего";
+                return "синий";
             case KeyDoorType.Yellow:
-                return "желтого";
+                return "желтый";
                 default: return "";
+        }
+    }
+
+    private Color ColorKey(KeyDoorType key)
+    {
+        switch (key)
+        {
+            case KeyDoorType.Red:
+                return Color.red;
+            case KeyDoorType.Green:
+                return Color.green;
+            case KeyDoorType.Blue:
+                return Color.blue;
+            case KeyDoorType.Yellow:
+                return Color.yellow;
+            default: return Color.white;
         }
     }
 
