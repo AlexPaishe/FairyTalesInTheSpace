@@ -111,6 +111,8 @@ public class ChangeCanvas : MonoBehaviour
     public void YesLoad()
     {
         CanvasChange(3);
+        Time.timeScale = 1;
+        Base.Death = true;
     }
 
     public void SaveYesLoad(int newcanvas)

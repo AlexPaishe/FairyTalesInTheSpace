@@ -9,6 +9,7 @@ public class DeadPlayer : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private PauseMenu _pause;
     [SerializeField] private Win _win;
+    [SerializeField] private WeaponLoader _weapon;
 
     public void DeadBegin()
     {
@@ -16,6 +17,7 @@ public class DeadPlayer : MonoBehaviour
         _rb.isKinematic = true;
         _col.enabled = false;
         _win.Lose();
+        _weapon.CurrentWeapon.StopShoot();
     }
 
     public void DeadEnd()

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour, IHaveHealth
     [SerializeField] private PlayerParts _playerParts;
     [SerializeField] private Material _kosMat;
     [SerializeField] private DamageText _damageText;
+    [SerializeField] private GameObject _zero;
 
     public int Health => _health;
 
@@ -55,10 +56,12 @@ public class Player : MonoBehaviour, IHaveHealth
         if(_health > 0)
         {
             _kosMat.SetFloat("_EmissionStrenght", 30);
+            _zero.SetActive(false);
         }
         else
         {
             _kosMat.SetFloat("_EmissionStrenght", 0);
+            _zero.SetActive(true);
         }
         _damageTimer.UpdateDisplay();
     }

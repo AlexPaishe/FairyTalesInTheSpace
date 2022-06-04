@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Sprite[] _pauseSprite;
     [SerializeField] private GameObject _pauseButton;
     [SerializeField] private ChangeCanvas _canvasSystem;
+    [SerializeField] private WeaponLoader _weapon;
     private Image _pauseIcon;
     private bool _pause = false;
     public bool Pause
@@ -47,6 +48,11 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0;
             _pauseIcon.sprite = _pauseSprite[1];
             _canvasSystem.NewCanvas(0);
+            string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
+            if (weapon == "Izlar")
+            {
+                _weapon.CurrentWeapon.StopShoot();
+            }
             AudioListener.pause = true;
         }
     }

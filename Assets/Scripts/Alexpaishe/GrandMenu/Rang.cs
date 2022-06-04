@@ -10,7 +10,6 @@ public class Rang : MonoBehaviour
     [SerializeField] private int[] _timeRang;
     [SerializeField] private Sprite[] _rangSprite;
     [SerializeField] private Image[] _rangImage;
-    [SerializeField] private InfoSearch _info;
     private int _timer;
     public int Timer
     {
@@ -31,7 +30,9 @@ public class Rang : MonoBehaviour
     /// </summary>
     private void TimerSearch()
     {
-        int record = PlayerPrefs.GetInt($"Record{SceneManager.GetActiveScene().buildIndex}");
+        string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
+        int level = PlayerPrefs.GetInt($"Level");
+        int record = PlayerPrefs.GetInt($"Record{weapon}{SceneManager.GetActiveScene().buildIndex}");
         for (int i = 0; i < _recordText.Length; i++)
         {
             _recordText[i].text = _timer.ToString();
@@ -46,12 +47,15 @@ public class Rang : MonoBehaviour
                 }
                 if (record < _timer)
                 {
-                    PlayerPrefs.SetInt($"Record{SceneManager.GetActiveScene().buildIndex}", _timer);
-                    PlayerPrefs.SetInt($"Rang{SceneManager.GetActiveScene().buildIndex}", i);
+                    PlayerPrefs.SetInt($"Record{weapon}{SceneManager.GetActiveScene().buildIndex}", _timer);
+                    PlayerPrefs.SetInt($"Rang{weapon}{SceneManager.GetActiveScene().buildIndex}", i);
                 }
                 break;
             }
         }
-        _info.Init();
+        if(SceneManager.GetActiveScene().buildIndex > level)
+        {
+            PlayerPrefs.SetInt($"Level", SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

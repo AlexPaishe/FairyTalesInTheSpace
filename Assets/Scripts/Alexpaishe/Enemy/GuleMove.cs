@@ -16,7 +16,6 @@ public class GuleMove : Enemy, ITriggerMove
     private Vector3 _target;
     private bool _isIddle = true;
     private GameObject _trigger;
-    private Coroutine _coroutineGule;
     void Start()
     {
         Agent.speed = _speed;
@@ -34,7 +33,7 @@ public class GuleMove : Enemy, ITriggerMove
             _isIddle = false;
             Anima.SetFloat("Speed", 1);
             StartCoroutine(Move());
-            _coroutineGule = StartCoroutine(StartAttack());
+            StartCoroutine(StartAttack());
         }
     }
 
@@ -141,10 +140,5 @@ public class GuleMove : Enemy, ITriggerMove
             DoorOpen = false;
             _trigger = door.gameObject;
         }
-    }
-
-    private void OnDisable()
-    {
-        StopCoroutine(_coroutineGule);
     }
 }

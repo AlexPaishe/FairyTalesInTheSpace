@@ -6,6 +6,7 @@ public class Win : MonoBehaviour
 {
     [SerializeField] private ChangeCanvas _changeCanvas;
     [SerializeField] private Rang _rang;
+    [SerializeField] private InfoSearch _search;
     private Player _player;
     private float _enemyLenght;
     private bool _lose = false;
@@ -25,7 +26,7 @@ public class Win : MonoBehaviour
                 {
                     _changeCanvas.NewCanvas(11);
                     _rang.Timer = _player.Health;
-                    Time.timeScale = 0;
+                    _search.Init();
                 }
             }
         }

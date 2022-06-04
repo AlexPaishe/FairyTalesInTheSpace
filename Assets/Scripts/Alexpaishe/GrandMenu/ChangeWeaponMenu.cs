@@ -26,10 +26,10 @@ public class ChangeWeaponMenu : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private void Start()
     {
         string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
-        switch(weapon)
+        switch (weapon)
         {
             case GlobalSystemVar.sword: CurrentWeapon = 0; break;
             case GlobalSystemVar.izlar: CurrentWeapon = 1; break;

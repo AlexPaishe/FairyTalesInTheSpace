@@ -13,7 +13,6 @@ public class LeshiyMove : Enemy, ITriggerMove
     private bool _isIddle = true;
     private bool _isAlart = false;
     private GameObject _trigger;
-    private Coroutine _coroutineLeshiy;
     public bool IsAttack { get; set; }
 
     void Start()
@@ -29,7 +28,7 @@ public class LeshiyMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
-           _coroutineLeshiy = StartCoroutine(Move());
+           StartCoroutine(Move());
         }
     }
 
@@ -84,10 +83,5 @@ public class LeshiyMove : Enemy, ITriggerMove
             DoorOpen = false;
             _trigger = door.gameObject;
         }
-    }
-
-    private void OnDisable()
-    {
-        StopCoroutine(_coroutineLeshiy);
     }
 }
