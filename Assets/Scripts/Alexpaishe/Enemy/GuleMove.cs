@@ -12,6 +12,7 @@ public class GuleMove : Enemy, ITriggerMove
     [SerializeField] private float _minDistance;
     [SerializeField] private float _minTimeAttack;
     [SerializeField] private float _maxTimeAttack;
+    [SerializeField] private bool _upgrade;
     private Transform _player;
     private Vector3 _target;
     private bool _isIddle = true;
@@ -31,7 +32,14 @@ public class GuleMove : Enemy, ITriggerMove
         {
             _player = trans;
             _isIddle = false;
-            Anima.SetFloat("Speed", 1);
+            if (_upgrade == false)
+            {
+                Anima.SetFloat("Speed", 1);
+            }
+            else
+            {
+                Anima.speed = 2;
+            }
             StartCoroutine(Move());
             StartCoroutine(StartAttack());
         }
@@ -45,14 +53,20 @@ public class GuleMove : Enemy, ITriggerMove
             if (Death == false && Vector3.Distance(transform.position, _target) > _minDistance)
             {
                 Agent.destination = _target;
-                Anima.SetFloat("Speed", 1);
+                if (_upgrade == false)
+                {
+                    Anima.SetFloat("Speed", 1);
+                }
                 StartCoroutine(Move());
             }
             else if (Death == false && Vector3.Distance(transform.position, _target) <= _minDistance)
             {
                 NewTarget();
                 Agent.destination = _target;
-                Anima.SetFloat("Speed", 1);
+                if(_upgrade == false)
+                {
+                    Anima.SetFloat("Speed", 1);
+                }
                 StartCoroutine(Move());
             }
             if(Base.Death == true)

@@ -8,12 +8,16 @@ public class GuleAttack : MonoBehaviour
     [SerializeField] private Transform _guleAttack;
     [SerializeField] private Transform _point;
     [SerializeField] private GameObject _bullet;
+    [SerializeField] private bool _upgrade;
     private Transform _player;
 
     public void GuleAttackEnd()
     {
-        _guleAttack.localRotation = Quaternion.Euler(Vector3.zero);
-        _gule.AgentSpeed();
+        if (_upgrade == false)
+        {
+            _guleAttack.localRotation = Quaternion.Euler(Vector3.zero);
+            _gule.AgentSpeed();
+        }
         StartCoroutine(_gule.StartAttack());
     }
 
