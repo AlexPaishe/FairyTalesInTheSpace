@@ -35,4 +35,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void LevelSaveBase()
+    {
+        SceneManager.LoadScene(Base.Level + 1);
+    }
 }

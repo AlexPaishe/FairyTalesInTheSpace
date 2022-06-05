@@ -12,6 +12,10 @@ public class InfoSearch : MonoBehaviour
     [SerializeField] private SoundVolumeSystem _sound;
     [SerializeField] private GameObject[] _level;
     [SerializeField] private Image[] _levelIcon;
+    [SerializeField] private Text _levelText;
+    [SerializeField] private string[] _infoLevel;
+    [SerializeField] private Text[] _levelTitle;
+    [SerializeField] private string[] _levelName;
     private int[] _rang;
     private int[] _record;
     private int _nowLevel = 0;
@@ -53,6 +57,12 @@ public class InfoSearch : MonoBehaviour
     public void LevelSearchInfo(int var)
     {
         _nowLevel = var;
+        Base.Level = _nowLevel;
+        _levelText.text = _infoLevel[var];
+        for(int i = 0; i < _levelTitle.Length; i++)
+        {
+            _levelTitle[i].text = _levelName[var];
+        }
         for(int i = 0; i < _recordText.Length; i++)
         {
             if(_record[var] > -1)
