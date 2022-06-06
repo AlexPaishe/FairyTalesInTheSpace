@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class ChangeWeaponMenu : MonoBehaviour
 {
     [SerializeField] private Image[] _weaponIcon;
-    [SerializeField] private Sprite[] _weaponSpriteArmory;
     [SerializeField] private Sprite[] _weaponSprite;
     [SerializeField] private Text[] _weaponTitle;
     [SerializeField] private string[] _weaponText;
     [SerializeField] private int _weaponMaxVariation;
+    [SerializeField] private ModelPicture _model;
     private int _currentWeapon;
     public int CurrentWeapon
     {
@@ -61,14 +61,7 @@ public class ChangeWeaponMenu : MonoBehaviour
     {
         for (int i = 1; i < _weaponIcon.Length; i++)
         {
-            if(i == 0)
-            {
-                _weaponIcon[i].sprite = _weaponSpriteArmory[_currentWeapon];
-            }
-            else
-            {
-                _weaponIcon[i].sprite = _weaponSprite[_currentWeapon];
-            }
+            _weaponIcon[i].sprite = _weaponSprite[_currentWeapon];
         }
 
         for(int i = 0; i < _weaponTitle.Length; i++)
@@ -104,7 +97,7 @@ public class ChangeWeaponMenu : MonoBehaviour
             _currentWeapon = _weaponMaxVariation;
         }
 
-        _weaponIcon[0].sprite = _weaponSpriteArmory[_currentWeapon];
+        _model.NewModel(_currentWeapon);
         _weaponTitle[0].text = _weaponText[_currentWeapon];
     }
 }
