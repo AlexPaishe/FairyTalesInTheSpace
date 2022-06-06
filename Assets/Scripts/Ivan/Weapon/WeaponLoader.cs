@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class WeaponLoader : MonoBehaviour
 {
-    [SerializeField] PlayerParts _playerParts;
-    [SerializeField] Events _events;
+    [SerializeField] private PlayerParts _playerParts;
+    [SerializeField] private Events _events;
+    [SerializeField] private PlayerAnimation _playerAnimation;
 
     public Weapon CurrentWeapon { get; private set; }
 
     private void Awake()
     {
         CurrentWeapon = LoadWeapon();
+        _playerAnimation.WeaponChange(CurrentWeapon.Index);
         CurrentWeapon.Construct(_events, _playerParts);
     }
 
@@ -36,8 +38,10 @@ public class WeaponLoader : MonoBehaviour
 
     public void ChangeWeapon(string weapon)
     {
+        CurrentWeapon.StopShoot();
         CurrentWeapon.Delete();
         CurrentWeapon = LoadWeapon(weapon);
+        _playerAnimation.WeaponChange(CurrentWeapon.Index);
         CurrentWeapon.Construct(_events, _playerParts);
     }
 }

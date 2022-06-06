@@ -8,6 +8,7 @@ public abstract class Weapon : MonoBehaviour
     public virtual float ForceFastAttack { get; private set; }
     public virtual Events Events { get; private set; }
     public virtual PlayerParts PlayerParts { get; private set; }
+    public virtual int Index { get; private set; }
 
     public virtual void Construct(Events events, PlayerParts playerParts)
     {

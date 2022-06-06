@@ -14,6 +14,7 @@ public class Izlar : Weapon
     public override float TimeReadyFastAttack => _edit.waitJerkTime;
     public override int DamageFastAttack => _edit.jerkDamage;
     public override float ForceFastAttack => _edit.jerkForce;
+    public override int Index => 0;
 
     private PlayerAnimation _animation;
     private Events _events;
@@ -45,7 +46,6 @@ public class Izlar : Weapon
         _layerDefaultValue = LayerMask.NameToLayer("Player");
 
         _bulletsPool = FillBulletsPull(_edit.bulletReservCount);
-        _animation.WeaponChange(0);
     }
 
     public override void StartShoot()

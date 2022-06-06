@@ -9,6 +9,7 @@ public class Sword : Weapon
     [SerializeField] private SwordCollisionHandler _swordCollisionHandler;
 
     public override float TimeReadyFastAttack => _edit.waitCircleAttackTime;
+    public override int Index => 1;
 
     private PlayerAnimation _animation;
     private Events _events;
@@ -40,8 +41,6 @@ public class Sword : Weapon
         _playerColliders = new Collider[2];
         _playerColliders[0] = base.PlayerParts.Father.GetComponent<Collider>();
         _playerColliders[1] = _swordCollisionHandler.transform.GetComponent<Collider>();
-
-        _animation.WeaponChange(1);
     }
 
     public override void StartShoot()
