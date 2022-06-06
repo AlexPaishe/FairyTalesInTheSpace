@@ -429,7 +429,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.35
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1704958757901774154
 Rigidbody:
@@ -504,7 +504,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.35
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1704958758688062669
 Rigidbody:
@@ -1545,8 +1545,8 @@ MonoBehaviour:
   Sounds: {fileID: 1974919854552740723}
   DoorOpen: 0
   _speed: 8
-  _attackDistance: 2.5
-  _stopDistance: 2.3
+  _attackDistance: 4
+  _stopDistance: 1
   _leshiy: {fileID: 1974919854552740725}
 --- !u!114 &4441050558078550611
 MonoBehaviour:
