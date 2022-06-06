@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordCollisionHandler : MonoBehaviour
@@ -24,6 +22,11 @@ public class SwordCollisionHandler : MonoBehaviour
                 {
                     bulletReaction.Reaction(BulletType.PlayerBullet, collision.contacts[0].point);
                 }
+            }
+
+            if (collision.transform.GetComponent<Bullet>())
+            {
+                collision.gameObject.SetActive(false);
             }
         }
     }

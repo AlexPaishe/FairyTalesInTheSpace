@@ -126,7 +126,8 @@ public class Sword : Weapon
     {
         _jerkDistance = 0;
         _isJerk = false;
-        ChangeLayer(_playerColliders, _layerDefaultValue);
+        _playerColliders[0].gameObject.layer = _layerDefaultValue;
+        _playerColliders[1].gameObject.layer = _layerJerkValue;
     }
 
     public override void FastAttak()
@@ -138,10 +139,14 @@ public class Sword : Weapon
     {
         _swordCollisionHandler.OnDamage(true, _edit.circleAttackDamage);
         _animation.SwordCircleAttack();
+        _playerColliders[0].gameObject.layer = _layerJerkValue;
+        _playerColliders[1].gameObject.layer = _layerDefaultValue;
 
         yield return new WaitForSeconds(0.5f);
 
         _swordCollisionHandler.OnDamage(false, 0);
+        _playerColliders[0].gameObject.layer = _layerDefaultValue;
+        _playerColliders[1].gameObject.layer = _layerJerkValue;
     }
 
     private void ChangeLayer(Collider[] colliders, int layer)
