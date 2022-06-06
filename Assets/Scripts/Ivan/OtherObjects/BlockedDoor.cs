@@ -39,7 +39,7 @@ public class BlockedDoor : MonoBehaviour
         }
     }
 
-    private void Open()
+    public virtual void Open()
     {
         _animator.Play("Open");
         _sound.SoundPlay(0);

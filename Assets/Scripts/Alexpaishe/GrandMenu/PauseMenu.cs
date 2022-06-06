@@ -63,7 +63,6 @@ public class PauseMenu : MonoBehaviour
     public void PauseOnAndOff()
     {
         Pause = !Pause;
-        Debug.Log(Pause);
     }
 
     /// <summary>

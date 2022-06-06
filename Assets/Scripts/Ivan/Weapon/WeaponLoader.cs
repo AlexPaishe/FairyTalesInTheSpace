@@ -26,4 +26,18 @@ public class WeaponLoader : MonoBehaviour
 
         return weaponGO.GetComponent<Weapon>();
     }
+
+    private Weapon LoadWeapon(string weapon)
+    {
+        string path = GlobalSystemVar.weaponPrefsabPath + weapon;
+        GameObject weaponGO = Instantiate(Resources.Load(path, typeof(GameObject)), _playerParts.RightHandPoint) as GameObject;
+        return weaponGO.GetComponent<Weapon>();
+    }
+
+    public void ChangeWeapon(string weapon)
+    {
+        CurrentWeapon.Delete();
+        CurrentWeapon = LoadWeapon(weapon);
+        CurrentWeapon.Construct(_events, _playerParts);
+    }
 }

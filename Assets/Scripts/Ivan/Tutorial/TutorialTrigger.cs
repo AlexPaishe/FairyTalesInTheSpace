@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class TutorialTrigger : MonoBehaviour
 {
-    [SerializeField] private int _step;
+    public int step;
     [SerializeField] private TutorialDisplay _tutorialDisplay;
+
+    private bool _isWorked = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.GetComponent<Player>())
+        if (_isWorked == false)
         {
-            _tutorialDisplay.OnDisplay(_step);
-            Destroy(gameObject);
+            if (other.transform.GetComponent<Player>())
+            {
+                _tutorialDisplay.OnDisplayToTrigger(step);
+                _isWorked = true;
+            }
         }
     }
 }

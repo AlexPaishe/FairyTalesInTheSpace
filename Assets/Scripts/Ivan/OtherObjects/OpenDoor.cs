@@ -24,7 +24,7 @@ public class OpenDoor : MonoBehaviour
         }
     }
 
-    private void Open()
+    public virtual void Open()
     {
         _animator.Play("Open");
         _triggerDoor.SetActive(false);

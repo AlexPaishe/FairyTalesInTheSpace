@@ -1,44 +1,78 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TutorialDisplay : MonoBehaviour
 {
     [SerializeField] private Text _text;
-    [SerializeField] private float _interval;
+    [SerializeField] private float _letterInterval;
+    [SerializeField] private int _soundInterval;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private Button _continueButton;
     [SerializeField] private GameObject _gameplayCanvas;
-    //[SerializeField] private PauseMenu _pauseMenu;
+    [SerializeField] private GameObject _statButtonPanel;
     [SerializeField] private MenuSound _menuSound;
+    [SerializeField] private WeaponLoader _weaponLoader;
+    [SerializeField] private PlayerMovement _playerMovement;
 
     private TutorialData _data;
-    private WaitForSecondsRealtime _wait;
+    private WaitForSecondsRealtime _waitLetter;
 
     private void Awake()
     {
         _data = new TutorialData();
-        _wait = new WaitForSecondsRealtime(_interval);
+        _waitLetter = new WaitForSecondsRealtime(_letterInterval);
     }
 
-    public void OnDisplay(int step)
+    private void Start()
+    {
+        _continueButton.gameObject.SetActive(false);
+
+        OnDisplayToTrigger(0);
+    }
+
+    public void OnDisplayToTrigger(int step)
     {
         Time.timeScale = 0;
+
+        _statButtonPanel.SetActive(false);
         _gameplayCanvas.SetActive(false);
-        _menuSound.Click();
+
         gameObject.SetActive(true);
 
+        _text.text = "";
+
         StartCoroutine(GradualAppearanceText(_data.StepText[step]));
+        _menuSound.Click();
+    }
+
+    public void OnLastDisplay()
+    {
+        Time.timeScale = 0;
+
+        _statButtonPanel.SetActive(false);
+        _gameplayCanvas.SetActive(false);
+
+        gameObject.SetActive(true);
+        _continueButton.gameObject.SetActive(true);
+        _menuSound.Click();
     }
 
     public void OffDisplay()
     {
-        _continueButton.gameObject.SetActive(false);
         Time.timeScale = 1;
+
+        gameObject.SetActive(false);
+        _continueButton.gameObject.SetActive(false);
+
+        _statButtonPanel.SetActive(true);
         _gameplayCanvas.SetActive(true);
         _menuSound.Click();
-        _text.text = "";
+
+        _weaponLoader.CurrentWeapon.StopShoot();
+        _playerMovement.RestMovement();
     }
 
     private IEnumerator GradualAppearanceText(string text)
@@ -48,8 +82,13 @@ public class TutorialDisplay : MonoBehaviour
         for (int i = 0; i < textLength; i++)
         {
             _text.text += text[i];
-            _audioSource.Play();
-            yield return _wait;
+
+            if(i%_soundInterval == 0)
+            {
+                _audioSource.Play();
+            }
+
+            yield return _waitLetter;
         }
 
         _continueButton.gameObject.SetActive(true);

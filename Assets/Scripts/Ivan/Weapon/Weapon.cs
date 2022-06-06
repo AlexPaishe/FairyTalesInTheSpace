@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
@@ -27,5 +28,10 @@ public abstract class Weapon : MonoBehaviour
     public virtual void FastAttak()
     {
 
+    }
+
+    public virtual void Delete()
+    {
+        Destroy(this.gameObject);
     }
 }

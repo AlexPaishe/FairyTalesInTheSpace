@@ -56,7 +56,10 @@ public class Izlar : Weapon
     public override void StopShoot()
     {
         _animation.StartShoot(false);
-        StopCoroutine(_shoot);
+        if(_shoot != null)
+        {
+            StopCoroutine(_shoot);
+        }
     }
 
     public override void FastAttak()
@@ -125,5 +128,11 @@ public class Izlar : Weapon
         {
             collider.gameObject.layer = layer;
         }
+    }
+
+    public override void Delete()
+    {
+        Destroy(_secondIzlar);
+        base.Delete();
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IHaveHealth
 {
+    public Events Events;
+
     public int Health;
 
     public int Damage;
@@ -53,5 +55,6 @@ public class Enemy : MonoBehaviour, IHaveHealth
         Rb.isKinematic = true;
         Agent.destination = transform.position;
         Anima.SetTrigger("Dead");
+        Events.EnemyDead();
     }
 }

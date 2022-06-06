@@ -66,7 +66,11 @@ public class Sword : Weapon
 
     public override void StopShoot()
     {
-        StopCoroutine(_jerkCharging);
+        if (_jerkCharging != null)
+        {
+            StopCoroutine(_jerkCharging);
+        }
+        
         _animation.Jerk();
 
         StartJerk();
