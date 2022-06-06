@@ -34,7 +34,7 @@ public class LeshiyMove : Enemy, ITriggerMove
 
     private IEnumerator Move()
     {
-        yield return new WaitForSeconds(0.03f);
+        yield return new WaitForSeconds(0.1f);
         if(Death == false)
         {
             if (Base.Death == false && DoorOpen == true)
