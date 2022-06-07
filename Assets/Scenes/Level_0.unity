@@ -444,6 +444,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 443348647}
     - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+      propertyPath: _health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
       propertyPath: _damageText
       value: 
       objectReference: {fileID: 1562784728525824436}
@@ -8784,7 +8788,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4121284320445195669, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -17.5
+      value: -17.499985
       objectReference: {fileID: 0}
     - target: {fileID: 4121284320626802246, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_Text
