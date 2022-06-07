@@ -78,4 +78,9 @@ public class EnemyPointer : MonoBehaviour
         }
         return Quaternion.identity;
     }
+
+    private void OnDisable()
+    {
+        _canvas.alpha = 0;
+    }
 }
