@@ -212,7 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mesh:
-  - {fileID: 0}
+  - {fileID: 7052088023432365392}
+  - {fileID: 4224957144566741885}
   _speedDesolve: 0.5
 --- !u!1 &3074100949217808227
 GameObject:
@@ -653,8 +654,8 @@ MonoBehaviour:
   Sounds: {fileID: 6729529066732709535}
   DoorOpen: 0
   _speed: 2
-  _attackDistance: 20
-  _maxTimeWaitAttack: 4
+  _attackDistance: 30
+  _maxTimeWaitAttack: 3
   _viyAttack: {fileID: 1978075548}
 --- !u!1001 &6729529066732709506
 PrefabInstance:
@@ -1294,5 +1295,10 @@ Transform:
 --- !u!137 &7052088023432365392 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4847531565359701038, guid: 03243b011e2b0314486da16b343af49b, type: 3}
+  m_PrefabInstance: {fileID: 6729529066732709506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &4224957144566741885 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7477672114596797951, guid: 03243b011e2b0314486da16b343af49b, type: 3}
   m_PrefabInstance: {fileID: 6729529066732709506}
   m_PrefabAsset: {fileID: 0}
