@@ -12,6 +12,7 @@ public class EnemyPointer : MonoBehaviour
     private Transform _player;
     private SearchPointer _search;
     private CanvasGroup _canvas;
+    private GameObject _pointArrow;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class EnemyPointer : MonoBehaviour
         GameObject point = Instantiate(_pointer, _search.gameObject.transform);
         _point = point.transform;
         _canvas = point.GetComponent<CanvasGroup>();
+        _pointArrow = point;
     }
 
     void Update()
@@ -79,14 +81,13 @@ public class EnemyPointer : MonoBehaviour
         return Quaternion.identity;
     }
 
+    public void PointArrow()
+    {
+        _pointArrow.SetActive(false);
+    }
+
     private void OnDisable()
     {
         _canvas.alpha = 0;
-    }
-
-    private void OnDestroy()
-    {
-        _canvas.alpha = 0;
-        Destroy(_canvas.gameObject);
     }
 }

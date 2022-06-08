@@ -24,6 +24,7 @@ public class GuleMove : Enemy, ITriggerMove
         _point.transform.parent = transform.parent;
         NewTarget();
         DoorOpen = true;
+        Events = FindObjectOfType<Events>();
     }
 
     public void StartMove(Transform trans)

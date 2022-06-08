@@ -173,7 +173,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 8161291933446657807, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -218,7 +218,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -593,6 +593,7 @@ MonoBehaviour:
   Anima: {fileID: 5866666021835888614}
   Sounds: {fileID: 919132149232981799}
   DoorOpen: 0
+  Point: {fileID: 5177534227193241373}
   _speed: 4
   _point: {fileID: 5069455450455161262}
   _pointRot: {fileID: 6487982298442526876}
@@ -1725,7 +1726,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0

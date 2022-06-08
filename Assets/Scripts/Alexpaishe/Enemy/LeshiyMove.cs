@@ -20,6 +20,7 @@ public class LeshiyMove : Enemy, ITriggerMove
         Agent.speed = _speed;
         Agent.destination = transform.position;
         DoorOpen = true;
+        Events = FindObjectOfType<Events>();
     }
 
     public void StartMove(Transform trans)

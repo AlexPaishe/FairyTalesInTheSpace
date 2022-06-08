@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour, IHaveHealth
 
     public bool DoorOpen;
 
+    public EnemyPointer Point;
+
     /// <summary>
     /// Реализация получения урона
     /// </summary>
@@ -55,6 +57,7 @@ public class Enemy : MonoBehaviour, IHaveHealth
         Rb.isKinematic = true;
         Agent.destination = transform.position;
         Anima.SetTrigger("Dead");
+        Point.PointArrow();
         Events.EnemyDead();
     }
 }

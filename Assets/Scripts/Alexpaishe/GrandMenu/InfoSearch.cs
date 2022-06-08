@@ -21,7 +21,7 @@ public class InfoSearch : MonoBehaviour
     private int _nowLevel = 0;
     private void Awake()
     {
-        PlayerPrefs.SetInt("First", 0);
+        //PlayerPrefs.SetInt("First", 0);
         Time.timeScale = 1;
         _rang = new int[_level.Length];
         _record = new int[_level.Length];
