@@ -6,6 +6,7 @@ public class ViyMove : Enemy, ITriggerMove
 {
     public bool IsAttack { get; set; }
 
+    [SerializeField] private float _speed;
     [SerializeField] private float _attackDistance;
     [SerializeField] private ViyAttack _viyAttack;
 
@@ -15,12 +16,19 @@ public class ViyMove : Enemy, ITriggerMove
     private GameObject _trigger;
     private Coroutine _moveCoroutine;
     private WaitForSeconds _waitForSeconds;
+    private float _maxSpeed;
 
     void Start()
     {
         Agent.destination = transform.position;
+        _maxSpeed = _speed;
         DoorOpen = true;
         _waitForSeconds = new WaitForSeconds(0.1f);
+    }
+
+    private void Update()
+    {
+        //Anima.SetFloat("Speed", _speed/_maxSpeed);
     }
 
     public void StartMove(Transform trans)
@@ -46,10 +54,19 @@ public class ViyMove : Enemy, ITriggerMove
                         _isAlart = true;
                         Sounds.SoundVaroation(1);
                     }
-                    if (Vector3.Distance(_player.position, transform.position) < _attackDistance && IsAttack == false)
+
+                    if (IsAttack == false)
                     {
-                        IsAttack = true;
-                        _viyAttack.Attack();
+                        if (Vector3.Distance(_player.position, transform.position) < _attackDistance)
+                        {
+                            Agent.speed = _speed;
+                            //_viyAttack.Attack();
+
+                        }
+                        else
+                        {
+                            Agent.speed = _speed;
+                        }
                     }
                 }
                 else
@@ -64,7 +81,9 @@ public class ViyMove : Enemy, ITriggerMove
             {
                 Anima.SetTrigger("Dead");
                 Agent.speed = 0;
+                Anima.SetFloat("Speed", 0);
                 StopCoroutine(_moveCoroutine);
+                Debug.Log("Dead");
             }
 
             Agent.destination = _player.position;
