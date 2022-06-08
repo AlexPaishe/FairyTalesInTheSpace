@@ -769,6 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f97ba079d1869646a11a38dbeefcf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Events: {fileID: 0}
   Health: 3
   Damage: 0
   Death: 0
@@ -777,7 +778,7 @@ MonoBehaviour:
   Rb: {fileID: 2411065407912945056}
   Agent: {fileID: 2411065407912945057}
   Anima: {fileID: 7426619842422262144}
-  Sounds: {fileID: 0}
+  Sounds: {fileID: 4232076459432200513}
   DoorOpen: 0
   _speed: 0
   _point: {fileID: 8079563355001432008}
@@ -1247,7 +1248,7 @@ MonoBehaviour:
   _gule: {fileID: 2411065407912945083}
   _guleAttack: {fileID: 3598529701306405882}
   _point: {fileID: 2262610953106021}
-  _bullet: {fileID: 5914388539362406882, guid: 7b40cd831d7bd314895ac388149afe68, type: 3}
+  _bullet: {fileID: 5914388539362406882, guid: 29cda90475444b149b20cc92cfb63a60, type: 3}
   _upgrade: 1
 --- !u!1 &4893172632551881858
 GameObject:
