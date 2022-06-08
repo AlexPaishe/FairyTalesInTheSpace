@@ -137,6 +137,8 @@ public class ViyMove : Enemy, ITriggerMove
 
     private void Dead()
     {
+        Collider.enabled = false;
+        _viyAttack.StopLight();
         Anima.SetTrigger("Dead");
         Agent.speed = 0;
         StopCoroutine(_moveCoroutine);

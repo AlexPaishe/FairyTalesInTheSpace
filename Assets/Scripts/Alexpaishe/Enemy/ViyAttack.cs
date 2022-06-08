@@ -43,6 +43,11 @@ public class ViyAttack : MonoBehaviour
         _isAttacking = true;
     }
 
+    public void StopLight()
+    {
+        _light.spotAngle = 0;
+    }
+
     private IEnumerator Shoot()
     {
         float delay = 0.1f;
