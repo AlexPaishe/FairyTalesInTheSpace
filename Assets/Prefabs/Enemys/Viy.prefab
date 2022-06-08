@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2022411112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022411113}
+  - component: {fileID: 2022411114}
+  m_Layer: 9
+  m_Name: EnemyPointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022411113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022411112}
+  m_LocalRotation: {x: -0, y: 0.9982416, z: -0, w: -0.059275992}
+  m_LocalPosition: {x: 3.9893272, y: 0.86173487, z: -1.2784858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7846579337657748748}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022411114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022411112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b96e63260b4d24478da9bc4a096447c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointer: {fileID: 8693800639349960399, guid: 30402a3623abbfe4a81cc0aabe0d98cd, type: 3}
 --- !u!1 &3074100948733467881
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,29 +326,12 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 102ed8f484691b249bc1d69d0f054c8c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6729529066732709534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883247962935122899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ab263ccdfed8148b1670b93c230ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _leshiy: {fileID: 7471321119483680693}
-  _attackZone:
-  - {fileID: 0}
-  - {fileID: 0}
-  _damage: 5
 --- !u!114 &6729529066732709535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ea91a939bbaad4fb6f43d0083e5279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sound: {fileID: 0}
+  _sound: {fileID: 6729529066732709528}
   _clips:
   - {fileID: 8300000, guid: f3494faedd247fe4bb26899956b0b582, type: 3}
   - {fileID: 8300000, guid: ed905519e9dfe8c43ba2d6c0a369534e, type: 3}
@@ -342,8 +369,9 @@ GameObject:
   - component: {fileID: 7471321119483680690}
   - component: {fileID: 7471321119483680691}
   - component: {fileID: 7471321119483680692}
-  - component: {fileID: 7471321119483680693}
   - component: {fileID: 45488445387516485}
+  - component: {fileID: 1055525967}
+  - component: {fileID: 1055525968}
   m_Layer: 9
   m_Name: Viy
   m_TagString: Untagged
@@ -358,13 +386,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7471321119483680694}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 120.9, y: -4.26, z: -53.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3074100949217808226}
   - {fileID: 3074100948733467880}
   - {fileID: 6552366327132684649}
+  - {fileID: 2022411113}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,10 +407,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.40000004
-  m_Height: 2.3990269
+  m_Radius: 0.8
+  m_Height: 3.3928964
   m_Direction: 1
-  m_Center: {x: 0, y: 1.1019113, z: 0.3}
+  m_Center: {x: 0, y: 1.5988461, z: 0}
 --- !u!54 &7471321119483680690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -412,7 +441,7 @@ NavMeshAgent:
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 2000
-  m_StoppingDistance: 2.3
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -441,33 +470,6 @@ MonoBehaviour:
   _effectsGuleBullet:
   - {fileID: 657426988427023622, guid: 09489c86051a2c144b3fc399e9e67b0c, type: 3}
   _effectReservcount: 5
---- !u!114 &7471321119483680693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7471321119483680694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 976b09fc6ae231543b4f0e7fc7684463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Events: {fileID: 0}
-  Health: 30
-  Damage: 1
-  Death: 0
-  Desolver: {fileID: 3074100948733467895}
-  Collider: {fileID: 7471321119483680689}
-  Rb: {fileID: 7471321119483680690}
-  Agent: {fileID: 7471321119483680691}
-  Anima: {fileID: 6729529066732709533}
-  Sounds: {fileID: 6729529066732709535}
-  DoorOpen: 0
-  _speed: 4
-  _attackDistance: 2.5
-  _stopDistance: 2.3
-  _leshiy: {fileID: 6729529066732709534}
 --- !u!114 &45488445387516485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,8 +483,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mesh:
-  - {fileID: 0}
+  - {fileID: 7052088023432365392}
   _speed: 1.2
+--- !u!114 &1055525967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471321119483680694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c87a5257ea48647bba910fdb43ccd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6729529066732709533}
+--- !u!114 &1055525968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471321119483680694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2f72260a2744f409dfa02e87f232ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events: {fileID: 0}
+  Health: 30
+  Damage: 5
+  Death: 0
+  Desolver: {fileID: 3074100948733467895}
+  Collider: {fileID: 7471321119483680689}
+  Rb: {fileID: 7471321119483680690}
+  Agent: {fileID: 7471321119483680691}
+  Anima: {fileID: 6729529066732709533}
+  Sounds: {fileID: 6729529066732709535}
+  DoorOpen: 0
+  _attackDistance: 5
+  _viyAttack: {fileID: 1055525967}
 --- !u!1001 &6729529066732709506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,5 +588,10 @@ GameObject:
 --- !u!4 &6552366327132684649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
+  m_PrefabInstance: {fileID: 6729529066732709506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &7052088023432365392 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4847531565359701038, guid: 03243b011e2b0314486da16b343af49b, type: 3}
   m_PrefabInstance: {fileID: 6729529066732709506}
   m_PrefabAsset: {fileID: 0}

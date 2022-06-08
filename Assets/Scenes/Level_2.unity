@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394330
+  m_Name: pb_Mesh-23822
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -639,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -863,7 +867,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394190
+  m_Name: pb_Mesh-23682
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1052,6 +1056,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1108,6 +1120,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -1174,7 +1190,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394540
+  m_Name: pb_Mesh-24032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1338,7 +1354,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394498
+  m_Name: pb_Mesh-23990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1506,6 +1522,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -1784,6 +1804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -1903,7 +1927,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394820
+  m_Name: pb_Mesh-24312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2267,6 +2291,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -2635,6 +2663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -2739,7 +2771,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394218
+  m_Name: pb_Mesh-23710
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2938,7 +2970,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394442
+  m_Name: pb_Mesh-23934
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3107,6 +3139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -3242,6 +3278,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -3580,6 +3620,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -4057,7 +4101,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394778
+  m_Name: pb_Mesh-24270
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4226,7 +4270,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394526
+  m_Name: pb_Mesh-24018
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4617,6 +4661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -4731,7 +4779,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394484
+  m_Name: pb_Mesh-23976
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4916,7 +4964,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394750
+  m_Name: pb_Mesh-24242
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5080,7 +5128,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394204
+  m_Name: pb_Mesh-23696
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5326,7 +5374,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394162
+  m_Name: pb_Mesh-23654
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5654,6 +5702,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -5706,7 +5762,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394246
+  m_Name: pb_Mesh-23738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5938,7 +5994,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394470
+  m_Name: pb_Mesh-23962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6107,7 +6163,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394736
+  m_Name: pb_Mesh-24228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6472,6 +6528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -6776,6 +6836,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -7082,6 +7146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -7201,6 +7269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -7261,7 +7333,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394876
+  m_Name: pb_Mesh-24368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7430,7 +7502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394386
+  m_Name: pb_Mesh-23878
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7799,6 +7871,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -8183,6 +8259,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -8878,6 +8958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -9361,6 +9445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -9501,6 +9589,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9658,7 +9754,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394148
+  m_Name: pb_Mesh-23640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9861,6 +9957,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -10356,7 +10456,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394680
+  m_Name: pb_Mesh-24172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10735,6 +10835,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -11148,6 +11252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -11252,7 +11360,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394358
+  m_Name: pb_Mesh-23850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11437,7 +11545,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394708
+  m_Name: pb_Mesh-24200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11845,6 +11953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -11960,7 +12072,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394302
+  m_Name: pb_Mesh-23794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12134,7 +12246,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394806
+  m_Name: pb_Mesh-24298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12302,6 +12414,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -12587,6 +12703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -12868,6 +12988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy Big (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6511951407914646174, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
 --- !u!1001 &701498009
@@ -13076,6 +13200,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -13387,6 +13515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -13657,7 +13789,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394274
+  m_Name: pb_Mesh-23766
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13929,6 +14061,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -14207,6 +14343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -14325,6 +14465,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -14586,6 +14730,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -15064,6 +15212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -15245,6 +15397,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -15498,6 +15658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -15630,6 +15794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -15747,7 +15915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394176
+  m_Name: pb_Mesh-23668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16201,6 +16369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -16309,6 +16481,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -16703,6 +16879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -17008,6 +17188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -17122,7 +17306,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394568
+  m_Name: pb_Mesh-24060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17415,7 +17599,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394456
+  m_Name: pb_Mesh-23948
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17656,7 +17840,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394652
+  m_Name: pb_Mesh-24144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17956,6 +18140,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -18272,6 +18460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -18414,7 +18606,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394260
+  m_Name: pb_Mesh-23752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18971,6 +19163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -19366,7 +19562,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394694
+  m_Name: pb_Mesh-24186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19723,7 +19919,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394792
+  m_Name: pb_Mesh-24284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20121,6 +20317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -20414,13 +20614,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 1055298817}
   _triggerDoor: {fileID: 1361264633}
+--- !u!4 &1055525973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+  m_PrefabInstance: {fileID: 1965576743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1062180737
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394610
+  m_Name: pb_Mesh-24102
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20676,7 +20881,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394624
+  m_Name: pb_Mesh-24116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20855,6 +21060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -21318,6 +21531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -21382,6 +21599,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -21532,7 +21753,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394848
+  m_Name: pb_Mesh-24340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22082,6 +22303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -22273,7 +22498,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394722
+  m_Name: pb_Mesh-24214
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22516,7 +22741,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394288
+  m_Name: pb_Mesh-23780
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23073,6 +23298,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -23665,6 +23898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -23769,7 +24006,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394862
+  m_Name: pb_Mesh-24354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23943,6 +24180,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -24210,6 +24455,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -24648,6 +24897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -24756,6 +25009,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -25384,6 +25641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -25750,6 +26011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -25890,6 +26155,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -26141,7 +26410,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394512
+  m_Name: pb_Mesh-24004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26665,6 +26934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -26774,7 +27047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394638
+  m_Name: pb_Mesh-24130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27130,7 +27403,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394232
+  m_Name: pb_Mesh-23724
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27462,6 +27735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -27547,6 +27824,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -27843,6 +28124,10 @@ PrefabInstance:
     - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: m_Name
       value: Gule (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
@@ -28591,6 +28876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -28774,6 +29063,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28836,7 +29133,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394414
+  m_Name: pb_Mesh-23906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29161,6 +29458,7 @@ Transform:
   - {fileID: 507891540}
   - {fileID: 2136225718}
   - {fileID: 1730425542}
+  - {fileID: 1055525973}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29409,6 +29707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -29603,7 +29905,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394666
+  m_Name: pb_Mesh-24158
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29767,7 +30069,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394400
+  m_Name: pb_Mesh-23892
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30148,6 +30450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -30439,6 +30745,10 @@ PrefabInstance:
     - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_Name
       value: GuleStab
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
@@ -30801,7 +31111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394372
+  m_Name: pb_Mesh-23864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31171,6 +31481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -31437,7 +31751,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394428
+  m_Name: pb_Mesh-23920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31802,6 +32116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -32106,6 +32424,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -32562,6 +32884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -32946,6 +33272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -33060,7 +33390,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394344
+  m_Name: pb_Mesh-23836
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33427,6 +33757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -33593,7 +33927,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394596
+  m_Name: pb_Mesh-24088
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33862,7 +34196,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394554
+  m_Name: pb_Mesh-24046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34529,6 +34863,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ea91a939bbaad4fb6f43d0083e5279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1965576743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1650541835}
+    m_Modifications:
+    - target: {fileID: 1055525968, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
+    - target: {fileID: 7471321119483680694, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_Name
+      value: Viy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_RootOrder
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55.022915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4287348
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -51.856857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2011078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9795692
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -156.797
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846579337657748748, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 322e8910a8200324ab270b7a7f01047e, type: 3}
 --- !u!1001 &1972756897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34736,7 +35131,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394764
+  m_Name: pb_Mesh-24256
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34905,6 +35300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -35047,6 +35446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gule
       objectReference: {fileID: 0}
+    - target: {fileID: 1661795247940811714, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1661795247940811741, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
       propertyPath: Events
       value: 
@@ -35107,7 +35510,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394316
+  m_Name: pb_Mesh-23808
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35407,7 +35810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394582
+  m_Name: pb_Mesh-24074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35576,6 +35979,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -35644,6 +36055,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945060, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -36160,7 +36579,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-394834
+  m_Name: pb_Mesh-24326
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36605,6 +37024,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
@@ -37921,6 +38344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leshiy (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
       value: 
@@ -38215,9 +38642,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6511951407914646173, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 6511951407914646174, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
       propertyPath: m_Name
       value: Leshiy Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 6511951407914646174, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f70bd6f9971eaef48add8570bf350e78, type: 3}
@@ -38869,6 +39304,54 @@ PrefabInstance:
       propertyPath: _weaponLoader
       value: 
       objectReference: {fileID: 1943600551}
+    - target: {fileID: 5174123086057837955, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174123086057837955, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174123086057837955, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174123086057837955, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207489087073547708, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207489087073547708, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207489087073547708, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207489087073547708, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186764093063802795, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186764093063802795, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186764093063802795, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186764093063802795, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
 --- !u!114 &1562784728525824436 stripped
@@ -39105,6 +39588,10 @@ PrefabInstance:
     - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: m_Name
       value: Leshiy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534488360203157408, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6534488360203157411, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
       propertyPath: Events
