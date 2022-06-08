@@ -435,6 +435,14 @@ PrefabInstance:
       propertyPath: _weapon
       value: 
       objectReference: {fileID: 1943600551}
+    - target: {fileID: 896166899028812658, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832129364478850377, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
       propertyPath: _zero
       value: 
@@ -443,10 +451,6 @@ PrefabInstance:
       propertyPath: _events
       value: 
       objectReference: {fileID: 443348647}
-    - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
-      propertyPath: _health
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
       propertyPath: _damageText
       value: 
@@ -519,11 +523,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7725446020040829835, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5510234171771182666, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
 --- !u!114 &49795047 stripped
 MonoBehaviour:
@@ -605,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 796764474}
     - target: {fileID: 5927915375931032941, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_VersionIndex
-      value: 5834
+      value: 5840
       objectReference: {fileID: 0}
     - target: {fileID: 5927915376487708025, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_Mesh
@@ -613,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 128341091}
     - target: {fileID: 5927915376487708025, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_VersionIndex
-      value: 4753
+      value: 4759
       objectReference: {fileID: 0}
     - target: {fileID: 5927915376487708029, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_Mesh
@@ -623,17 +624,13 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 128341091}
-    - target: {fileID: 5927915376487708031, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 57ae99e88c367f846a2b98c984438dc6, type: 2}
     - target: {fileID: 5927915376698971780, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 714544503}
     - target: {fileID: 5927915376698971780, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_VersionIndex
-      value: 5840
+      value: 5846
       objectReference: {fileID: 0}
     - target: {fileID: 5927915376698972024, guid: 8e6b346205f1f164b92cefeb576214fa, type: 3}
       propertyPath: m_Mesh
@@ -1116,7 +1113,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-252946
+  m_Name: pb_Mesh-18766
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2879,7 +2876,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-252982
+  m_Name: pb_Mesh-18802
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3328,7 +3325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-252964
+  m_Name: pb_Mesh-18784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8970,7 +8967,7 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 4121284321305555884, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0008239746
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 4121284322119541992, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8983,6 +8980,10 @@ PrefabInstance:
     - target: {fileID: 4121284322119541992, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121284322119541992, guid: 946f231b40209574784bba2343e0724f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: NaN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 946f231b40209574784bba2343e0724f, type: 3}

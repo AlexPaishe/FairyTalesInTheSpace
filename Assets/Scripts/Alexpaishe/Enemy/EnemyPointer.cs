@@ -83,4 +83,10 @@ public class EnemyPointer : MonoBehaviour
     {
         _canvas.alpha = 0;
     }
+
+    private void OnDestroy()
+    {
+        _canvas.alpha = 0;
+        Destroy(_canvas.gameObject);
+    }
 }
