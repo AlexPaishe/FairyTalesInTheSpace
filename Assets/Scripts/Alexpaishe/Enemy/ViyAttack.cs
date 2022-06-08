@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class ViyAttack : MonoBehaviour
 {
@@ -12,13 +13,9 @@ public class ViyAttack : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Light _light;
+    [SerializeField] private int _damage;
 
     private bool _isAttacking;
-    private Ray _rayAttack;
-
-    private void Start()
-    {
-    }
 
     private void Update()
     {
@@ -36,6 +33,8 @@ public class ViyAttack : MonoBehaviour
                 counter+= Time.deltaTime;
             }
         }
+        Vector3 direction = _player.transform.position + Vector3.up - _shootPoint.position;
+        Debug.DrawRay(_shootPoint.position, direction, Color.red);
     }
 
     public void Attack()
@@ -55,12 +54,14 @@ public class ViyAttack : MonoBehaviour
             delay++;
             yield return new WaitForSeconds(delay/4);
         }
-        _rayAttack = new Ray(_shootPoint.position, _shootPoint.forward * _distanceAttack);
+
+        DealDamage();
 
         _viyMove.IsAttack = false;
         _isAttacking = false;
 
         Color color = new Color(_light.color.r, 0, 0);
+
         _light.color = color;
 
         _light.spotAngle = 0;
@@ -69,5 +70,26 @@ public class ViyAttack : MonoBehaviour
     public void EndAttack()
     {
         StartCoroutine(Shoot());
+    }
+
+    private void DealDamage()
+    {
+        if (Vector3.Angle(_shootPoint.forward, _player.transform.position - _shootPoint.position) < _angelAttack / 2)
+        {
+            Vector3 direction = _player.transform.position + Vector3.up - _shootPoint.position;
+
+            Ray ray = new Ray(_shootPoint.position, direction);
+
+            RaycastHit[] hits = Physics.SphereCastAll(ray, 0.5f, _distanceAttack);
+
+            foreach(RaycastHit hit in hits)
+            {
+                if(hit.transform.TryGetComponent<Player>(out Player player))
+                {
+                    player.Impact(_damage);
+                    return;
+                }
+            }
+        }
     }
 }
