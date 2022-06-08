@@ -47,8 +47,18 @@ public class Rang : MonoBehaviour
                 }
                 if (record < _timer)
                 {
-                    PlayerPrefs.SetInt($"Record{weapon}{SceneManager.GetActiveScene().buildIndex}", _timer);
-                    PlayerPrefs.SetInt($"Rang{weapon}{SceneManager.GetActiveScene().buildIndex}", i);
+                    if(SceneManager.GetActiveScene().buildIndex == 1)
+                    {
+                        PlayerPrefs.SetInt($"Record{GlobalSystemVar.sword}{SceneManager.GetActiveScene().buildIndex}", _timer);
+                        PlayerPrefs.SetInt($"Rang{GlobalSystemVar.sword}{SceneManager.GetActiveScene().buildIndex}", i);
+                        PlayerPrefs.SetInt($"Record{GlobalSystemVar.izlar}{SceneManager.GetActiveScene().buildIndex}", _timer);
+                        PlayerPrefs.SetInt($"Rang{GlobalSystemVar.izlar}{SceneManager.GetActiveScene().buildIndex}", i);
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt($"Record{weapon}{SceneManager.GetActiveScene().buildIndex}", _timer);
+                        PlayerPrefs.SetInt($"Rang{weapon}{SceneManager.GetActiveScene().buildIndex}", i);
+                    }
                 }
                 break;
             }

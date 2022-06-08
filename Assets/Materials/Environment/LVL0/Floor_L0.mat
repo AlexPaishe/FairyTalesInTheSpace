@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wall_l0
+  m_Name: Floor_L0
   m_Shader: {fileID: -6465566751694194690, guid: 4c939765b5f4eca4496c12a3c6ea5f6c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AOMap:
-        m_Texture: {fileID: 2800000, guid: 5cd0ce2ae800b7646a09324fe4f2e1c0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 205333bb4c0ff204ea740523acfcb677, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 9fce8997087b2b341b7240e6f2f57e97, type: 3}
+        m_Texture: {fileID: 2800000, guid: dcb76165d7abd4f44b905b7196b779ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,11 +73,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicMap:
-        m_Texture: {fileID: 2800000, guid: 65e78b785eb53c04c939e2fa4e566d98, type: 3}
+        m_Texture: {fileID: 2800000, guid: 80cb134d565c38b4ea222ca0c13c3c45, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 074629c6d97d36346a2e5a0a839c2336, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8b66b3c02d32f174493965a99e0f9df8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SmoothnessMap:
-        m_Texture: {fileID: 2800000, guid: 4cb728369e1e28c43a450062644da408, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4d0fcd6da5018c346914a5b2a655c48c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -130,7 +130,7 @@ Material:
     - _NormalStrenght: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PowerFresnel: 4
+    - _PowerFresnel: 4.3
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
