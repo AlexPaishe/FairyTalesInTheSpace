@@ -53,7 +53,7 @@ public class ViyAttack : MonoBehaviour
             _light.color = colour;
 
             delay++;
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay/4);
         }
         _rayAttack = new Ray(_shootPoint.position, _shootPoint.forward * _distanceAttack);
 
