@@ -8,6 +8,7 @@ public class ViyMove : Enemy, ITriggerMove
 
     [SerializeField] private float _speed;
     [SerializeField] private float _attackDistance;
+    [SerializeField] private float _maxTimeWaitAttack;
     [SerializeField] private ViyAttack _viyAttack;
 
     private Transform _player;
@@ -43,53 +44,56 @@ public class ViyMove : Enemy, ITriggerMove
     }
     private IEnumerator Move()
     {
+        yield return new WaitForSeconds(1);
         do
         {
             if (Death == false)
             {
                 if (DoorOpen == true)
                 {
-                    if (_isAlart == false)
-                    {
-                        _isAlart = true;
-                        Sounds.SoundVaroation(1);
-                    }
+                    CheckAlart();
 
                     if (IsAttack == false)
                     {
                         if (Vector3.Distance(_player.position, transform.position) < _attackDistance)
                         {
-                            Agent.speed = _speed;
-                            //_viyAttack.Attack();
-
+                            StartCoroutine(CounterAttack());
+                            IsAttack = true;
                         }
                         else
                         {
-                            Agent.speed = _speed;
+                            MoveToPlayer();
                         }
                     }
                 }
+
                 else
                 {
-                    if (_trigger.activeSelf == false)
-                    {
-                        DoorOpen = true;
-                    }
+                    CheckDoor();
                 }
             }
             else
             {
-                Anima.SetTrigger("Dead");
-                Agent.speed = 0;
-                Anima.SetFloat("Speed", 0);
-                StopCoroutine(_moveCoroutine);
-                Debug.Log("Dead");
+                Dead();
             }
 
-            Agent.destination = _player.position;
             yield return _waitForSeconds;
 
         } while (true);
+    }
+
+    private IEnumerator CounterAttack()
+    {
+        float counter = 0;
+        do
+        {
+            MoveToPlayer();
+            counter += 0.1f;
+            yield return _waitForSeconds;
+        } while (counter < _maxTimeWaitAttack);
+
+        Agent.speed = 0;
+        _viyAttack.Attack();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -98,6 +102,51 @@ public class ViyMove : Enemy, ITriggerMove
         {
             DoorOpen = false;
             _trigger = door.gameObject;
+        }
+    }
+
+    private void CheckAlart()
+    {
+        if (_isAlart == false)
+        {
+            _isAlart = true;
+            Sounds.SoundVaroation(1);
+        }
+    }
+
+    private void CheckDoor()
+    {
+        if (_trigger.activeSelf == false)
+        {
+            DoorOpen = true;
+        }
+    }
+    private void MoveToPlayer()
+    {
+        if (Vector3.Distance(_player.position, transform.position) > Agent.stoppingDistance)
+        {
+            Anima.SetFloat("Speed", 1);
+        }
+        else
+        {
+            Anima.SetFloat("Speed", 0);
+        }
+        Agent.speed = _speed;
+        Agent.destination = _player.position;
+    }
+
+    private void Dead()
+    {
+        Anima.SetTrigger("Dead");
+        Agent.speed = 0;
+        StopCoroutine(_moveCoroutine);
+    }
+
+    private void OnDisable()
+    {
+        if (_moveCoroutine != null)
+        {
+            StopCoroutine(_moveCoroutine);
         }
     }
 }
