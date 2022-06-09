@@ -2220,6 +2220,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1650541835}
     m_Modifications:
     - target: {fileID: 1055525968, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+      propertyPath: Point
+      value: 
+      objectReference: {fileID: 221818295}
+    - target: {fileID: 1055525968, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
       propertyPath: Damage
       value: 20
       objectReference: {fileID: 0}
@@ -2235,6 +2239,10 @@ PrefabInstance:
       propertyPath: _speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1978075548, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 2071019827}
     - target: {fileID: 1978075548, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
       propertyPath: _timeAttack
       value: 0.4
@@ -2294,6 +2302,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7846579337657748748, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
   m_PrefabInstance: {fileID: 221818293}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &221818295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2022411114, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+  m_PrefabInstance: {fileID: 221818293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b96e63260b4d24478da9bc4a096447c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &232005204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5901116453958264090, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}
@@ -13052,6 +13071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuleStab
       objectReference: {fileID: 0}
+    - target: {fileID: 2411065407912945083, guid: 324022a955a549f43bed59f754976589, type: 3}
+      propertyPath: Events
+      value: 
+      objectReference: {fileID: 443348647}
     - target: {fileID: 3043874359355801374, guid: 324022a955a549f43bed59f754976589, type: 3}
       propertyPath: m_RootOrder
       value: 3

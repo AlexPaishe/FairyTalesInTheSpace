@@ -12,9 +12,12 @@ public class Portal : MonoBehaviour
     private bool _movementAllowed;
     private Coroutine _delayedMove;
     private float _light = 0.1f;
+    private Camera _camera;
 
     private void Start()
     {
+        _camera = Camera.main;
+
         _movementAllowed = true;
         for(int i = 0; i < _mesh.Length; i++)
         {
@@ -60,6 +63,9 @@ public class Portal : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _secondPortal.StartCharging();
         player.position = _secondPortal.transform.position;
+
+        Vector3 newCamPosition = new Vector3(player.position.x, _camera.transform.position.y, player.position.z);
+        _camera.transform.position = newCamPosition;
     }
 
     private IEnumerator Charging()

@@ -12,11 +12,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private bool _moveAllowed = true;
     private bool _isRun;
-
+    private RigidbodyConstraints _constraintsOpen;
+    private RigidbodyConstraints _constraintsBlock;
     private void Start()
     {
         _events.OnJerkEvent += BanMovement;
         _rigidbody = GetComponent<Rigidbody>();
+        _constraintsOpen = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+        _constraintsBlock = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+        _rigidbody.constraints = _constraintsOpen;
     }
 
     private void FixedUpdate()
@@ -32,7 +36,9 @@ public class PlayerMovement : MonoBehaviour
             direction = DirectionWASD();
         }
 
-        _rigidbody.velocity = direction.normalized * _moveSpeed;
+        direction = direction.normalized * _moveSpeed;
+
+        _rigidbody.velocity = direction;
 
         float moveSpeed = _rigidbody.velocity.normalized.magnitude;
         _playerAnimation.SetMoveSpeed(moveSpeed);
