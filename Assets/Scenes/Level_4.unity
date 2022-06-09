@@ -534,6 +534,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 443348647}
     - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+      propertyPath: _health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725446020040829825, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
       propertyPath: _damageText
       value: 
       objectReference: {fileID: 1562784728525824436}
@@ -1942,6 +1946,10 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1015185551}
+    - target: {fileID: 9079604881147162940, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
+      propertyPath: _addedLiveTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9079604881147162943, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
       propertyPath: m_Name
       value: TimeBonus (1)
@@ -13711,6 +13719,10 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1015185551}
+    - target: {fileID: 9079604881147162940, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
+      propertyPath: _addedLiveTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9079604881147162943, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
       propertyPath: m_Name
       value: TimeBonus (7)
@@ -15210,7 +15222,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-253806
+  m_Name: pb_Mesh-12790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33554,6 +33566,10 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1015185551}
+    - target: {fileID: 9079604881147162940, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
+      propertyPath: _addedLiveTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9079604881147162943, guid: dd3c61ccc6d11054c8e78b62d68e98d9, type: 3}
       propertyPath: m_Name
       value: TimeBonus (12)
