@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 6729529066732709533}
   _viyMove: {fileID: 1055525968}
-  _timeAttack: 0.5
+  _timeAttack: 0.4
   _angelAttack: 120
   _distanceAttack: 20
   _player: {fileID: 0}
@@ -643,8 +643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Events: {fileID: 0}
-  Health: 30
-  Damage: 5
+  Health: 90
+  Damage: 20
   Death: 0
   Desolver: {fileID: 3074100948733467895}
   Collider: {fileID: 7471321119483680689}
@@ -653,10 +653,10 @@ MonoBehaviour:
   Anima: {fileID: 6729529066732709533}
   Sounds: {fileID: 6729529066732709535}
   DoorOpen: 0
-  Point: {fileID: 0}
-  _speed: 2
+  Point: {fileID: 2022411114}
+  _speed: 3
   _attackDistance: 30
-  _maxTimeWaitAttack: 4
+  _maxTimeWaitAttack: 2.5
   _viyAttack: {fileID: 1978075548}
 --- !u!1001 &6729529066732709506
 PrefabInstance:
@@ -696,6 +696,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -828,7 +840,7 @@ PrefabInstance:
     - target: {fileID: -4847531565359701038, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: aa44fe3d970792a4e9089baf45dc3b66, type: 2}
+      objectReference: {fileID: 2100000, guid: 89dfa365d776f444b8174d4ca9dbc972, type: 2}
     - target: {fileID: -4612117668256915830, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1192,7 +1204,7 @@ PrefabInstance:
     - target: {fileID: 7477672114596797951, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: aa44fe3d970792a4e9089baf45dc3b66, type: 2}
+      objectReference: {fileID: 2100000, guid: 89dfa365d776f444b8174d4ca9dbc972, type: 2}
     - target: {fileID: 7511021356471606391, guid: 03243b011e2b0314486da16b343af49b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -73.09181

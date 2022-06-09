@@ -64,6 +64,8 @@ public class Izlar : Weapon
 
     public override void FastAttak()
     {
+        _playerColliders = base.PlayerParts.Father.transform.GetComponentsInChildren<Collider>();
+
         ChangeLayer(_playerColliders, _layerJerkValue);
         _animation.Jerk();
         _playerRB.AddForce(_legs.transform.forward * _edit.jerkForce, ForceMode.Impulse);

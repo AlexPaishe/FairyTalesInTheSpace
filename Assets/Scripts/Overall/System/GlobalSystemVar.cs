@@ -14,6 +14,7 @@ public class GlobalSystemVar
 
     public const string sword = "Sword";
     public const string izlar = "Izlar";
+    public const string blaster = "Blaster";
 
     #endregion
 }

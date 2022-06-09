@@ -11,6 +11,7 @@ public class TutorialDisplay : MonoBehaviour
     [SerializeField] private int _soundInterval;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private Button _continueButton;
+    [SerializeField] private Button _infoButton;
     [SerializeField] private GameObject _gameplayCanvas;
     [SerializeField] private GameObject _statButtonPanel;
     [SerializeField] private MenuSound _menuSound;
@@ -28,6 +29,7 @@ public class TutorialDisplay : MonoBehaviour
 
     private void Start()
     {
+        _infoButton.gameObject.SetActive(true);
         _continueButton.gameObject.SetActive(false);
 
         OnDisplayToTrigger(0);
