@@ -1,9 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeBonus : MonoBehaviour
 {
-    [SerializeField] int _addedLiveTime;
-    [SerializeField] AudioSource _audioSource;
+    [SerializeField] private int _addedLiveTime;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private Text _text;
+
+    private void Start()
+    {
+        _text.text = _addedLiveTime.ToString();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

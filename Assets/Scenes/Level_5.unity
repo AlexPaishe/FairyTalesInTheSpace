@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -807,6 +807,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2036807175443177848, guid: 575eba8b191a59c4fa52f4ea701131df, type: 3}
   m_PrefabInstance: {fileID: 659126729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &132452236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2071019822, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+  m_PrefabInstance: {fileID: 49795046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc8adef929d1e74291160430a9eebd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &145385256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2318,6 +2329,18 @@ PrefabInstance:
     - target: {fileID: 1978075548, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
       propertyPath: _timeAttack
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552366327132684649, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552366327132684649, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552366327132684649, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7471321119483680694, guid: 9d26497911cfa594bb92fe3bfba4f290, type: 3}
       propertyPath: m_Name
@@ -18814,7 +18837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerParts: {fileID: 2071019823}
   _events: {fileID: 443348647}
-  _playerAnimation: {fileID: 0}
+  _playerAnimation: {fileID: 132452236}
 --- !u!4 &1960380500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5901116453958264090, guid: a419b961fdd1e3e4ebf2f4f9145f933c, type: 3}

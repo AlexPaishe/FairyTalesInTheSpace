@@ -7,7 +7,7 @@ public class ShootJoystick : Joystick
 {
     [SerializeField] private float _shootDelay;
     [SerializeField] private WeaponLoader _weaponLoader;
-
+    
     public bool IsRetention {get; private set;}
 
     private FillingReadiAttak _fillingReady;
