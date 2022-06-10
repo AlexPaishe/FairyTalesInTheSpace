@@ -41,6 +41,7 @@ public class ModelPicture : MonoBehaviour
         {
             case GlobalSystemVar.sword: NewModel(0); break;
             case GlobalSystemVar.izlar: NewModel(1); break;
+            case GlobalSystemVar.blaster:NewModel(6); break;
         }
     }
 }

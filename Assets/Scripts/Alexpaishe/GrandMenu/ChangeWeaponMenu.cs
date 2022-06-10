@@ -63,7 +63,7 @@ public class ChangeWeaponMenu : MonoBehaviour
     /// </summary>
     private void NewWeapon()
     {
-        for (int i = 1; i < _weaponIcon.Length; i++)
+        for (int i = 0; i < _weaponIcon.Length; i++)
         {
             _weaponIcon[i].sprite = _weaponSprite[_currentWeapon];
         }
