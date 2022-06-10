@@ -5,14 +5,24 @@ public class WeaponLoader : MonoBehaviour
     [SerializeField] private PlayerParts _playerParts;
     [SerializeField] private Events _events;
     [SerializeField] private PlayerAnimation _playerAnimation;
+    [SerializeField] private bool _isTutorial;
 
     public Weapon CurrentWeapon { get; private set; }
 
     private void Awake()
     {
-        CurrentWeapon = LoadWeapon();
-        _playerAnimation.WeaponChange(CurrentWeapon.Index);
-        CurrentWeapon.Construct(_events, _playerParts);
+        if(_isTutorial == false)
+        {
+            CurrentWeapon = LoadWeapon();
+            _playerAnimation.WeaponChange(CurrentWeapon.Index);
+            CurrentWeapon.Construct(_events, _playerParts);
+        }
+        else
+        {
+            LoadWeapon(GlobalSystemVar.unarmed);
+            _playerAnimation.WeaponChange(CurrentWeapon.Index);
+            CurrentWeapon.Construct(_events, _playerParts);
+        }
     }
 
     private Weapon LoadWeapon()
