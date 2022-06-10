@@ -25,6 +25,7 @@ public class ViyMove : Enemy, ITriggerMove
         _maxSpeed = _speed;
         DoorOpen = true;
         _waitForSeconds = new WaitForSeconds(0.1f);
+        Events = FindObjectOfType<Events>();
     }
 
     private void Update()

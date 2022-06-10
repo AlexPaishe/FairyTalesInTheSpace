@@ -9,9 +9,10 @@ public class ChangeWeaponMenu : MonoBehaviour
     [SerializeField] private Sprite[] _weaponSprite;
     [SerializeField] private Text[] _weaponTitle;
     [SerializeField] private string[] _weaponText;
-    [SerializeField] private int _weaponMaxVariation;
     [SerializeField] private ModelPicture _model;
+    [SerializeField] private int[] _weaponModel;
     private int _currentWeapon;
+    private int _weaponMaxVariation;
     public int CurrentWeapon
     {
         get
@@ -33,7 +34,10 @@ public class ChangeWeaponMenu : MonoBehaviour
         {
             case GlobalSystemVar.sword: CurrentWeapon = 0; break;
             case GlobalSystemVar.izlar: CurrentWeapon = 1; break;
+            case GlobalSystemVar.blaster: CurrentWeapon = 2; break;
         }
+
+        _weaponMaxVariation = _weaponSprite.Length;
 
         ChangeWepon();
     }
@@ -80,6 +84,7 @@ public class ChangeWeaponMenu : MonoBehaviour
         {
             case 0: PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.sword); break;
             case 1: PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.izlar); break;
+            case 2: PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.blaster); break;
         }
     }
 
@@ -88,7 +93,7 @@ public class ChangeWeaponMenu : MonoBehaviour
     /// </summary>
     private void ChangePicture()
     {
-        if (_currentWeapon > _weaponMaxVariation)
+        if (_currentWeapon == _weaponMaxVariation)
         {
             _currentWeapon = 0;
         }
@@ -97,7 +102,7 @@ public class ChangeWeaponMenu : MonoBehaviour
             _currentWeapon = _weaponMaxVariation;
         }
 
-        _model.NewModel(_currentWeapon);
+        _model.NewModel(_weaponModel[_currentWeapon]);
         _weaponTitle[0].text = _weaponText[_currentWeapon];
     }
 }

@@ -10,12 +10,17 @@ public class ViyAttack : MonoBehaviour
     [SerializeField] private float _timeAttack;
     [SerializeField] private float _angelAttack;
     [SerializeField] private float _distanceAttack;
-    [SerializeField] private Player _player;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Light _light;
     [SerializeField] private int _damage;
 
     private bool _isAttacking;
+    private Player _player;
+
+    private void Awake()
+    {
+        _player = FindObjectOfType<Player>();
+    }
 
     private void Update()
     {

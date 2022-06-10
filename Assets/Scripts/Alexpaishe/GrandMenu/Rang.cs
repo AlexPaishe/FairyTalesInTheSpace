@@ -53,6 +53,8 @@ public class Rang : MonoBehaviour
                         PlayerPrefs.SetInt($"Rang{GlobalSystemVar.sword}{SceneManager.GetActiveScene().buildIndex}", i);
                         PlayerPrefs.SetInt($"Record{GlobalSystemVar.izlar}{SceneManager.GetActiveScene().buildIndex}", _timer);
                         PlayerPrefs.SetInt($"Rang{GlobalSystemVar.izlar}{SceneManager.GetActiveScene().buildIndex}", i);
+                        PlayerPrefs.SetInt($"Record{GlobalSystemVar.blaster}{SceneManager.GetActiveScene().buildIndex}", _timer);
+                        PlayerPrefs.SetInt($"Rang{GlobalSystemVar.blaster}{SceneManager.GetActiveScene().buildIndex}", i);
                     }
                     else
                     {
