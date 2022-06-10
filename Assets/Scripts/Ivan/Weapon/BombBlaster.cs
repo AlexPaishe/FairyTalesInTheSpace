@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class BombBlaster : MonoBehaviour
 {
-    [SerializeField] float _bombRadius;
-    [SerializeField] int _damage;
-    [SerializeField] Animator _animator;
+    [SerializeField] private float _bombRadius;
+    [SerializeField] private int _damage;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Sound _sound;
+
+    private void Awake()
+    {
+        _sound.SoundPlay(0);
+    }
 
     public void Boom()
     {
@@ -21,6 +27,8 @@ public class BombBlaster : MonoBehaviour
         }
 
         _animator.SetTrigger("Boom");
+
+        _sound.SoundPlay(1);
 
         Destroy(gameObject, 0.5f);
     }

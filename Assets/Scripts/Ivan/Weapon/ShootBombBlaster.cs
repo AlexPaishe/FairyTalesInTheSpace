@@ -12,6 +12,5 @@ public class ShootBombBlaster : MonoBehaviour
     public void Shoot()
     {
         GameObject bomb = Instantiate(_bombPrefab, transform.position, Quaternion.identity);
-        Debug.Log(transform.position);
     }
 }
