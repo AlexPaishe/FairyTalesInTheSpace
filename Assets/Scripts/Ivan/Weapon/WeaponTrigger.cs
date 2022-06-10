@@ -18,8 +18,11 @@ public class WeaponTrigger : MonoBehaviour
     {
         if (other.transform.GetComponent<Player>())
         {
-            ShowWeapon(_weaponLoader.CurrentWeapon.Index);
+            int temp = _weaponLoader.CurrentWeapon.Index;
+
+            ShowWeapon(temp);
             _weaponLoader.ChangeWeapon(WeaponName(_index));
+            _index = temp;
         }
     }
 

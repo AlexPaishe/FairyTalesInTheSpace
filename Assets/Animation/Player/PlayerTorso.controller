@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State
+  m_Name: Unarmed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -295,7 +295,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: WeaponNumber
-    m_EventTreshold: 3
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6181025717692247934}
   m_Solo: 0
@@ -342,7 +342,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: WeaponNumber
-    m_EventTreshold: 3
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6181025717692247934}
   m_Solo: 0
@@ -378,7 +378,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 5008234939137457435, guid: 87fadbfd216df644790e99719880a43a, type: 3}
+  m_Motion: {fileID: 7400000, guid: 184d116c1b9a5dc4ebbbb6d550e01e4a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -679,7 +679,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 120, y: 140, z: 0}
   m_EntryPosition: {x: 100, y: 310, z: 0}
-  m_ExitPosition: {x: 720, y: 630, z: 0}
+  m_ExitPosition: {x: 720, y: 800, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 7903691847380969780}
 --- !u!1101 &-1888341410081431356
@@ -1155,7 +1155,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: WeaponNumber
-    m_EventTreshold: 3
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6181025717692247934}
   m_Solo: 0
@@ -1316,7 +1316,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: WeaponNumber
-    m_EventTreshold: 2
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8498790726655887291}
   m_Solo: 0

@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 617797518}
   m_Layer: 10
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 7102548598030890633}
   m_Layer: 0
   m_Name: JerkDash
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 1068769316}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -947,6 +947,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1018183814812198538, guid: d2b36da0c430c8c43a5376c301157a82, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1018183814812198539, guid: d2b36da0c430c8c43a5376c301157a82, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1119,6 +1123,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -3196511607817033700, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -1063094714816996356, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.98021
@@ -1163,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1726527512867401859, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -1170,6 +1182,10 @@ PrefabInstance:
     - target: {fileID: 1963035160312945046, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963035160312945046, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2472186858389371150, guid: cf7561cac8f82374196f17f6583c5a2e, type: 3}
       propertyPath: m_Layer
@@ -1471,6 +1487,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -593497275445482950, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
       propertyPath: m_Name
       value: CosTorso
@@ -1478,6 +1498,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1054983193689959709, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
       propertyPath: m_Layer
@@ -1554,6 +1578,10 @@ PrefabInstance:
     - target: {fileID: 7290139105190669015, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290139105190669015, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7472224364962472061, guid: df69305a57c3ddb43ba99410767ebe9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

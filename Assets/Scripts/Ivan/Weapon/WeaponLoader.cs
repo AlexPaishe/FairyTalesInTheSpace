@@ -19,7 +19,7 @@ public class WeaponLoader : MonoBehaviour
         }
         else
         {
-            LoadWeapon(GlobalSystemVar.unarmed);
+            CurrentWeapon = LoadWeapon(GlobalSystemVar.unarmed);
             _playerAnimation.WeaponChange(CurrentWeapon.Index);
             CurrentWeapon.Construct(_events, _playerParts);
         }
