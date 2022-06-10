@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 
     private WaitForSeconds _liveTime;
     private Rigidbody _rigidbody;
+    private float _currentSpeed;
 
     private void Awake()
     {
@@ -19,11 +20,13 @@ public class Bullet : MonoBehaviour
     {
         _rigidbody.velocity = Vector3.zero;
         StartCoroutine(LiveCounter());
+        _currentSpeed = _edit.speed;
     }
 
     private void FixedUpdate()
     {
-        _rigidbody.AddForce(transform.forward * _edit.speed, ForceMode.Force);
+        _rigidbody.AddForce(transform.forward * _currentSpeed * 1);
+        _currentSpeed -= 0.5f;
     }
 
     private void OnCollisionEnter(Collision collision)

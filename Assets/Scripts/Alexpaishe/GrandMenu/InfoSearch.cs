@@ -36,9 +36,11 @@ public class InfoSearch : MonoBehaviour
             {
                 PlayerPrefs.SetInt($"Rang{GlobalSystemVar.sword}{i + 1}", _rangSprite.Length - 1);
                 PlayerPrefs.SetInt($"Rang{GlobalSystemVar.izlar}{i + 1}", _rangSprite.Length - 1);
+                PlayerPrefs.SetInt($"Rang{GlobalSystemVar.blaster}{i + 1}", _rangSprite.Length - 1);
                 _rang[i] = PlayerPrefs.GetInt($"Rang{weapon}{i + 1}");
                 PlayerPrefs.SetInt($"Record{GlobalSystemVar.sword}{i + 1}", -1);
                 PlayerPrefs.SetInt($"Record{GlobalSystemVar.izlar}{i + 1}", -1);
+                PlayerPrefs.SetInt($"Record{GlobalSystemVar.blaster}{i + 1}", - 1);
                 _record[i] = PlayerPrefs.GetInt($"Record{weapon}{i + 1}");
                 _sound.FirstSound();
                 Init();

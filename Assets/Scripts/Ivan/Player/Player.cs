@@ -35,14 +35,29 @@ public class Player : MonoBehaviour, IHaveHealth
             _damageText.DamageAnima(damage);
             StartCoroutine(Damage());
             TypeDamage(damage);
-            if (damage < _health)
+
+            if (damage < 0)
             {
                 TakeDamage(damage);
-                //анимация
             }
             else
             {
-                Dead();
+                if(_health > 0)
+                {
+                    if (damage < _health)
+                    {
+                        TakeDamage(damage);
+                    }
+                    else
+                    {
+                        TakeDamage(_health); ;
+                    }
+                }
+                else
+                {
+                    Dead();
+                }
+                
             }
         }
     }

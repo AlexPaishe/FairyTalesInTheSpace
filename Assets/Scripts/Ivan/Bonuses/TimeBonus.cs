@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class TimeBonus : MonoBehaviour
 {
     [SerializeField] private int _addedLiveTime;
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private Text _text;
+    [SerializeField] private TextMeshPro _text;
 
     private void Start()
     {

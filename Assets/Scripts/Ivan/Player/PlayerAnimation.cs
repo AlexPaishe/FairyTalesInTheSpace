@@ -31,6 +31,16 @@ public class PlayerAnimation : MonoBehaviour
         _torsoAnim.SetTrigger("SwordChargJerk");
     }
 
+    public void BlasterShootFoward()
+    {
+        _torsoAnim.SetTrigger("BlasterShootFoward");
+    }
+    
+    public void BlasterShootUp()
+    {
+        _torsoAnim.SetTrigger("BlasterShootUp");
+    }
+
     public void Shoot (bool isLeftShoot)
     {
         if (isLeftShoot)

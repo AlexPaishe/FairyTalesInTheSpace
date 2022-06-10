@@ -20,6 +20,8 @@ public class TutorialDisplay : MonoBehaviour
 
     private TutorialData _data;
     private WaitForSecondsRealtime _waitLetter;
+    private Coroutine _gradualAppearanceText;
+    private int _step;
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class TutorialDisplay : MonoBehaviour
 
     public void OnDisplayToTrigger(int step)
     {
+        _step = step;
         Time.timeScale = 0;
 
         _statButtonPanel.SetActive(false);
@@ -46,8 +49,18 @@ public class TutorialDisplay : MonoBehaviour
 
         _text.text = "";
 
-        StartCoroutine(GradualAppearanceText(_data.StepText[step]));
+        _gradualAppearanceText = StartCoroutine(GradualAppearanceText(_data.StepText[step]));
         _menuSound.Click();
+    }
+
+    public void ShowAllText()
+    {
+        if (_gradualAppearanceText != null)
+        {
+            StopCoroutine(_gradualAppearanceText);
+        }
+        _text.text = _data.StepText[_step];
+        _continueButton.gameObject.SetActive(true);
     }
 
     public void OnLastDisplay()
