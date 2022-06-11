@@ -16,6 +16,7 @@ public class InfoSearch : MonoBehaviour
     [SerializeField] private string[] _infoLevel;
     [SerializeField] private Text[] _levelTitle;
     [SerializeField] private string[] _levelName;
+    [SerializeField] private GameObject[] _titleRange;
     private int[] _rang;
     private int[] _record;
     private int _nowLevel = 0;
@@ -76,6 +77,18 @@ public class InfoSearch : MonoBehaviour
             {
                 _recordText[i].text = "00:00";
                 _rangImage[i].sprite = _rangSprite[5];
+            }
+        }
+
+        for(int i = 0; i < _titleRange.Length;i++)
+        {
+            if(i == var)
+            {
+                _titleRange[i].SetActive(true);
+            }
+            else
+            {
+                _titleRange[i].SetActive(false);
             }
         }
     }
