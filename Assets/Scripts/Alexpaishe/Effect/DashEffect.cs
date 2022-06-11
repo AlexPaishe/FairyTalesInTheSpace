@@ -10,11 +10,7 @@ public class DashEffect : MonoBehaviour
 
     public void DashOn()
     {
-        var emission = _dash.emission;
-        emission.rateOverDistance = _maxRateDistance;
-        emission.rateOverTime = _maxRateDistance * 2;
-        _sound[0].SoundPlay(0);
-        _sound[1].SoundVaroation(0);
+        DashVariation();
         _dash.Play();
     }
 
@@ -22,6 +18,38 @@ public class DashEffect : MonoBehaviour
     {
         var emission = _dash.emission;
         emission.rateOverDistance = 0;
-        emission.rateOverTime = 0;
+    }
+
+    private void DashVariation()
+    {
+        string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
+        switch(weapon)
+        {
+            case GlobalSystemVar.sword: _sound[0].SoundPlay(1);  break;
+            case GlobalSystemVar.izlar:
+                DashOnSword();
+                _sound[0].SoundPlay(0);
+                _sound[1].SoundVaroation(0);
+                StartCoroutine(DashOffCourutine(0.8f));
+                break;
+            //case GlobalSystemVar.blaster: CurrentWeapon = 2; break;
+        }
+    }
+
+    IEnumerator DashOffCourutine(float second)
+    {
+        yield return new WaitForSeconds(second);
+        DashOff();
+    }
+
+    public void DashOffSword(float second)
+    {
+        StartCoroutine(DashOffCourutine(second));
+    }
+
+    public void DashOnSword()
+    {
+        var emission = _dash.emission;
+        emission.rateOverDistance = _maxRateDistance;
     }
 }

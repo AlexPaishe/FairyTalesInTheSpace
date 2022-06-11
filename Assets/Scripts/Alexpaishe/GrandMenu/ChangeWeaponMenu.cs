@@ -29,17 +29,7 @@ public class ChangeWeaponMenu : MonoBehaviour
 
     private void Start()
     {
-        string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
-        switch (weapon)
-        {
-            case GlobalSystemVar.sword: CurrentWeapon = 0; break;
-            case GlobalSystemVar.izlar: CurrentWeapon = 1; break;
-            case GlobalSystemVar.blaster: CurrentWeapon = 2; break;
-        }
-
-        _weaponMaxVariation = _weaponSprite.Length;
-
-        ChangeWepon();
+        Init();
     }
 
     /// <summary>
@@ -104,5 +94,20 @@ public class ChangeWeaponMenu : MonoBehaviour
 
         _model.NewModel(_weaponModel[_currentWeapon]);
         _weaponTitle[0].text = _weaponText[_currentWeapon];
+    }
+
+    public void Init()
+    {
+        string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
+        switch (weapon)
+        {
+            case GlobalSystemVar.sword: CurrentWeapon = 0; break;
+            case GlobalSystemVar.izlar: CurrentWeapon = 1; break;
+            case GlobalSystemVar.blaster: CurrentWeapon = 2; break;
+        }
+
+        _weaponMaxVariation = _weaponSprite.Length;
+
+        ChangeWepon();
     }
 }

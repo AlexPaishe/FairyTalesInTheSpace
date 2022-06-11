@@ -10,6 +10,12 @@ public class DeadPlayer : MonoBehaviour
     [SerializeField] private PauseMenu _pause;
     [SerializeField] private Win _win;
     [SerializeField] private WeaponLoader _weapon;
+    private MenuSound _sound;
+
+    private void Awake()
+    {
+        _sound = FindObjectOfType<MenuSound>();
+    }
 
     public void DeadBegin()
     {
@@ -18,6 +24,7 @@ public class DeadPlayer : MonoBehaviour
         _col.enabled = false;
         _win.Lose();
         _weapon.CurrentWeapon.StopShoot();
+        _sound.WinAndLose(1);
     }
 
     public void DeadEnd()

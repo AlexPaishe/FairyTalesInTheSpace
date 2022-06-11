@@ -266,10 +266,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -302,7 +302,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -362,10 +362,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -398,7 +398,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -474,7 +474,6 @@ MonoBehaviour:
   _timeAttack: 0.5
   _angelAttack: 120
   _distanceAttack: 20
-  _player: {fileID: 0}
   _shootPoint: {fileID: 1703224206}
   _light: {fileID: 819123984}
   _damage: 10
@@ -492,16 +491,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sound: {fileID: 6729529066732709528}
   _clips:
-  - {fileID: 8300000, guid: f3494faedd247fe4bb26899956b0b582, type: 3}
-  - {fileID: 8300000, guid: ed905519e9dfe8c43ba2d6c0a369534e, type: 3}
-  - {fileID: 8300000, guid: 8a560e34ec1f1ae42963c3edfce5c75d, type: 3}
-  - {fileID: 8300000, guid: ab119c7e9001aec4f8ffb3964021603c, type: 3}
-  - {fileID: 8300000, guid: 2150511297abc8e40a0a161c73735f1c, type: 3}
-  - {fileID: 8300000, guid: 3650e6e227309394c83fdd71b89d5d6e, type: 3}
-  - {fileID: 8300000, guid: a066b04bb7f6fee4281cd6a662ef4e67, type: 3}
-  - {fileID: 8300000, guid: 8d4ab477a2e37b34cbe8a6210973fa22, type: 3}
-  _min: 000000000200000005000000
-  _max: 020000000500000008000000
+  - {fileID: 8300000, guid: 2d388c9c12028424a9a845549c1b7a4d, type: 3}
+  - {fileID: 8300000, guid: b22beee9c41dca94cb2cd11cbe640c84, type: 3}
+  - {fileID: 8300000, guid: b5392a70d921d17498633cac41de67c8, type: 3}
+  _min: 000000000100000002000000
+  _max: 010000000200000003000000
 --- !u!1 &7471321119483680694
 GameObject:
   m_ObjectHideFlags: 0
