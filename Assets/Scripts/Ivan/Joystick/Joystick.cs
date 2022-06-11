@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
+    [SerializeField] private PlayerRotation _rotation;
+
     private void OnEnable()
     {
+        _rotation.BlockedRotate = false;
         PointerUp();
     }
 
