@@ -16,6 +16,7 @@ public class Blaster : Weapon
     private WaitForSeconds _coroutineTick;
     private float _angel = 0;
     private float _addedAngel;
+    private PlayerRotation _rotation;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class Blaster : Weapon
         _coroutineTick = new WaitForSeconds(0.05f);
         _addedAngel = _edit.timeCharging / _edit.angelAttack * 100;
         _light.spotAngle = 0;
+        _rotation = base.PlayerParts.Father.GetComponent<PlayerRotation>();
     }
 
     public override void StartShoot()
@@ -47,6 +49,8 @@ public class Blaster : Weapon
 
     public override void StopShoot()
     {
+        _rotation.BlockedRotate = true;
+
         if( _shootCoroutine != null)
         {
             StopCoroutine(_shootCoroutine);
@@ -75,6 +79,8 @@ public class Blaster : Weapon
         _light.spotAngle = 0;
 
         DealDamage();
+
+        _rotation.BlockedRotate = false;
     }
 
     private void Update()
@@ -92,7 +98,24 @@ public class Blaster : Weapon
             {
                 if (hit.transform.TryGetComponent<Enemy>(out Enemy enemy))
                 {
-                    enemy.Impact(2 + (int)((float)_edit.shootDamage * _angel / _edit.angelAttack) - 2);
+                    Ray ray = new Ray(_torso.position + Vector3.up,  enemy.transform.position + Vector3.up - _torso.position + Vector3.up);
+
+                    RaycastHit[] obstacleHits = Physics.RaycastAll(ray, Vector3.Distance(_torso.position, hit.transform.position));
+
+                    bool isObstacle = false;
+
+                    foreach(RaycastHit obstacle in obstacleHits)
+                    {
+                        if (obstacle.transform.CompareTag("Obstacle"))
+                        {
+                            isObstacle = true;
+                        }
+                    }
+
+                    if (isObstacle == false)
+                    {
+                        enemy.Impact(2 + (int)((float)_edit.shootDamage * _angel / _edit.angelAttack) - 2);
+                    }
                 }
             }
         }
