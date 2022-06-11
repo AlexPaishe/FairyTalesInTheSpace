@@ -96,7 +96,25 @@ public class ViyAttack : MonoBehaviour
             {
                 if(hit.transform.TryGetComponent<Player>(out Player player))
                 {
-                    player.Impact(_damage);
+                    Ray checkRay = new Ray(player.transform.position + Vector3.up, transform.position + Vector3.up - player.transform.position + Vector3.up);
+
+                    RaycastHit[] obstacleHits = Physics.RaycastAll(checkRay, Vector3.Distance(transform.position, player.transform.position));
+
+                    bool isObstacle = false;
+
+                    foreach (RaycastHit obstacle in obstacleHits)
+                    {
+                        if (obstacle.transform.CompareTag("Obstacle"))
+                        {
+                            isObstacle = true;
+                        }
+                    }
+
+                    if (isObstacle == false)
+                    {
+                        player.Impact(_damage);
+                    }
+
                     return;
                 }
             }

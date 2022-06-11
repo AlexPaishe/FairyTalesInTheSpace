@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Events _events;
     [SerializeField] private PlayerAnimation _playerAnimation;
 
+    public float Speed { get; set; }
+
     private Rigidbody _rigidbody;
     private bool _moveAllowed = true;
     private bool _isRun;
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         _constraintsOpen = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
         _constraintsBlock = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         _rigidbody.constraints = _constraintsOpen;
+        Speed = _moveSpeed;
     }
 
     private void FixedUpdate()
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             direction = DirectionWASD();
         }
 
-        direction = direction.normalized * _moveSpeed;
+        direction = direction.normalized * Speed;
 
         _rigidbody.velocity = direction;
 

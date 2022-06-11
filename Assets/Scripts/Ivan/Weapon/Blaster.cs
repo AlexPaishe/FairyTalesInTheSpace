@@ -6,6 +6,8 @@ public class Blaster : Weapon
 {
     [SerializeField] private BlasterEdit _edit;
     [SerializeField] private Light _light;
+    [SerializeField] private float _aimingSpeed;
+    [SerializeField] private Sound _sound;
 
     public override int Index => 2;
     public override float TimeReadyFastAttack => _edit.timeCharging;
@@ -17,6 +19,8 @@ public class Blaster : Weapon
     private float _angel = 0;
     private float _addedAngel;
     private PlayerRotation _rotation;
+    private PlayerMovement _movement;
+    private float _defaultSpeed;
 
     private void Start()
     {
@@ -26,11 +30,16 @@ public class Blaster : Weapon
         _addedAngel = _edit.timeCharging / _edit.angelAttack * 100;
         _light.spotAngle = 0;
         _rotation = base.PlayerParts.Father.GetComponent<PlayerRotation>();
+        _movement = base.PlayerParts.Father.GetComponent<PlayerMovement>();
+        _defaultSpeed = _movement.Speed;
     }
 
     public override void StartShoot()
     {
         _shootCoroutine = StartCoroutine(ShootFoward());
+        _movement.Speed = _aimingSpeed;
+
+        _sound.SoundPlay(0);
     }
 
     private IEnumerator ShootFoward()
@@ -57,6 +66,10 @@ public class Blaster : Weapon
         }
         _animation.BlasterShootFoward();
         StartCoroutine(Shoot());
+
+        _movement.Speed = _defaultSpeed;
+
+        _sound.SoundPlay(1);
     }
 
     private IEnumerator Shoot()
@@ -124,6 +137,5 @@ public class Blaster : Weapon
     public override void FastAttak()
     {
         _animation.BlasterShootUp();
-
     }
 }

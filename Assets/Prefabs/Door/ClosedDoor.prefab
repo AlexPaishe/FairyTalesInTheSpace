@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 7959046402732190920}
   m_Layer: 11
   m_Name: DoorsParts
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5364152327442673473}
   - component: {fileID: 7700587614859056662}
   m_Layer: 0
-  m_Name: BlockedDoorUltra
+  m_Name: ClosedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,6 +230,8 @@ MonoBehaviour:
   _clips:
   - {fileID: 8300000, guid: 268f3d272804cb742a84a3a5ce2ec61c, type: 3}
   - {fileID: 8300000, guid: 2a2d03eaffd4ecc4b93f8466c4a7a6e5, type: 3}
+  _min: 
+  _max: 
 --- !u!114 &3897272679950889812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keyType: 0
   _sound: {fileID: 7481862954496114483}
+  _triggerDoor: {fileID: 0}
 --- !u!95 &3303983052090068430
 Animator:
   serializedVersion: 3
