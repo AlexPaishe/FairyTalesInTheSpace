@@ -32280,7 +32280,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1285837547115294230, guid: ea619da42435ed44b84a66efed0f430f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 17254888b12699d4aaa9517e7c073a0b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 001172d37d1ad1e48a1dc9233166fd59, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -34588,6 +34588,7 @@ MonoBehaviour:
   _playerParts: {fileID: 2071019823}
   _events: {fileID: 443348647}
   _playerAnimation: {fileID: 419758236}
+  _isTutorial: 0
 --- !u!1001 &1944160510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37490,6 +37491,30 @@ PrefabInstance:
     - target: {fileID: 2819154077511963917, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
       propertyPath: m_Name
       value: CanvasGamePlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588724215425614, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588724215425614, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588724215425614, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588725336562465, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588725336562465, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848588725336562465, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4178509094095496966, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
       propertyPath: _timeRang.Array.data[0]

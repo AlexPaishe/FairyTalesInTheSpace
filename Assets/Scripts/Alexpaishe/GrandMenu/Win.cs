@@ -13,6 +13,7 @@ public class Win : MonoBehaviour
     [SerializeField] private string[] _nameLevel;
     [SerializeField] private GameObject[] _rangInfo;
     private Player _player;
+    private MenuSound _sound;
     private float _enemyLenght;
     private bool _lose = false;
     public float EnemyLenght
@@ -43,6 +44,7 @@ public class Win : MonoBehaviour
         Enemy[] enemies = FindObjectsOfType<Enemy>();
         EnemyLenght = enemies.Length;
         _player = FindObjectOfType<Player>();
+        _sound = FindObjectOfType<MenuSound>();
     }
 
     public void Lose()
@@ -68,5 +70,6 @@ public class Win : MonoBehaviour
                 _rangInfo[i].SetActive(false);
             }
         }
+        _sound.WinAndLose(0);
     }
 }

@@ -52,11 +52,14 @@ public class WeaponTrigger : MonoBehaviour
     {
         switch (index)
         {
-            case 0: 
+            case 0:
+                PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.izlar);
                 return GlobalSystemVar.izlar;
-            case 1: 
+            case 1:
+                PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.sword);
                 return GlobalSystemVar.sword;
             case 2:
+                PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.blaster);
                 return GlobalSystemVar.blaster;
             default:
                 return GlobalSystemVar.unarmed;
