@@ -611,6 +611,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+--- !u!114 &49795047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7725446020040829831, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+  m_PrefabInstance: {fileID: 49795046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c5f8442fa784046ba70424be39f586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &50100025
 Mesh:
   m_ObjectHideFlags: 0
@@ -37609,9 +37620,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4327854878925424590, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: _rotation
+      value: 
+      objectReference: {fileID: 49795047}
+    - target: {fileID: 4327854878925424590, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
       propertyPath: _weaponLoader
       value: 
       objectReference: {fileID: 1943600551}
+    - target: {fileID: 4401964074955818614, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
+      propertyPath: _rotation
+      value: 
+      objectReference: {fileID: 49795047}
     - target: {fileID: 5174123086057837955, guid: 13c472ff3f817734aa15ca1ad0fbd840, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

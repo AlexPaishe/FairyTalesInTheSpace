@@ -16,6 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private bool _isRun;
     private RigidbodyConstraints _constraintsOpen;
     private RigidbodyConstraints _constraintsBlock;
+
+    private void Awake()
+    {
+        Speed = _moveSpeed;
+    }
+
     private void Start()
     {
         _events.OnJerkEvent += BanMovement;
@@ -23,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         _constraintsOpen = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
         _constraintsBlock = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         _rigidbody.constraints = _constraintsOpen;
-        Speed = _moveSpeed;
     }
 
     private void FixedUpdate()
