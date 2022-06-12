@@ -85,9 +85,4 @@ public class EnemyPointer : MonoBehaviour
     {
         _pointArrow.SetActive(false);
     }
-
-    private void OnDisable()
-    {
-        _canvas.alpha = 0;
-    }
 }

@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2108350458}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -8980,6 +8980,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1723652875}
+        m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &586483912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12746,6 +12758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1723652875}
+        m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &774941906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15210,7 +15234,7 @@ MonoBehaviour:
     \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0430 \u0432
     \u0433\u0430\u043B\u0430\u043A\u0442\u0438\u043A\u0435. \u0415\u0435 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044F\u044F
     \u044D\u043A\u043E\u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043F\u043E \u0431\u043E\u043B\u044C\u0448\u0435\u0439
-    \u0447\u0430\u0441\u0442\u0438 \u0441\u0430\u043C\u043E\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E,
+    \u0447\u0430\u0441\u0442\u0438 \u0441\u0430\u043C\u043E\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u0430,
     \u043D\u043E \u043D\u0443\u0436\u0434\u0430\u0435\u0442\u0441\u044F \u0432 \u043F\u043E\u0442\u0440\u0435\u0431\u043B\u0435\u043D\u0438\u0438
     \u0441\u043E\u043B\u043D\u0435\u0447\u043D\u043E\u0439 \u044D\u043D\u0435\u0440\u0433\u0438\u0438
     \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0437\u0432\u0435\u0437\u0434.
@@ -18570,8 +18594,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1464689902}
   m_HandleRect: {fileID: 1464689901}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.50000006
+  m_Value: 0.9999995
+  m_Size: 0.49999997
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22559,11 +22583,11 @@ MonoBehaviour:
     \u0437\u0430 \u043F\u043E\u043C\u043E\u0449\u044C \u0432 \u0431\u043E\u0440\u044C\u0431\u0435
     \u0441 \u043C\u0435\u0441\u0442\u043D\u044B\u043C\u0438 \u0438\u043D\u043E\u043F\u043B\u0430\u043D\u0435\u0442\u043D\u044B\u043C\u0438
     \u0444\u043E\u0440\u043C\u0430\u043C\u0438 \u0436\u0438\u0437\u043D\u0438. \u041F\u0440\u043E\u0441\u0442\u044B
-    \u0432 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F
+    \u0432 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0438
     \u0438 \u0441\u0434\u0435\u043B\u0430\u043D\u044B \u0438\u0437 \u043B\u0435\u0433\u043A\u0438\u0445
-    \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432, \u0443\u043D\u0438\u0432\u0435\u0440\u0441\u0430\u043B\u044C\u043D\u044B\u0439
-    \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442 \u041A\u043E\u0441-6,
-    \u043F\u043E\u0434\u0445\u043E\u0434\u044F\u0449\u0438\u0439 \u0434\u043B\u044F
+    \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432, \u0443\u043D\u0438\u0432\u0435\u0440\u0441\u0430\u043B\u044C\u043D\u044B\u0435
+    \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B \u041A\u043E\u0441-6,
+    \u043F\u043E\u0434\u0445\u043E\u0434\u044F\u0449\u0438\u0435 \u0434\u043B\u044F
     \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u0430 \u0435\u0433\u043E
     \u043C\u0438\u0441\u0441\u0438\u0439 "
   _textInformationTitle: {fileID: 1538444667}
@@ -24285,8 +24309,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 194886066}
   m_HandleRect: {fileID: 194886065}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.50000006
+  m_Value: 0.9999995
+  m_Size: 0.49999997
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24537,7 +24561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 625906619}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -26947,7 +26971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 561c11e778fbb034294c4242525345ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 369a004b025ce1a4490a9fb8ba700f1e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35274,7 +35298,7 @@ MonoBehaviour:
     \u0432\u0435\u0440\u0441\u0438\u044F \u0412\u0438\u044F \u043F\u0440\u044F\u043C\u0438\u043A\u043E\u043C
     \u0438\u0437 \u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u0438
     \"\u0421\u043A\u043E\u043B-40\". \u041F\u043E\u0445\u043E\u0436\u0435, \u0447\u0442\u043E
-    \u044D\u0442\u043E\u0442 \u0432\u0438\u0439 \u0431\u044B\u043B \u0441\u043E\u0437\u0434\u0430\u043D
+    \u044D\u0442\u043E\u0442 \u0412\u0438\u0439 \u0431\u044B\u043B \u0441\u043E\u0437\u0434\u0430\u043D
     \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043D\u0430
     \u043E\u0441\u043D\u043E\u0432\u0435 \u043E\u0431\u0440\u0430\u0437\u0446\u043E\u0432
     \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0445 \u0441 \u043F\u043B\u0430\u043D\u0435\u0442\u044B
@@ -35646,6 +35670,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1723652879}
         m_TargetAssemblyTypeName: ModelPicture, Assembly-CSharp
         m_MethodName: WeaponChangeModel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1723652875}
+        m_TargetAssemblyTypeName: ChangeWeaponMenu, Assembly-CSharp
+        m_MethodName: Init
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36106,6 +36142,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8207074076290968091, guid: 52658cea186e1a34496835be22f27ab4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207074076299690966, guid: 52658cea186e1a34496835be22f27ab4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
