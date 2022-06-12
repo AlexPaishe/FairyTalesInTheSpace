@@ -22,6 +22,7 @@ public class TutorialDisplay : MonoBehaviour
     private WaitForSecondsRealtime _waitLetter;
     private Coroutine _gradualAppearanceText;
     private int _step;
+    private bool _textIsShow;
 
     private void Awake()
     {
@@ -53,18 +54,28 @@ public class TutorialDisplay : MonoBehaviour
         _menuSound.Click();
     }
 
-    public void ShowAllText()
+    public void ShowAllTextAndContinue()
     {
-        if (_gradualAppearanceText != null)
+        if (_textIsShow == false)
         {
-            StopCoroutine(_gradualAppearanceText);
+            if (_gradualAppearanceText != null)
+            {
+                StopCoroutine(_gradualAppearanceText);
+            }
+            _text.text = _data.StepText[_step];
+            _continueButton.gameObject.SetActive(true);
+
+            _textIsShow = true;
         }
-        _text.text = _data.StepText[_step];
-        _continueButton.gameObject.SetActive(true);
+        else
+        {
+            OffDisplay();
+        }
     }
 
     public void OnLastDisplay()
     {
+        _textIsShow = true;
         Time.timeScale = 0;
 
         _statButtonPanel.SetActive(false);
@@ -88,6 +99,8 @@ public class TutorialDisplay : MonoBehaviour
 
         _weaponLoader.CurrentWeapon.StopShoot();
         _playerMovement.RestMovement();
+
+        _textIsShow = false;
     }
 
     private IEnumerator GradualAppearanceText(string text)
@@ -106,6 +119,7 @@ public class TutorialDisplay : MonoBehaviour
             yield return _waitLetter;
         }
 
+        _textIsShow = true;
         _continueButton.gameObject.SetActive(true);
     }
 }
