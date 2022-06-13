@@ -45,6 +45,7 @@ public class FillingReadiAttak : MonoBehaviour
 
     public void StartReadiness()
     {
+        _timeReadyFastAttack = _weaponLoader.CurrentWeapon.TimeReadyFastAttack;
         _isReady = false;
         _dash.DashOn();
     }
