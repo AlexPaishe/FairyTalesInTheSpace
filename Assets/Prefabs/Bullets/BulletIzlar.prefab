@@ -93,8 +93,8 @@ GameObject:
   - component: {fileID: 5308933738505447637}
   - component: {fileID: 25697615094080336}
   - component: {fileID: 7112725207476148199}
-  - component: {fileID: 7695138449281362636}
   - component: {fileID: 8065539748101129631}
+  - component: {fileID: 2923216948167469789}
   m_Layer: 7
   m_Name: BulletIzlar
   m_TagString: Untagged
@@ -147,19 +147,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &7695138449281362636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5914388539362406882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9dbd21df2c031e4a90920a5a5af9c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _edit: {fileID: 11400000, guid: c3ea9b1adcd0a214a873ab578c931e21, type: 2}
 --- !u!114 &8065539748101129631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +160,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _decale: {fileID: 7275574335330908050, guid: ac9980d43804ef340ae9e436fa97e690, type: 3}
+--- !u!114 &2923216948167469789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914388539362406882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37941cc6874ac3646a2c6353d97d76c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edit: {fileID: 11400000, guid: c3ea9b1adcd0a214a873ab578c931e21, type: 2}
 --- !u!1001 &251507750667176911
 PrefabInstance:
   m_ObjectHideFlags: 0

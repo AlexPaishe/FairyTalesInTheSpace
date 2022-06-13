@@ -9,6 +9,7 @@ public class BulletEdit : ScriptableObject
     [Range(0.1f, 5)] public float liveTime;
     [Range(1, 100)] public int damage;
     [Range(1, 100)] public float force;
+    [Range(0.1f, 10)] public float damageRadius;
 }
 
 public enum BulletType

@@ -9,6 +9,8 @@ public class BombBlaster : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Sound _sound;
 
+    public bool IsTutorial { get; set; }
+
     private void Awake()
     {
         _sound.SoundPlay(0);
@@ -20,9 +22,19 @@ public class BombBlaster : MonoBehaviour
 
         foreach (Collider c in hits)
         {
-            if (c.transform.TryGetComponent<IHaveHealth>(out IHaveHealth health))
+            if (IsTutorial == true)
             {
-                health.Impact(_damage);
+                if (c.transform.TryGetComponent<Enemy>(out Enemy enemy))
+                {
+                    enemy.Impact(_damage);
+                }
+            }
+            else
+            {
+                if (c.transform.TryGetComponent<IHaveHealth>(out IHaveHealth health))
+                {
+                    health.Impact(_damage);
+                }
             }
         }
 

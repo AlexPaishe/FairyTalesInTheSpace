@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private BulletEdit _edit;
+    public BulletEdit edit;
 
     private WaitForSeconds _liveTime;
     private Rigidbody _rigidbody;
@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 
     private void Awake()
     {
-        _liveTime = new WaitForSeconds(_edit.liveTime);
+        _liveTime = new WaitForSeconds(edit.liveTime);
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     {
         _rigidbody.velocity = Vector3.zero;
         StartCoroutine(LiveCounter());
-        _currentSpeed = _edit.speed;
+        _currentSpeed = edit.speed;
     }
 
     private void FixedUpdate()
@@ -29,15 +29,15 @@ public class Bullet : MonoBehaviour
         _currentSpeed -= 0.5f;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
         {
-            bulletReaction.Reaction(_edit.bulletType, collision.contacts[0].point);
+            bulletReaction.Reaction(edit.bulletType, collision.contacts[0].point);
 
             if (collision.transform.TryGetComponent<IHaveHealth>(out IHaveHealth haveHealth))
             {
-                haveHealth.Impact(_edit.damage);
+                haveHealth.Impact(edit.damage);
             }
         }
 
@@ -50,4 +50,3 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-

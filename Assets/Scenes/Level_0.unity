@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1192647312, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
+      propertyPath: _isTutorial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3200116332281766186, guid: 29cb2ad4380bfa84a9a59ac9a846382f, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -10072,7 +10076,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4121284320445195669, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -17.5
+      value: -17.499985
       objectReference: {fileID: 0}
     - target: {fileID: 4121284321214421504, guid: 946f231b40209574784bba2343e0724f, type: 3}
       propertyPath: m_Pivot.x
