@@ -3,6 +3,7 @@ public class GlobalSystemVar
     #region PlayerPrefsValues
 
     public const string currentWeaponSave = "currentWeaponSave";
+    public const string currentLanguage = "currentLanguage";
 
     #endregion
 
@@ -16,6 +17,13 @@ public class GlobalSystemVar
     public const string izlar = "Izlar";
     public const string blaster = "Blaster";
     public const string unarmed = "Unarmed";
+
+    #endregion
+
+    #region Language
+
+    public const string RU = "RU";
+    public const string EN = "EN";
 
     #endregion
 }
