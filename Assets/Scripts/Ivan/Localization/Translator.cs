@@ -1,24 +1,69 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Translator : MonoBehaviour
 {
-    public event Action<Language> OnSetLanguageEvent;
+    [SerializeField] private Button _enButton;
+    [SerializeField] private Button _ruButton;
+
+    private TranslatedText[] translatedTexts;
 
     public void Awake()
     {
         if (!PlayerPrefs.HasKey(GlobalSystemVar.currentLanguage))
         {
-            Debug.Log("Нет ключа с параметром currentLanguage");
             PlayerPrefs.SetString(GlobalSystemVar.currentLanguage, GlobalSystemVar.RU);
         }
+    }
+
+    private void Start()
+    {
+        translatedTexts = GetComponentsInChildren<TranslatedText>(true);
 
         SetLanguage(ConvertLanguage(PlayerPrefs.GetString(GlobalSystemVar.currentLanguage)));
     }
 
+    private void OnEnable()
+    {
+        _enButton.onClick.AddListener(SetEnglish);
+        _ruButton.onClick.AddListener(SetRussian);
+    }
+
+    private void OnDisable()
+    {
+        _enButton.onClick.RemoveListener(SetEnglish);
+        _ruButton.onClick.RemoveListener(SetRussian);
+    }
+
     public void SetLanguage(Language language)
     {
-        this.OnSetLanguageEvent?.Invoke(language);
+        foreach (var text in translatedTexts)
+        {
+            text.FillText(language);
+        }
+
+        PlayerPrefs.SetString(GlobalSystemVar.currentLanguage, language.ToString());
+    }
+
+    private void SetEnglish()
+    {
+        foreach (var text in translatedTexts)
+        {
+            text.FillText(Language.EN);
+        }
+
+        PlayerPrefs.SetString(GlobalSystemVar.currentLanguage, GlobalSystemVar.EN);
+    }
+
+    private void SetRussian()
+    {
+        foreach (var text in translatedTexts)
+        {
+            text.FillText(Language.RU);
+        }
+
+        PlayerPrefs.SetString(GlobalSystemVar.currentLanguage, GlobalSystemVar.RU);
     }
 
     private Language ConvertLanguage (string language)
