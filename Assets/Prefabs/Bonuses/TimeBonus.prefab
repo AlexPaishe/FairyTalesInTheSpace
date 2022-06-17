@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3714213045696012065}
   - component: {fileID: 2336836882356999319}
   - component: {fileID: 92151605811173499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 1375565903689927741}
   - component: {fileID: 2254556304707080927}
   - component: {fileID: 3527431701747807350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 6913587935575006347}
   - component: {fileID: 5118401292937143520}
   - component: {fileID: 6032015529744282451}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TextBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 9079604881147162941}
   - component: {fileID: 9079604881147162940}
   - component: {fileID: 1357886757577482739}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TimeBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 5692335730361076631}
   - component: {fileID: 4772323777983515799}
   - component: {fileID: 4970497921205918141}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,9 +576,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 234002821371633928, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
       propertyPath: m_Name
       value: EdgeLP_all
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360653943207917664, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2400030716319289747, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5484502193700708074, guid: b8db10ff7d504814cb053fb609ff66f4, type: 3}
       propertyPath: m_LocalRotation.w
