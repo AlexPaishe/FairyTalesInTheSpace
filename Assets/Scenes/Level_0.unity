@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3860,7 +3860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750672879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 137.68, y: 0.44, z: -77.63}
+  m_LocalPosition: {x: 137.68, y: 0.44, z: -73.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 944114289}
@@ -3891,8 +3891,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8771057, y: 3.1330233, z: 10.041481}
-  m_Center: {x: 2.7039032, y: 1.0665116, z: 1.5434074}
+  m_Size: {x: 4.8771057, y: 3.1330233, z: 17.364529}
+  m_Center: {x: 2.7039032, y: 1.0665116, z: 3.0118694}
 --- !u!33 &750672883
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5555,8 +5555,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8771057, y: 3.1330233, z: 5.120964}
-  m_Center: {x: 2.7039032, y: 1.0665116, z: 1.5434074}
+  m_Size: {x: 6.345085, y: 3.1330233, z: 14.178146}
+  m_Center: {x: -3.812893, y: 1.0665116, z: 6.0719986}
 --- !u!33 &1028648682
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7898,8 +7898,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7204895, y: 3.1330233, z: 13.070335}
-  m_Center: {x: -6.2408066, y: 1.0665116, z: 0.29620743}
+  m_Size: {x: 6.3861313, y: 3.1330233, z: 21.405502}
+  m_Center: {x: -8.073627, y: 1.0665116, z: 4.463791}
 --- !u!33 &1360112915
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8904,8 +8904,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.031906, y: 3.1330233, z: 3.172058}
-  m_Center: {x: 2.778572, y: 1.0665116, z: 2.4767532}
+  m_Size: {x: 15.031906, y: 3.1330233, z: 4.1443825}
+  m_Center: {x: 2.778572, y: 1.0665116, z: 7.8385563}
 --- !u!33 &1598196915
 MeshFilter:
   m_ObjectHideFlags: 0

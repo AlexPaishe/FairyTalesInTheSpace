@@ -8,6 +8,7 @@ public class Blaster : Weapon
     [SerializeField] private Light _light;
     [SerializeField] private float _aimingSpeed;
     [SerializeField] private Sound _sound;
+    [SerializeField] private Color _color;
 
     public override int Index => 2;
     public override float TimeReadyFastAttack => _edit.timeCharging;
@@ -74,19 +75,9 @@ public class Blaster : Weapon
 
     private IEnumerator Shoot()
     {
-        float delay = 0.1f;
-
         Color defaultColor = _light.color;
-
-        while (delay < 1)
-        {
-            Color colour = new Color(_light.color.r + 0.5f, _light.color.g + 0.5f, _light.color.b + 0.5f);
-            _light.color = colour;
-
-            delay++;
-            yield return new WaitForSeconds(delay / 4);
-        }
-
+        _light.color = _color;
+        yield return new WaitForSeconds(0.2f);
         _light.color = defaultColor;
 
         _light.spotAngle = 0;
