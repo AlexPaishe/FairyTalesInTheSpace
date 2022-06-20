@@ -9,6 +9,7 @@ public class Blaster : Weapon
     [SerializeField] private float _aimingSpeed;
     [SerializeField] private Sound _sound;
     [SerializeField] private Color _color;
+    [SerializeField] private ParticleSystem _sparks;
 
     public override int Index => 2;
     public override float TimeReadyFastAttack => _edit.timeCharging;
@@ -46,11 +47,13 @@ public class Blaster : Weapon
     private IEnumerator ShootFoward()
     {
         _angel = 0;
+        var shape = _sparks.shape;
 
         do
         {
             _angel += _addedAngel;
             _light.spotAngle = _angel;
+            shape.angle = _angel / 2;
 
             yield return _coroutineTick;
 
@@ -77,6 +80,7 @@ public class Blaster : Weapon
     {
         Color defaultColor = _light.color;
         _light.color = _color;
+        _sparks.Play();
         yield return new WaitForSeconds(0.2f);
         _light.color = defaultColor;
 
