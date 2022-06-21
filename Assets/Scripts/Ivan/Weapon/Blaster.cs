@@ -62,9 +62,7 @@ public class Blaster : Weapon
 
     public override void StopShoot()
     {
-        _rotation.BlockedRotate = true;
-
-        if( _shootCoroutine != null)
+        if ( _shootCoroutine != null)
         {
             StopCoroutine(_shootCoroutine);
         }
@@ -74,10 +72,12 @@ public class Blaster : Weapon
         _movement.Speed = _defaultSpeed;
 
         _sound.SoundPlay(1);
+        
     }
 
     private IEnumerator Shoot()
     {
+        _rotation.BlockedRotate = true;
         Color defaultColor = _light.color;
         _light.color = _color;
         _sparks.Play();
@@ -87,13 +87,7 @@ public class Blaster : Weapon
         _light.spotAngle = 0;
 
         DealDamage();
-
         _rotation.BlockedRotate = false;
-    }
-
-    private void Update()
-    {
-        Debug.DrawRay(_torso.position, _torso.forward);
     }
 
     private void DealDamage()

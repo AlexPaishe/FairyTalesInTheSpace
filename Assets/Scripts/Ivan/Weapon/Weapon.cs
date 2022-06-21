@@ -10,10 +10,13 @@ public abstract class Weapon : MonoBehaviour
     public virtual PlayerParts PlayerParts { get; private set; }
     public virtual int Index { get; private set; }
 
+    public PlayerRotation rotation;
+
     public virtual void Construct(Events events, PlayerParts playerParts)
     {
         this.Events = events;
         this.PlayerParts = playerParts;
+        rotation = this.PlayerParts.Father.GetComponent<PlayerRotation>();
     }
 
     public virtual void StartShoot()
@@ -23,7 +26,7 @@ public abstract class Weapon : MonoBehaviour
 
     public virtual void StopShoot()
     {
-
+        rotation.BlockedRotate = false;
     }
 
     public virtual void FastAttak()
