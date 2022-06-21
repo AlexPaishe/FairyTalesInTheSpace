@@ -83,6 +83,7 @@ public class Sword : Weapon
 
     private void StartJerk()
     {
+        _jerkDirection.FillDirection(0);
         ChangeLayer(_playerColliders, _layerJerkValue);
         _jerkStartPos = _torso.position;
         _jerkCurrentDirection = _torso.forward * _edit.jerkSpeed;
