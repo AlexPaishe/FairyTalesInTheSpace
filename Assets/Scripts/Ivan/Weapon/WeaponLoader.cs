@@ -7,10 +7,14 @@ public class WeaponLoader : MonoBehaviour
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private bool _isTutorial;
 
+    private PlayerRotation _rotation;
+
     public Weapon CurrentWeapon { get; private set; }
 
     private void Awake()
     {
+        _rotation = _playerParts.Father.GetComponent<PlayerRotation>();
+
         if(_isTutorial == false)
         {
             CurrentWeapon = LoadWeapon();
@@ -53,5 +57,6 @@ public class WeaponLoader : MonoBehaviour
         CurrentWeapon = LoadWeapon(weapon);
         _playerAnimation.WeaponChange(CurrentWeapon.Index);
         CurrentWeapon.Construct(_events, _playerParts);
+        _rotation.BlockedRotate = false;
     }
 }
