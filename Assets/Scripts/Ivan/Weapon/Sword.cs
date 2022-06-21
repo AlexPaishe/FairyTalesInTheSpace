@@ -70,9 +70,15 @@ public class Sword : Weapon
             StopCoroutine(_jerkCharging);
         }
         
+        if (_jerkDistance > _edit.jerkMinDistance)
+        {
+            StartJerk();
+        }
+        else
+        {
+            StopJerk();
+        }
         _animation.Jerk();
-
-        StartJerk();
     }
 
     private void StartJerk()
@@ -124,6 +130,7 @@ public class Sword : Weapon
 
     private void StopJerk()
     {
+        _jerkDirection.FillDirection(0);
         _jerkDistance = 0;
         _isJerk = false;
         _playerColliders[0].gameObject.layer = _layerDefaultValue;
