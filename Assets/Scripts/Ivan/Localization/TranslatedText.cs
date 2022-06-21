@@ -30,7 +30,7 @@ public abstract class TranslatedText : MonoBehaviour
 
     private void OnEnable()
     {
-        FillText(ConvertLanguage(PlayerPrefs.GetString(GlobalSystemVar.currentLanguage)));
+        //FillText(ConvertLanguage(PlayerPrefs.GetString(GlobalSystemVar.currentLanguage)));
     }
 
     private Language ConvertLanguage(string language)
