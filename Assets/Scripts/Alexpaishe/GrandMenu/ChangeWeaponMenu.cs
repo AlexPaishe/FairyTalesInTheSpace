@@ -89,7 +89,7 @@ public class ChangeWeaponMenu : MonoBehaviour
         }
         else if (_currentWeapon < 0)
         {
-            _currentWeapon = _weaponMaxVariation;
+            _currentWeapon = _weaponMaxVariation - 1;
         }
 
         _model.NewModel(_weaponModel[_currentWeapon]);
