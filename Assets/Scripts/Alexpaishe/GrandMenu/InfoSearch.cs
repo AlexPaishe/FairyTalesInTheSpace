@@ -17,6 +17,7 @@ public class InfoSearch : MonoBehaviour
     [SerializeField] private Text[] _levelTitle;
     [SerializeField] private string[] _levelName;
     [SerializeField] private GameObject[] _titleRange;
+    [SerializeField] private GameObject _firstTitle;
     private int[] _rang;
     private int[] _record;
     private int _nowLevel = 0;
@@ -32,6 +33,7 @@ public class InfoSearch : MonoBehaviour
             PlayerPrefs.SetInt("First", 1);
             PlayerPrefs.SetString(GlobalSystemVar.currentWeaponSave, GlobalSystemVar.sword);
             string weapon = PlayerPrefs.GetString(GlobalSystemVar.currentWeaponSave);
+            _firstTitle.SetActive(true);
             PlayerPrefs.SetInt($"Level", 0);
             for (int i = 0; i < _level.Length; i++)
             {
