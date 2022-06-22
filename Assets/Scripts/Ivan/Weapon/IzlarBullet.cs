@@ -10,14 +10,14 @@ public class IzlarBullet : Bullet
 
         foreach (Collider hit in hits)
         {
-            if (collision.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
-            {
-                bulletReaction.Reaction(base.edit.bulletType, hit.transform.position);
-            }
-
             if (hit.transform.TryGetComponent<Enemy>(out Enemy enemy))
             {
                 enemy.Impact(base.edit.damage);
+
+                if (collision.transform.TryGetComponent<BulletReaction>(out BulletReaction bulletReaction))
+                {
+                    bulletReaction.Reaction(base.edit.bulletType, hit.transform.position);
+                }
             }
         }
 

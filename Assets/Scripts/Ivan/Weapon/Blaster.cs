@@ -8,6 +8,8 @@ public class Blaster : Weapon
     [SerializeField] private Light _light;
     [SerializeField] private float _aimingSpeed;
     [SerializeField] private Sound _sound;
+    [SerializeField] private Color _color;
+    [SerializeField] private ParticleSystem _sparks;
 
     public override int Index => 2;
     public override float TimeReadyFastAttack => _edit.timeCharging;
@@ -45,11 +47,13 @@ public class Blaster : Weapon
     private IEnumerator ShootFoward()
     {
         _angel = 0;
+        var shape = _sparks.shape;
 
         do
         {
             _angel += _addedAngel;
             _light.spotAngle = _angel;
+            shape.angle = _angel / 2;
 
             yield return _coroutineTick;
 
@@ -58,9 +62,7 @@ public class Blaster : Weapon
 
     public override void StopShoot()
     {
-        _rotation.BlockedRotate = true;
-
-        if( _shootCoroutine != null)
+        if ( _shootCoroutine != null)
         {
             StopCoroutine(_shootCoroutine);
         }
@@ -70,35 +72,22 @@ public class Blaster : Weapon
         _movement.Speed = _defaultSpeed;
 
         _sound.SoundPlay(1);
+        
     }
 
     private IEnumerator Shoot()
     {
-        float delay = 0.1f;
-
+        _rotation.BlockedRotate = true;
         Color defaultColor = _light.color;
-
-        while (delay < 1)
-        {
-            Color colour = new Color(_light.color.r + 0.5f, _light.color.g + 0.5f, _light.color.b + 0.5f);
-            _light.color = colour;
-
-            delay++;
-            yield return new WaitForSeconds(delay / 4);
-        }
-
+        _light.color = _color;
+        _sparks.Play();
+        yield return new WaitForSeconds(0.2f);
         _light.color = defaultColor;
 
         _light.spotAngle = 0;
 
         DealDamage();
-
         _rotation.BlockedRotate = false;
-    }
-
-    private void Update()
-    {
-        Debug.DrawRay(_torso.position, _torso.forward);
     }
 
     private void DealDamage()

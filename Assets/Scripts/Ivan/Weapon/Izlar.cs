@@ -55,6 +55,8 @@ public class Izlar : Weapon
 
     public override void StopShoot()
     {
+        base.StopShoot();
+
         _animation.StartShoot(false);
         if(_shoot != null)
         {
