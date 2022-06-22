@@ -10,6 +10,8 @@ public class InfoText : MonoBehaviour
     [SerializeField] private CanvasGroup[] _typeInfo;
     [SerializeField] private int _firstModel;
     [SerializeField] private ModelPicture _model;
+    [SerializeField] private Image _searchButton;
+    [SerializeField] private Sprite[] _icon;
     private bool _isModel = false;
 
     /// <summary>
@@ -32,6 +34,7 @@ public class InfoText : MonoBehaviour
             models = 1;
         }
         _isModel = !_isModel;
+
         for(int i = 0; i < _typeInfo.Length; i++)
         {
             if(i == models)
@@ -46,6 +49,18 @@ public class InfoText : MonoBehaviour
                 _typeInfo[i].interactable = false;
                 _typeInfo[i].alpha = 0;
             }
+        }
+    }
+
+    public void NewTypeIcon()
+    {
+        if (_isModel == true)
+        {
+            _searchButton.sprite = _icon[0];
+        }
+        else
+        {
+            _searchButton.sprite = _icon[1];
         }
     }
 
