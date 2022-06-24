@@ -12,6 +12,9 @@ public class InfoText : MonoBehaviour
     [SerializeField] private ModelPicture _model;
     [SerializeField] private Image _searchButton;
     [SerializeField] private Sprite[] _icon;
+    [Space]
+    [SerializeField] private Text _name3dArtist;
+    [SerializeField] private string[] _nameArtist;
     private bool _isModel = false;
 
     /// <summary>
@@ -20,10 +23,12 @@ public class InfoText : MonoBehaviour
     /// <param name="variation"></param>
     public void VariationInformation(int variation)
     {
-        for(int i = 0; i < _textInfo.Length; i++)
-        {
-            _textInformationTitle.text = _textInfo[variation];
-        }
+        _textInformationTitle.text = _textInfo[variation];
+    }
+
+    public void NameArtist(int variation)
+    {
+        _name3dArtist.text = _nameArtist[variation];
     }
 
     public void TypeInformation()
@@ -68,5 +73,9 @@ public class InfoText : MonoBehaviour
     {
         _model.NewModel(_firstModel);
         VariationInformation(_firstModel);
+        if (_name3dArtist != null)
+        {
+            NameArtist(_firstModel);
+        }
     }
 }
