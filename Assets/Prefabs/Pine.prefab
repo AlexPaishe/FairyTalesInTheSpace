@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3100871803386777895}
   - component: {fileID: 2340941245408424439}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 5927424984031935235}
   - component: {fileID: 7939200925424047100}
   - component: {fileID: 5860606882132164706}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9610d1ad0e30c304f864f4702d1f58f3, type: 3}
       propertyPath: m_Name
       value: pine_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9610d1ad0e30c304f864f4702d1f58f3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9610d1ad0e30c304f864f4702d1f58f3, type: 3}
       propertyPath: m_IsActive

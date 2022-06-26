@@ -26,6 +26,8 @@ public class Sword : Weapon
     private Collider[] _playerColliders;
     private int _layerJerkValue;
     private int _layerDefaultValue;
+    private bool _circle = false;
+    private Slash _slash;
 
     private void Start()
     {
@@ -41,6 +43,7 @@ public class Sword : Weapon
         _playerColliders = new Collider[2];
         _playerColliders[0] = base.PlayerParts.Father.GetComponent<Collider>();
         _playerColliders[1] = _swordCollisionHandler.transform.GetComponent<Collider>();
+        _slash = FindObjectOfType<Slash>();
     }
 
     public override void StartShoot()
@@ -141,12 +144,17 @@ public class Sword : Weapon
 
     public override void FastAttak()
     {
-        StartCoroutine(CircleAttack());
+        if (_circle == false)
+        {
+            _circle = true;
+            StartCoroutine(CircleAttack());
+        }
     }
 
     private IEnumerator CircleAttack()
     {
         _swordCollisionHandler.OnDamage(true, _edit.circleAttackDamage);
+        _slash.SlashOn();
         _animation.SwordCircleAttack();
         _playerColliders[0].gameObject.layer = _layerJerkValue;
         _playerColliders[1].gameObject.layer = _layerDefaultValue;
@@ -156,6 +164,7 @@ public class Sword : Weapon
         _swordCollisionHandler.OnDamage(false, 0);
         _playerColliders[0].gameObject.layer = _layerDefaultValue;
         _playerColliders[1].gameObject.layer = _layerJerkValue;
+        _circle = false;
     }
 
     private void ChangeLayer(Collider[] colliders, int layer)
